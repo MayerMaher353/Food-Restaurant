@@ -1,0 +1,240 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  --main-color: #f76e2a;
+  --colorFont: rgb(26, 47, 51);
+  --secondary-color: #869193;
+  --font-family: "Roboto", sans-serif;
+  --font-family-secondary: "Belleza", sans-serif;
+  --third-font-family: "Cinzel", sans-serif;
+  --text-color: #F3F2F0;
+  --cinzel-font: 'Cinzel', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+* {
+  scrollbar-width: thin;
+  /* auto | thin | none */
+  scrollbar-color: var(--main-color) var(--colorFont);
+  /* thumb color | track color */
+}
+
+/* ====================== start section 1 ==================================== */
+
+/* ====================== start of the header ==================================== */
+
+.navbar {
+  z-index: 1000;
+}
+
+header {
+  min-height: 98px;
+  background-color: transparent;
+  padding-top: 4px;
+  position: absolute;
+  /* position: sticky; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.logo-holder {
+  position: relative;
+  width: 8rem;
+}
+
+
+.logo-holder img {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+
+header .nav-link,
+header .logo h4,
+header .logo h6,
+header .icon-shopping i {
+  color: #ffffff !important;
+}
+
+.nav-links .home i {
+  color: var(--main-color);
+}
+
+.nav-links .navbar-nav .nav-item {
+  position: relative;
+}
+
+.nav-links .navbar-nav .nav-item .after-home::after {
+  content: "";
+  width: 53px;
+  height: 3px;
+  border-radius: 12px;
+  position: absolute;
+  background-color: var(--main-color);
+  top: 100%;
+  left: 6%;
+}
+
+.navbar .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 550;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-family: var(--font-family);
+}
+
+.dropdown-menu {
+  background-color: var(--main-color);
+  border-radius: 0px;
+  transition: all 0.7 ease-in-out;
+  min-width: 123px;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 8px 16px;
+}
+
+.dropdown-item:hover {
+  background-color: var(--main-color);
+  color: #ffdcca;
+}
+
+.header-right-side {
+  gap: 37px;
+}
+
+.header-right-side button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 16px 27px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: all 0.6s ease-in-out;
+}
+
+.header-right-side button:hover {
+  transform: scale(1.03);
+}
+
+.icon-shopping i {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+
+.icon-shopping i:hover {
+  transform: scale(1.06);
+  color: #dddddd;
+}
+
+#cart-count {
+  background-color: #2ecc71;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+/* ====================== end of the header ==================================== */
+
+/* ====================== start of the background ==================================== */
+
+.background-image .background {
+  background-image: url(../images/background-image.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.background-image {
+  background-color: #f4f4f4;
+}
+
+.background-image .background .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 43%);
+}
+
+.background-image .background .background-text {
+  color: white;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+/* .background-image .background .background-text .welcoming {
+  position: relative;
+} */
+
+.background-image .background .background-text .welcoming h6 {
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+}
+
+.background-image .background .background-text .welcoming h6::before {
+  content: "";
+  width: 33px;
+  height: 2.8px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  top: -20px;
+  left: 47.6%;
+}
+
+.background-image .background .background-text button a {
+  text-decoration: none;
+  color: #dddddd;
+  background-color: transparent;
+}
+
+.background-image .background .background-text .book-a-table-button {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 15px 35px;
+  font-size: 16px;
+  margin-top: 14px;
+  border: 2px solid #dddddd;
+  color: #dddddd;
+  transition: all 0.5s ease;
+}
+
+.background-image .background .background-text .book-a-table-button:hover {
+  transform: scale(1.02);
+}
+
+.background-image .background .background-text .open-menu-button {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 11px;
+  margin-top: 14px;
+  border: none;
+  font-size: 16px;
+  color: #dddddd;
+  transition: all 0.5s ease;
+}
+
+.background-image .background .background-text .open-menu-button:hover {
+  transform: scale(1.02);
+}
+
+.background-image .background .background-text h2 {
+  font-size: 100px;
+  font-weight: 500;
+  color: #dddddd;
+  font-family: var(--font-family-secondary);
+}
+
+/* ====================== end of the background ==================================== */

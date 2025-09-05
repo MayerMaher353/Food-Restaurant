@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/icon" href="./assests/images/logo.png">
+        <title>Tastyc - Seafood Restaurant</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./self work/assets/images/favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Render All Elements Normally -->
+        <link href="assests/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="./assests/css/all.min.css">
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="./assests/css/style.css">
+        <link rel="stylesheet" href="./assests/css/responsive.css">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </head>
+    <body>
+        <!-- start of the header -->
+        <header class="px-3">
+            <div class="container-fluid px-2">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid logo-nav d-flex ">
+                        <!-- logo -->
+                        <a class="navbar-brand logo d-flex align-items-center" href="#">
+                            <div class="logo-holder">
+                                <img src="./assests/images/logo/logo-sm-white.png">
+                            </div>
+                        </a>
+                        <!-- toggle button for small screens -->
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar"
+                            aria-controls="mainNavbar"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- nav links -->
+                        <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+                            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+                                <li class="nav-item d-flex align-items-center home">
+                                    <!-- <i class="fa-solid fa-house me-1"></i> -->
+                                    <a class="nav-link after-home" href="#">Home</a>
+                                </li>
+                                <!-- dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="categoriesMenu"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >Menu</a>
+                                    <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Breakfast</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Dinner</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Desserts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- button + cart -->
+                        <div class="d-flex align-items-center header-right-side">
+                            <button>RESERVATION</button>
+                            <div class="icon-shopping position-relative">
+                                <a href="#">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end of the header -->
+        <!-- start of the background-image -->
+        <div class="row g-0 background-image" id="home">
+            <div class="col-12 background d-flex justify-content-center align-items-center pt-0 position-relative">
+                <div class="overlay position-absolute top-0 start-0"></div>
+                <div class="background-text position-absolute z-2 text-center">
+                    <div class="welcoming">
+                        <h6>HELLO, NEW FRIEND!</h6>
+                    </div>
+                    <h2>
+                        Welcome To
+                        <br>
+                        TASTYC SEAFOOD
+                    </h2>
+                    <button class="book-a-table-button">
+                        <a href="#">BOOK A TABLE</a>
+                    </button>
+                    <button class="open-menu-button">
+                        <a href="#">OPEN MENU</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- end of the background-image -->
+
+        <script src="assests/js/bootstrap.bundle.min.js"></script>
+        <script src="assests/js/popper.min.js"></script>
+        <script src="./assests/js/basic.js" defer></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </body>
+</html>
