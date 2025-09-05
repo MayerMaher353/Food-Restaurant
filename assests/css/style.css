@@ -12,6 +12,7 @@
   --third-font-family: "Cinzel", sans-serif;
   --text-color: #F3F2F0;
   --cinzel-font: 'Cinzel', serif;
+  --menu-item-color:#F3F2F0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
@@ -311,7 +312,141 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* -------------------------------menu section---------------------- */
+/* menu -item color #08191B */
+#menu-section {
+  padding: 5rem 0;
+  background-color: var(--colorFont);
+  color: var(--text-color);
+  border-top-left-radius:3rem ;
+  border-top-right-radius:3rem ;
+}
+#menu-section .row{
+  justify-content: center;
+  row-gap: 1rem;
+  /* column-gap: 5rem; */
+ 
+}
+.main-menu-text{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   margin: 1rem 0;
+}
+.main-menu-text p{
+  position: relative;
+}
+.main-menu-text h2{
+   color: var(--text-color);
+}
+.main-menu-text p::before{
+ content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 2.1rem;
+    height: 0.3rem;
+    top: -18px;
+    border-radius: 7px;
+    left: 4.1rem;
+}
+.main-menu-nav{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem 0;
+    
+}
 
+.main-menu-nav nav {
+  display: flex;
+  justify-content: center; 
+  gap: 4rem; 
+}
+ 
+.main-menu-nav .menu-nav a{
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex; 
+  transition: all ease 0.4s;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+.main-menu-nav .menu-nav i{
+  margin-right: .2rem;
+  padding-top: 0.2rem;
+}
+.main-menu-nav .menu-nav a:hover{
+  color: var(--main-color);
+}
+#menu-section .separator {
+  border-top: 2px solid #f76e2a54 ; 
+  margin: 0rem 0 1rem 0;
+}
+.menu-section-item{
+  display: flex;
+  gap: 0.7rem;
+  /* background-color: var(--menu-item-color); */
+  padding: 1.3rem 0.7rem;
+}
+
+.abt-menu-item{
+  color: rgba(255, 255, 255, 0.795);
+}
+
+.menu-item-info{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-img-holder{
+  position: relative;
+  height:  120px;
+  width: 120px;
+
+}
+.menu-content-holder{
+     display: flex;
+     flex-direction: column;
+     gap: 1.4rem;
+   
+}
+
+.menu-end{
+  margin-top: 1.5rem;
+   display: flex;
+  justify-content: center; 
+}
+
+.menu-end  span{
+  padding: 0.13rem 0.7rem;
+  background-color: var(--main-color);
+  border-radius: 1rem;
+  text-align: center;
+
+  margin-right: 0.4rem;
+}
+.menu-end a{
+  color:var(--main-color);
+  transition: ease all 0.4s;
+}
+.menu-end a:hover{
+color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------end menu section---------------------- */
 /* ============== start working hours section ==================================== */
 
 .working-hours {

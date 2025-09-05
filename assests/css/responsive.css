@@ -59,6 +59,7 @@
   .nav-links .dropdown-menu .dropdown-item {
     font-size: 0.7rem !important;
   }
+
 }
 
 
@@ -177,6 +178,29 @@
     gap: 30px;
     align-items: center;
 }
+/* start menu */
+.main-menu-nav nav {
+  font-size: 0.5rem;
+  gap: 1rem; 
+}
+.main-menu-nav .menu-nav a{
+
+  font-size: .6rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+.main-menu-text h2{
+   color: var(--text-color);
+   font-size: 2.1rem;
+   text-align: center;
+   margin-top: 0.2rem;
+}
+.menu-end{
+  font-size: .8rem;
+}
+
+
+/* end menu */
 .testimonials .swiper .slider .button p{
     display: none;
 }
@@ -306,7 +330,66 @@ footer h3{
 }
 }
 
+@media (min-width:344px)and (max-width:375px){
+
+/* start menu */
+.main-menu-nav nav {
+  font-size: 0.5rem;
+  gap: .8rem; 
+}
+.main-menu-nav .menu-nav a{
+
+  font-size: .5rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+.main-menu-text h2{
+   color: var(--text-color);
+   font-size: 1.7rem;
+   text-align: center;
+   margin-top: 0.6rem;
+}
+.menu-end{
+  font-size: .67rem;
+}
+
+
+/* end menu */
+
+}
+
+
+
+
 @media(min-width:992px)and (max-width: 1280px){
+
+/* start menu */
+.main-menu-nav nav {
+  font-size: 0.5rem;
+  gap: 1rem; 
+}
+.main-menu-nav .menu-nav a{
+
+  font-size: .9rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+.main-menu-text h2{
+   color: var(--text-color);
+   font-size: 2.2rem;
+   text-align: center;
+   margin-top: 0.2rem;
+}
+.menu-end{
+  font-size: .8rem;
+}
+
+
+/* end menu */
+
+
+
+
 .subscribe .container .col>div #email{
     width: 100%;
 }
