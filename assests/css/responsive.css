@@ -10,13 +10,204 @@
      width: 20.06rem;
 }
 }
+@media (max-width:420px) {
+  .background-image .background .background-text h2 {
+    font-size: 29px !important;
+  }
 
+  .background-image .background .background-text h2 span {
+    font-size: 30px !important;
+  }
 
+  .background-image .background .background-text button {
+    padding: 4px;
+    padding-top: 0px;
+  }
+
+  .background-image .background .background-text button a {
+    font-size: 9px;
+  }
+}
+
+@media (max-width:380px) {
+
+  .logo img {
+    width: 80px;
+    height: 47px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 11px !important;
+  }
+
+  .navbar-toggler {
+    font-size: 11px;
+  }
+
+  header .container-fluid {
+    padding-left: 0px !important;
+  }
+
+  .navbar-nav {
+    font-size: 13px;
+  }
+
+  .navbar-collapse {
+    width: 197px;
+  }
+
+  .nav-links .dropdown-menu .dropdown-item {
+    font-size: 0.7rem !important;
+  }
+}
 
 
 
 @media(max-width:992px){
- 
+  .aboutus h2 ,
+  .text-center h2{
+    font-size: 30px;
+  }
+  .menu-info {
+    padding-left: 35px;
+  }
+  .aboutus {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .aboutus p {
+    margin-top: -10px;
+  }
+  .aboutus button {
+    margin-top: -20px;
+  }
+
+
+
+
+  .header-right-side {
+    order: 3;
+  }
+
+  .logo-nav .logo {
+    order: 2;
+    margin-left: 6%;
+  }
+
+
+  .logo img {
+    width: 102px;
+    height: 63px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 19px !important;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 224px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 2300;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  .exit-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #000;
+    font-size: 19px;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .navbar-collapse .dropdown-menu {
+    position: static;
+    background-color: #f4f4f4;
+    box-shadow: none;
+    margin: 0;
+    padding: 0px;
+  }
+
+  .navbar-collapse .dropdown-item {
+    color: #000;
+  }
+
+  .background-image .background .background-text h2 {
+    font-size: 42px !important;
+  }
+
+  .background-image .background .background-text h2 span {
+    font-size: 47px !important;
+  }
+
+  .background-image .background .background-text button a {
+    font-size: 12px;
+  }
+
+  .background-image .background .background-text button {
+
+    padding: 8px;
+  }
+
+
+    .slider{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: center;
+}
+.testimonials .swiper .slider .button p{
+    display: none;
+}
+.swiper-slide.swiper-slide-active .quotes {
+    right: 28px;
+}
+.testimonials .title h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.testimonials .title p:last-child {
+    padding: 0;
+}
+.testimonials .swiper .slider a{
+    margin: 0;
+}
+ .container .col>div .ele{
+    display: flex;
+    justify-content: center;
+}
+.subscribe .container .col>div #email {
+    padding: 20px 50px 20px 30px;
+}
+.subscribe .container .col>div .btn {
+    margin-left: 0;
+    margin-top: 30px;
+}
+.subscribe .container h1{
+    padding-right: 0;
+    font-size: 42px;
+}
 .working-hours-content{
     justify-content: center;
     align-items: center;
@@ -115,8 +306,19 @@ footer h3{
 }
 }
 
-@media(width:1024px)and (max-width: 1280px){
-
+@media(min-width:992px)and (max-width: 1280px){
+.subscribe .container .col>div #email{
+    width: 100%;
+}
+.testimonials .title p:last-child {
+    padding: 0 340px;
+}
+.subscribe .container .col>div .btn{
+    margin-left: 0;
+    margin-top: 0;
+}
+/* .working-hours-content{
+     padding: 70px 40px ;} */
 .working-hours-time{
      width: 19rem;
      
@@ -137,4 +339,136 @@ footer .container .row{
     gap: 0rem;
 
 }
+}
+
+@media (max-width: 1265px) and (min-width:1055px) {
+  .logo img {
+    width: 99px;
+    height: 61px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 19px !important;
+  }
+
+  .nav-links ul {
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 1055px) and (min-width:992px) {
+  .logo img {
+    width: 94px;
+    height: 57px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 17px !important;
+  }
+
+  .nav-links ul {
+    font-size: 13px;
+  }
+
+  .nav-links .dropdown-menu .dropdown-item {
+    font-size: 0.7rem !important;
+  }
+
+  .nav-links .dropdown-menu {
+    min-width: 110px;
+  }
+
+}
+@media (max-width: 1350px) {
+  /* container */
+  .container-aboutus {
+    display: flex;
+    position: relative;
+    gap: 30px;
+  }
+  .container-aboutus .info {
+    margin-left: 50px;
+  }
+  .container-aboutus .image img {
+    width: 100%;
+    min-width: 100px;
+    max-height: 600;
+    margin-right: 10px;
+    padding-right: 50px;
+  }
+  .container-aboutus p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .container-aboutus h2 {
+    font-size: 50px;
+  }
+
+  /* container menu */
+  .container-menu {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: -5px;
+    max-width: 1200px;
+    gap: 30px;
+  }
+  .container-menu p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .container-menu .image img {
+    width: 100%;
+    min-width: 100px;
+    margin-left: 10px;
+    padding-left: 40px;
+  }
+
+  /* container-our-team */
+  .container-our-team {
+    gap: 0;
+    margin-top: 30px;
+    max-width: 1200px;
+  }
+  .container-our-team .info {
+    max-width: 400px;
+    padding-right: 0px;
+  }
+  .container-our-team h2 {
+    font-size: 50px;
+  }
+
+  .container-our-team .image img {
+    width: 100%;
+    min-width: 100px;
+    max-height: 600px;
+    margin-left: 100px;
+    padding-right: 150px;
+  }
+  .container-our-team .info {
+    margin-left: 50px;
+    min-width: 300px;
+  }
+
+  .container-our-team h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutus {
+    margin-bottom: 30px;
+  }
+  .menu-info {
+    padding-left: 13px;
+    margin-bottom: 30px;
+  }
+  .our-team-container {
+    margin-bottom: 30px;
+  }
 }
