@@ -61,7 +61,11 @@
   }
 
 }
-
+@media(max-width:767px){
+  .section-2 .gg{
+    padding: 10px;
+  }
+}
 
 
 @media(max-width:992px){
@@ -82,9 +86,6 @@
   .aboutus button {
     margin-top: -20px;
   }
-
-
-
 
   .header-right-side {
     order: 3;
@@ -170,7 +171,19 @@
     padding: 8px;
   }
 
-
+  .gallery .head h1 {
+    font-size: 34px;
+  }
+  .subscribe .container p:first-child {
+      left: 0px;
+      text-align: center;
+      width: 100%;
+  }
+  .subscribe .container p:first-child::after {
+      top:-20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
     .slider{
     position: relative;
     display: flex;
