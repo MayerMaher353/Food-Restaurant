@@ -568,9 +568,3 @@ footer .container .row{
     margin-bottom: 30px;
   }
 }
-@media(max-width:957px){
-  .d-flex p {
-    margin-bottom: 30px !important;
-    margin-top: 30px !important;
-  }
-}
