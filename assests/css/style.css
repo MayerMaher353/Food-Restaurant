@@ -453,7 +453,8 @@ h2 {
 #menu-section {
   position: relative;
   padding: 5rem 0;
-  background-image: url(../images/bg.jpg);
+  /* background-image: url(../images/bg.jpg); */
+  background-color: var(--colorFont);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -736,7 +737,8 @@ color: var(--text-color);
 
 
 .event-services{
-  background-image: url(../images/bg.jpg);
+  /* background-image: url(../images/bg.jpg); */
+  background-color: var(--colorFont);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1297,7 +1299,8 @@ p {
     --gray: #6c757d;
     --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     position: relative;
-    background-image: url(../images/bg.jpg);
+    /* background-image: url(../images/bg.jpg); */
+    background-color: var(--colorFont);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1630,7 +1633,7 @@ p {
 
 .subscribe .container {
   position: relative;
-  z-index: 999999999999;
+  z-index: 2;
 }
 
 .subscribe .container .col {
