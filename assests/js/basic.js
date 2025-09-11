@@ -1,3 +1,12 @@
+const boxes=document.querySelectorAll('.ele-features');
+boxes.forEach(box => {
+    box.addEventListener('mouseenter', () => {
+      boxes.forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+    });
+ });
+
+
 const swiper = new Swiper('.swiper', {
     slidesPerView: 3,       // default = 3 slides
     spaceBetween: 30,
@@ -44,28 +53,38 @@ const swiper = new Swiper('.swiper', {
      }
     },
 });
-const slides = document.querySelectorAll('.swiper-slide');
-slides.forEach(slide => {
-  const clone = slide.cloneNode(true);
-  document.querySelector('.swiper-wrapper').appendChild(clone);
-});
 function animateCounter(id, target, duration) {
-    const counter = document.getElementById(id);
-    let start = 0;
-    const stepTime = Math.abs(Math.floor(duration / target));
+  const counter = document.getElementById(id);
+  let start = 0;
+  const fps = 60; // frames per second
+  const totalSteps = Math.round((duration / 1000) * fps);
+  const increment = target / totalSteps;
 
-    const timer = setInterval(() => {
-      start += 1;
-      counter.textContent = start;
-      if (start >= target) {
-        clearInterval(timer);
-      }
-    }, stepTime);
+  let step = 0;
+  const timer = setInterval(() => {
+    step++;
+    start += increment;
+
+    if (step >= totalSteps) {
+      start = target;
+      clearInterval(timer);
+    }
+
+    if (Number.isInteger(target)) {
+      counter.textContent = Math.floor(start);
+    } else {
+      counter.textContent = start.toFixed(1);
+    }
+  }, 1000 / fps);
 }
 animateCounter("counter1", 200, 2000);
 animateCounter("counter2", 400, 2000);
 animateCounter("counter3", 100, 2000);
 animateCounter("counter4", 40, 2000);
+animateCounter("feature-count1",100,2000);
+animateCounter("feature-count2",50,2000);
+animateCounter("feature-count3",4.9,2000);
+animateCounter("feature-count4",25,2000);
 
 const gallerySlider = new Swiper(".gallery-container", {
   loop: true,
