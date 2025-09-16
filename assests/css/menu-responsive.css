@@ -56,6 +56,11 @@
     }
 }
 @media(max-width:991px){
+  .reservation .container .content .row .col-lg-6:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .reservation .container .content span:first-child {
       left: 0px;
       text-align: center;

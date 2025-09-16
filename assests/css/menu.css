@@ -291,10 +291,10 @@ header .icon-shopping i {
     width: 130px;
     height: 160px;
     object-fit: cover;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
 }
 .menu-1 .swiper-wrapper .swiper-slide .row .content>a img:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 a{
     text-decoration: none;
@@ -434,10 +434,10 @@ header .icon-shopping i {
     width: 130px;
     height: 160px;
     object-fit: cover;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
 }
 .menu-extra .swiper-wrapper .swiper-slide .row .content>a img:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 a{
     text-decoration: none;
@@ -545,7 +545,7 @@ header .icon-shopping i {
     height: 4px;
     border-radius: 3px;
     top: 3px;
-    left: -45px;
+    left: -50px;
 }
 .reservation .container .content span:nth-child(2) h1{
     font-family: var(--font-family-secondary);
@@ -561,13 +561,14 @@ header .icon-shopping i {
     line-height: 27px;
 }
 .reservation .container .content .row .col-lg-6:first-child .content{
-    background-color: var(--main-color);
-    padding: 20px 67px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 .reservation .container .content .row .col-lg-6:first-child a{
+    background-color: var(--main-color);
+    padding: 20px;
     color: white;
     text-decoration: none;
     font-family: var(--third-font-family);
@@ -576,7 +577,7 @@ header .icon-shopping i {
     transition: all 0.5s ease;
 }
 .reservation .container .content .row .col-lg-6:first-child a:hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .reservation .container .content .row .col-lg-6:last-child{
   display: flex;
