@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/icon"
+      href="./assests/images/logo/logo-sm.png"
+    />
+    <title>Tastyc - Seafood Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Render All Elements Normally -->
+    <link href="assests/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./assests/css/all.min.css" />
+    <!-- Font Awesome 6.5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="./assests/css/shop.css" />
+    <link rel="stylesheet" href="./assests/css/responsive.css" />
+    <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
+
+  </head>
+  <body>
+    <!-- start of the header -->
+    <header class="px-3" id="main-header">
+      <div class="container-fluid px-2">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid logo-nav d-flex">
+            <!-- logo -->
+            <a class="navbar-brand logo d-flex align-items-center" href="#">
+              <div class="logo-holder">
+                <img id="logo" src="./assests/images/logo/logo-sm-white.png" />
+              </div>
+            </a>
+            <!-- toggle button for small screens -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav links -->
+            <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+              <button
+                type="button"
+                class="btn-close exit-menu ms-auto d-lg-none"
+                aria-label="Close"
+              >
+                <i class="fas fa-xmark"></i>
+              </button>
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+                <li class="nav-item d-flex align-items-center home">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="categoriesMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Menu</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                    <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                    <li><a class="dropdown-item" href="#">Dinner</a></li>
+                    <li><a class="dropdown-item" href="#">Desserts</a></li>
+                  </ul>
+                </li> -->
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link after-shop" href="#">shop</a>
+                </li>
+              </ul>
+            </div>
+            <!-- button + cart -->
+            <div class="d-flex align-items-center header-right-side">
+              <button>RESERVATION</button>
+              <div class="icon-shopping position-relative">
+                <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                <span
+                  id="cart-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                  >0</span
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <div class="hero-section">
+      <img class="bgImg" src="./assests/images/shop img/shopBG.jpg.webp" />
+      <div class="shop-overlay"></div>
+      <div class="container">
+        <div class="main-text">
+          <h5>ONLINE STORE</h5>
+          <h1>SHOP</h1>
+          <p>
+            Quaerat debitis, vel, sapiente dicta sequi <br />labore porro
+            pariatur harum expedita.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="shop-content-wrapper">
+        <div class="shop-categories">
+          <form class="search-form" action="#">
+            <input
+              type="text"
+              placeholder="Search products..."
+              name="search"
+              id="searchInput"
+            />
+            <span><i class="fas fa-magnifying-glass"></i></span>
+          </form>
+          <div class="categories">
+            <h3>CATEGORIES</h3>
+            <ul>
+              <li><a href="#" data-category="All">All (6)</a></li>
+              <li>
+                <a href="#" data-category="Crustaceans">Crustaceans (2)</a>
+              </li>
+              <li>
+                <a href="#" data-category="Farmed Fish">Farmed Fish (2)</a>
+              </li>
+              <li>
+                <a href="#" data-category="Saltwater Fish"
+                  >Saltwater Fish (4)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="product-offers-sidebar">
+            <h3>PRODUCTS</h3>
+            <div class="sidebar-product-item">
+              <div class="product-sidebar-image-holder">
+                <img src="./assests/images/shop img/shop5.jpg.webp" />
+              </div>
+              <div class="sidebar-product-item-content">
+                <a href=""><strong>Salmon with tomatoes</strong></a>
+                <p id="price-offer"><span>€</span><del>25.99</del></p>
+                <p id="Salmon-price"><span>€</span><strong>20.99</strong></p>
+              </div>
+            </div>
+
+            <div class="sidebar-product-item">
+              <div class="product-sidebar-image-holder">
+                <img src="./assests/images/shop img/shop6.jpg.webp" />
+              </div>
+              <div class="sidebar-product-item-content">
+                <a href=""><strong>Paella with seafood</strong></a>
+                <p id="price-offer"><span>€</span><del>4.5</del></p>
+                <p id="Salmon-price"><span>€</span><strong>3.50</strong></p>
+              </div>
+            </div>
+
+            <div class="sidebar-product-item">
+              <div class="product-sidebar-image-holder">
+                <img src="./assests/images/shop img/shop7.jpg" />
+              </div>
+              <div class="sidebar-product-item-content">
+                <a href=""><strong>Salmon</strong></a>
+                <p id="price-offer"><span>€</span><del>1.99</del></p>
+                <p id="Salmon-price"><span>€</span><strong>1.50</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-filter-section">
+            <h3>FILTER BY PRICE</h3>
+            <label
+              >Min Price: <input type="number" id="min-price" value="0"
+            /></label>
+            <label
+              >Max Price: <input type="number" id="max-price" value="100"
+            /></label>
+            <button id="filter-btn">Filter</button>
+          </div>
+
+          <div class="product-tag-section">
+            <h3>TAGS</h3>
+            <button class="tag-btn" data-tag="Burger">Burger</button>
+            <button class="tag-btn" data-tag="Crabs">Crabs</button>
+            <button class="tag-btn" data-tag="Crustaceans">Crustaceans</button>
+            <button class="tag-btn" data-tag="Fish">Fish</button>
+            <button class="tag-btn" data-tag="Food">Food</button>
+            <button class="tag-btn" data-tag="Saltwater">Saltwater</button>
+            <button class="tag-btn" data-tag="Soup">Soup</button>
+          </div>
+        </div>
+
+        <div class="shop-products">
+          <div class="products-header">
+            <h3>SHOP</h3>
+            <div class="shop-item-sort">
+              <p>Showing 1–6 of 8 results</p>
+
+              <select name="sort" id="sort-select">
+                <option value="" hidden>Default sorting</option>
+                <option value="popularity">sort by popularity</option>
+                <option value="rating">sort by average rating</option>
+                <option value="latest">sort by latest</option>
+                <option value="price">sort by price : low to high</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="swiper myProductSwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 (Products 1–6) -->
+              <div class="swiper-slide">
+                <div class="product-grid">
+                  <!-- product 1 -->
+                  <div
+                    class="product"
+                    data-price="5.50"
+                    data-tags="Crabs,Crustaceans,Food"
+                    data-category="Crustaceans"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop1.jpg"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4><strong>BOILED CRAYFISH</strong></h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>7.50</del></p>
+                          <p><strong>€5.50</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 2 -->
+                  <div
+                    class="product"
+                    data-price="3.50"
+                    data-tags="Crabs,Food"
+                    data-category="Crustaceans"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop2.jpg.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4><strong>CRABS</strong></h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>4.50</del></p>
+                          <p><strong>€3.50</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 3-->
+                  <div
+                    class="product"
+                    data-price="1.99"
+                    data-tags="Burger,Fish,Food"
+                    data-category="Farmed Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop3.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4><strong>FISH BURGER</strong></h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>2.99</del></p>
+                          <p><strong>1.99</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 4 -->
+                  <div
+                    class="product"
+                    data-price="20.99"
+                    data-tags="Soup,Fish,Food,Saltwater"
+                    data-category="Saltwater Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop4.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4><strong>FISH SOUP</strong></h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>25.99</del></p>
+                          <p><strong>€20.99</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 5 -->
+                  <div
+                    class="product"
+                    data-price="3.50"
+                    data-tags="Crustaceans,Seafood,Food,Saltwater"
+                    data-category="Farmed Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop6.jpg.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4 class="large-text">
+                          <strong>PAELLA WITH SEAFOOD</strong>
+                        </h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>4.50</del></p>
+                          <p><strong>€3.50</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 6 -->
+                  <div
+                    class="product"
+                    data-price="1.5"
+                    data-tags="Fish,Food,Saltwater"
+                    data-category="Saltwater Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop7.jpg"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4><strong>SALMON</strong></h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>1.99</del></p>
+                          <p><strong>€1.50</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 (Products 7–8) -->
+              <div class="swiper-slide">
+                <div class="product-grid">
+                  <!-- product 7 -->
+                  <div
+                    class="product"
+                    data-price="20.99"
+                    data-tags="Fish,Food,Saltwater"
+                    data-category="Saltwater Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop5.jpg.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4 class="large-text">
+                          <strong>SALMON WITH TOMATOES</strong>
+                        </h4></a
+                      >
+                      <div class="separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>25.99</del></p>
+                          <p><strong>€20.99</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product 8 -->
+                  <div
+                    class="product"
+                    data-price="4.99"
+                    data-tags="Food,Saltwater"
+                    data-category="Saltwater Fish"
+                  >
+                    <div class="swiper-product-holder">
+                      <img
+                        src="./assests/images/shop img/shop8.jpg.webp"
+                        alt="Boiled Crayfish"
+                      />
+                      <span>SALE!</span>
+                    </div>
+                    <div class="product-content-holder">
+                      <a href="" class="product-item-name"
+                        ><h4 class="small-text">
+                          <strong>CASSEROLE</strong>
+                        </h4></a
+                      >
+                      <div class="casserole-item-separator"></div>
+                      <div class="product-price-holder">
+                        <div class="price-section">
+                          <p id="price-offer"><span>€</span><del>5.99</del></p>
+                          <p><strong>€4.99</strong></p>
+                        </div>
+                        <div class="product-icon-holder">
+                          <a href=""><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="swiper-controls">
+              <div class="nav-controls">
+                <div class="swiper-prev">
+                  <span>1</span>
+                </div>
+                <div class="swiper-next">
+                  <span>2</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- start subscribe -->
+    <div class="subscribe">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>NEWSLETTER</p>
+            <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+            <p class="p">
+              Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
+            </p>
+            <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12 ele">
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter your email here"
+                />
+              </div>
+              <div class="col-lg-3 col-md-12 col-sm-12 ele">
+                <button type="submit" class="btn">subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end subscribe -->
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="logo-holder">
+              <img src="./assests/images/logo/logo-sm.png" alt="" />
+            </div>
+          </div>
+          <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+            <div class="socials">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+              repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+              quaerat vitae.
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Contact info</h3>
+            <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+              <li>
+                <span class="tst-label"> Call :</span>
+                <span>+76 (094) 754 43 7I</span>
+              </li>
+              <li>
+                <span class="tst-label"> Write :</span>
+                <span> your.email.inbox@here.com</span>
+              </li>
+              <li>
+                <span class="tst-label"> Find us :</span>
+                <span> Canada, Toronto, Avenue 31B,</span>
+              </li>
+            </ul>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Gallery</h3>
+            <div class="gallery-container">
+              <div class="gallery-wrapper">
+                <!-- Each image -->
+                <div class="gallery-item">
+                  <img
+                    src="./assests/images/footer swiper/gallery-i-2-140x140.jpg.webp"
+                    alt="Food 2"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assests/images/footer swiper/blog-2-140x140.jpg.webp"
+                    alt="Food 1"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assests/images/footer swiper/gallery-i-4-140x140.jpg.webp"
+                    alt="Food 3"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assests/images/footer swiper/gallery-i-5-140x140.jpg.webp"
+                    alt="Food 4"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assests/images/footer swiper/gallery-i-6-140x140.jpg.webp"
+                    alt="Food 5"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Custom navigation -->
+              <div class="gallery-controls">
+                <a href="#">READ MORE</a>
+                <div class="nav-controls">
+                  <div class="gallery-prev">
+                    <i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="gallery-next">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+            <p>© Tastyc 2022 . All rights reserved.</p>
+          </div>
+          <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+            <a href="#">Back to Top</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- start footer -->
+    <script src="assests/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/js/popper.min.js"></script>
+    <script src="./assests/js/shop.js" defer></script>
+    <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+  </body>
+</html>
