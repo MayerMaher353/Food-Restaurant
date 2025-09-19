@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/icon"
+      href="./assets/images/logo/logo-sm.png"
+    />
+    <title>Tastyc - Seafood Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./self work/assets/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Render All Elements Normally -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- Font Awesome 6.5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- start of the header -->
+    <header class="px-3" id="main-header">
+      <div class="container-fluid px-2">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid logo-nav d-flex">
+            <!-- logo -->
+            <a class="navbar-brand logo d-flex align-items-center" href="#">
+              <div class="logo-holder">
+                <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
+              </div>
+            </a>
+            <!-- toggle button for small screens -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav links -->
+            <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+              <button
+                type="button"
+                class="btn-close exit-menu ms-auto d-lg-none"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+                <li class="nav-item d-flex align-items-center home">
+                  <a class="nav-link after-home" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="categoriesMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Menu</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                    <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                    <li><a class="dropdown-item" href="#">Dinner</a></li>
+                    <li><a class="dropdown-item" href="#">Desserts</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">shop</a>
+                </li>
+              </ul>
+            </div>
+            <!-- button + cart -->
+            <div class="d-flex align-items-center header-right-side">
+              <button>RESERVATION</button>
+              <div class="icon-shopping position-relative">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span
+                  id="cart-count"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                  >0</span
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end of the header -->
+    <!-- contact section -->
+    <div class="contact-section">
+      <img class="bgImg" src="./assets/images/1343322.png" />
+      <div class="shop-overlay"></div>
+      <div class="container">
+        <div class="main-text">
+          <h1>CONTACT</h1>
+          <p>Canada, Toronto, North Avenue 31B</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact information -->
+    <div class="text-center my-10 features">
+      <h5>GET IN TOUCH</h5>
+      <h2>Contact Information</h2>
+      <p class="p-features">Porro eveniet, autem ipsam vitae consequatur!</p>
+    </div>
+
+    <div class="row text-center icons-features">
+      <div class="col-md-4 mb-4">
+        <img
+          src="./assets/images/icon-contact-email-256x256.png"
+          class="feature-icon"
+          alt=""
+        />
+        <h5 class="h5-features">Write Us</h5>
+        <p class="p-features">
+          info@tastyc.com <br />
+          reservation@tastyc.com
+        </p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="./assets/images/icon-contact-tel-256x256.png"
+          class="feature-icon"
+          alt=""
+        />
+        <h5 class="h5-features">Call Us</h5>
+        <p class="p-features">+76 (094) 754 43 71 +76 (093) 753 43 72</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="./assets/images/icon-contact-adr-256x256.png"
+          class="feature-icon"
+          alt=""
+        />
+        <h5 class="h5-features">Visit Us</h5>
+        <p class="p-features">Canada, Toronto, North Avenue 31B</p>
+      </div>
+
+      <div class="text-center my-10 features-down">
+        <h5>CONTACT FORM</h5>
+        <h2>Write Us a Message</h2>
+        <p class="p-features">Porro eveniet, autem ipsam vitae consequatur!</p>
+      </div>
+
+      <!-- forms-->
+      <div class="form-container d-flex justify-content-center mt-5">
+        <form class="row g-3">
+          <!-- First Row -->
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="First Name" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Last Name" />
+          </div>
+
+          <!-- Second Row -->
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Phone" />
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" />
+          </div>
+
+          <!-- Third Row -->
+          <div class="col-12">
+            <textarea
+              class="form-control"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
+          </div>
+
+          <!-- Button -->
+          <div class="button-contact">
+            <button>
+              SEND A MESSAGE
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- start subscribe -->
+    <div class="subscribe">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>NEWSLETTER</p>
+            <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+            <p class="p">
+              Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
+            </p>
+            <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12 ele">
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Enter your email here"
+                />
+              </div>
+              <div class="col-lg-3 col-md-12 col-sm-12 ele">
+                <button type="submit" class="btn">subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end subscribe -->
+
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="logo-holder">
+              <img src="./assets/images/logo/logo-sm.png" alt="" />
+            </div>
+          </div>
+          <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+            <div class="socials">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+              repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+              quaerat vitae.
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Contact info</h3>
+            <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+              <li>
+                <span class="tst-label"> Call :</span>
+                <span>+76 (094) 754 43 7I</span>
+              </li>
+              <li>
+                <span class="tst-label"> Write :</span>
+                <span> your.email.inbox@here.com</span>
+              </li>
+              <li>
+                <span class="tst-label"> Find us :</span>
+                <span> Canada, Toronto, Avenue 31B,</span>
+              </li>
+            </ul>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Gallery</h3>
+            <div class="gallery-container">
+              <div class="gallery-wrapper">
+                <!-- Each image -->
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp"
+                    alt="Food 2"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/blog-2-140x140.jpg.webp"
+                    alt="Food 1"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp"
+                    alt="Food 3"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp"
+                    alt="Food 4"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp"
+                    alt="Food 5"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Custom navigation -->
+              <div class="gallery-controls">
+                <a href="#">READ MORE</a>
+                <div class="nav-controls">
+                  <div class="gallery-prev">
+                    <i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="gallery-next">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+            <p>© Tastyc 2022 . All rights reserved.</p>
+          </div>
+          <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+            <a href="#">Back to Top</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="./assets/js/contact.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+  </body>
+</html>
