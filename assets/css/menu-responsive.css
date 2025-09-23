@@ -1,0 +1,177 @@
+@media(max-width:542px){
+    .hero-section .main-text h1 {
+       font-size: 4.4rem;
+       text-align: center;
+    }
+}
+@media(max-width:500px){
+  .menu-1 .swiper-wrapper .swiper-slide .row .content{
+    align-items: stretch;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content{
+    align-items: stretch;
+  }
+  .menu-1 .swiper-wrapper .swiper-slide .row .content>a img{
+    height: 100%;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content>a img{
+    height: 100%;
+  }
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1{
+      padding: 20px 0;
+  }
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t2{
+    padding: 20px 30px 20px 0;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1{
+      padding: 20px 0;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t2{
+    padding: 20px 30px 20px 0;
+  }
+}
+
+@media(max-width:390px){
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 span {
+        font-size: 0.6rem !important;
+  }
+  .menu-1 .swiper-wrapper .swiper-slide .row .content {
+    gap: 13px;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 span {
+        font-size: 0.6rem !important;
+  }
+  .menu-extra .swiper-wrapper .swiper-slide .row .content {
+    gap: 13px;
+  }
+}
+
+@media(max-width:472px){
+    .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 span {
+        font-size: 0.7rem;
+    }
+    .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 span {
+        font-size: 0.65rem;
+    }
+    .menu-2 .swiper-2 .slider {
+       flex-direction: column;
+       gap: 20px;
+       align-items: center;
+    }
+    .menu-2 .swiper-2 .slider a {
+       width: fit-content;
+       padding: 18px 39px;
+    }
+}
+@media(max-width:504px){
+    .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 a {
+        font-size: 1.18rem;
+        font-weight: 800;
+    }
+    .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 a {
+        font-size: 1.18rem;
+        font-weight: 800;
+    }
+}
+@media(max-width:768px){
+    .menu-1 .swiper-pagination {
+       flex-direction: column;
+    }
+    .menu-extra .swiper-pagination {
+       flex-direction: column;
+    }
+}
+@media(max-width:991px){
+  .reservation .container .content .row .col-lg-6:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reservation .container .content span:first-child {
+      left: 0px;
+      text-align: center;
+      width: 100%;
+  }
+  .reservation .container .content span:first-child::after {
+      top:-20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .reservation .container .content span:nth-child(2) h1{
+    text-align: center;
+  }
+  .reservation .container .content span:nth-child(3){
+    text-align: center;
+  }
+  .reservation .container .content {
+    align-items: center;
+  }
+  .reservation .container .content .row{
+    gap: 40px;
+  }
+  .reservation .container .content .row .col-lg-6:first-child .content {
+    padding: 20px 0px;
+  }
+  .working-hours-content{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    gap:15px;
+ }
+
+ .working-hours-content h6{
+    padding: 0;
+ }
+ .working-hours-content h6::before{
+   left: 34.5%;
+   top: -1.2rem;
+   width: 32px;
+ }
+ .working-hours-content h1{
+    font-size: 2.5rem;
+ }
+ .working-hours-content .working-hours-btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+   
+ }
+ .working-hours-content .working-hours-btn-wrapper .booking-table-btn{
+
+    padding: 17px 55px;
+ }
+ .working-hours-time{
+     width: 22.06rem;
+ }
+ .working-hours-row{
+    justify-content: center;
+     margin: 0;
+
+ } 
+}
+@media(max-width:1072px){
+  .reservation .container .content {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+}
+@media(max-width:1200px){
+  .reservation .container .content span:nth-child(2) h1,.reservation .container .content span:nth-child(3){
+    padding-right: 0;
+  }
+}
+
+@media(min-width:992px)and (max-width: 1280px){
+  .working-hours-time{
+     width: 19rem;
+     
+  }
+  .working-hours-row{
+    justify-content:center;
+    margin-right: 0;
+  }
+}
