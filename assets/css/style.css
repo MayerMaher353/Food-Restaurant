@@ -478,7 +478,7 @@ h2 {
 }
 /* -------------------------------menu section---------------------- */
 /* menu -item color #08191B */
-#menu-section {
+#home-menu {
   position: relative;
   padding: 5rem 0;
   background-image: url(../images/bg.jpg);
@@ -488,7 +488,7 @@ h2 {
   background-repeat: no-repeat;
   color: var(--text-color);
 }
-#menu-section .overlay{
+#home-menu .overlay{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -496,11 +496,11 @@ h2 {
   left: 0;
   background-image: linear-gradient(180deg, rgba(4, 25, 29, .7) 0%, rgba(4, 25, 29, .7) 20%);
 }
-#menu-section .container{
+#home-menu .container{
   position: relative;
   z-index: 1;
 }
-#menu-section .row{
+#home-menu .row{
   justify-content: center;
   row-gap: 1rem;
   /* column-gap: 5rem; */
@@ -529,11 +529,11 @@ h2 {
     border-radius: 7px;
     left: 3.1rem;
 }
-#menu-section .separator {
+#home-menu .separator {
   border-top: 2px solid #f76e2a54 ; 
   margin: 0rem 0 1rem 0;
 }
-.menu-section-item{
+.home-menu-item{
   display: flex;
   gap: 0.7rem;
   padding: 1.3rem 0.7rem;

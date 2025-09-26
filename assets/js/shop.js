@@ -19,7 +19,7 @@
 //galary footer swiper
 const gallerySlider = new Swiper(".gallery-container", {
   loop: true,
-  slidesPerView: "auto",   // 👈 auto respects fixed CSS
+  slidesPerView: "auto",   //  auto respects fixed CSS
   spaceBetween: 13,
   navigation: {
     nextEl: ".gallery-next",
@@ -32,7 +32,7 @@ const gallerySlider = new Swiper(".gallery-container", {
 
 
 
-// elements (لازم ييجوا الأول)
+// elements (must be declared first)
 const prevArrow = document.querySelector(".swiper-prev");
 const nextArrow = document.querySelector(".swiper-next");
 const pageIndicator = document.getElementById("page-indicator");
@@ -170,7 +170,7 @@ function rebuildSlidesFromFiltered(perSlide = 6) {
       } catch(e){}
     }
 
-    // ✅ update indicator immediately
+    //  update indicator immediately
     updatePage(0, 0);
 
     console.log("rebuildSlides: 0 visible products");
@@ -205,7 +205,7 @@ function rebuildSlidesFromFiltered(perSlide = 6) {
       swiper.slideTo(0);
       swiper.params.loop = true;
 
-      // ✅ update indicator immediately with new slide count
+      // update indicator immediately with new slide count
       updatePage(swiper.realIndex, swiper.slides.length);
 
     } catch(e){}
@@ -214,71 +214,7 @@ function rebuildSlidesFromFiltered(perSlide = 6) {
   console.log("rebuildSlides: visible products =", visibleProducts.length, "slides =", groups.length);
 }
 
-// function rebuildSlidesFromFiltered(perSlide = 6) {
-//   const source = ensureProductsSource();
-//   const visibleProducts = Array.from(source.querySelectorAll(".product[data-filtered='1']"));
-//   const wrapper = document.querySelector(".swiper-wrapper");
-//   if (!wrapper) return console.warn("swiper-wrapper not found.");
 
-//   // temporarily disable Swiper loop to avoid missing slides
-//   if (typeof myProductSwiper !== "undefined") myProductSwiper.params.loop = false;
-
-//   // clear existing slides
-//   if (typeof myProductSwiper !== "undefined" && myProductSwiper.removeAllSlides) {
-//     myProductSwiper.removeAllSlides();
-//   } else {
-//     wrapper.innerHTML = "";
-//   }
-
-//   if (visibleProducts.length === 0) {
-//     const slide = document.createElement("div");
-//     slide.className = "swiper-slide";
-//     const grid = document.createElement("div");
-//     grid.className = "product-grid";
-//     grid.innerHTML = `<div class="no-results">No results</div>`;
-//     slide.appendChild(grid);
-//     wrapper.appendChild(slide);
-//     if (typeof myProductSwiper !== "undefined") {
-//       try { myProductSwiper.update(); myProductSwiper.slideTo(0); } catch(e){}
-//     }
-//     console.log("rebuildSlides: 0 visible products");
-//     return;
-//   }
-
-//   const groups = chunkArray(visibleProducts, perSlide);
-
-//   groups.forEach(group => {
-//     const slide = document.createElement("div");
-//     slide.className = "swiper-slide";
-//     const grid = document.createElement("div");
-//     grid.className = "product-grid";
-
-//     group.forEach(p => {
-//       const item = p.cloneNode(true);
-//       item.style.display = "";
-//       item.removeAttribute("aria-hidden");
-//       // trim name whitespace
-//       const h4 = item.querySelector(".product-item-name h4");
-//       if (h4) h4.innerText = h4.innerText.trim();
-//       grid.appendChild(item);
-//     });
-
-//     slide.appendChild(grid);
-//     wrapper.appendChild(slide);
-//   });
-
-//   // update Swiper & reset index
-//   if (typeof myProductSwiper !== "undefined") {
-//     try {
-//       myProductSwiper.update();
-//       myProductSwiper.slideTo(0);
-//       myProductSwiper.params.loop = true; // re-enable loop if needed
-//       updatePage(myProductSwiper.realIndex, myProductSwiper.slides.length);
-//     } catch(e){}
-//   }
-
-//   console.log("rebuildSlides: visible products =", visibleProducts.length, "slides =", groups.length);
-// }
 
 /* ----------------- apply filters ----------------- */
 function applyFilters() {
@@ -400,18 +336,6 @@ document.querySelectorAll(".tag-btn").forEach(btn => {
   });
 });
 
-// Category filter
-// document.querySelectorAll(".categories a").forEach(link => {
-//   link.addEventListener("click", e => {
-//     e.preventDefault();
-//     document.querySelectorAll(".categories a").forEach(l =>
-//       l.classList.remove("active")
-//     );
-//     link.classList.add("active");
-//     applyFilters();
-    
-//   });
-// });
 
 // Category filter
 document.querySelectorAll(".categories a").forEach(link => {
@@ -441,15 +365,6 @@ document.querySelectorAll(".categories a").forEach(link => {
     applyFilters();
   });
 });
-
-
-
-
-
-
-
-
-
 
 
 // Search filter

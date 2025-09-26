@@ -65,6 +65,8 @@
   .section-2 .gg{
     padding: 10px;
   }
+  
+  
 }
 @media(max-width:991px){
     .subscribe .container p:first-child {
@@ -313,6 +315,10 @@ footer .container .row{
       "products"
       "categories";  
   }
+  .shop-hero .main-text p {
+ font-size: 10px;
+
+}
   .shop-products{
     margin-bottom: 2rem;
   }
@@ -379,6 +385,9 @@ footer h3{
   gap: 30px;
 }
 
+.shop-hero .main-text p {
+  font-size: 16px;
+}
   
 /* end shop page */
 }
@@ -413,7 +422,6 @@ footer h3{
 
 
 
-
 @media(min-width:992px)and (max-width: 1280px){
 
 /* start menu */
@@ -439,8 +447,6 @@ footer h3{
 
 
 /* end menu */
-
-
 
 
 .subscribe .container .col>div #email{
