@@ -73,6 +73,17 @@
         font-weight: 800;
     }
 }
+@media(max-width:767px){
+  #reservation-window .content .ele input{
+      margin: 20px 0;
+  }
+  #reservation-window .content .ele-e input{
+     margin:20px 0;
+  }
+  #reservation-window .content .ele .nice-select{
+    height: auto;
+  }
+}
 @media(max-width:768px){
     .menu-1 .swiper-pagination {
        flex-direction: column;
@@ -111,6 +122,9 @@
   }
   .reservation .container .content .row .col-lg-6:first-child .content {
     padding: 20px 0px;
+  }
+  #reservation-window .content{
+    max-width: 90% !important;
   }
   .working-hours-content{
     justify-content: center;

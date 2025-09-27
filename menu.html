@@ -1,94 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/icon"
-      href="./assets/images/logo/logo-sm.png"
-    />
-    <title>Tastyc - Seafood Restaurant</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Render All Elements Normally -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <!-- Font Awesome 6.5 CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
 
-    <!-- Main Template CSS File -->
-    <link rel="stylesheet" href="./assets/css/menu.css" />
-    <link rel="stylesheet" href="./assets/css/menu-responsive.css" />
-    <!-- Swiper CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/icon" href="./assets/images/logo/logo-sm.png" />
+  <title>Tastyc - Seafood Restaurant</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Render All Elements Normally -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <!-- Font Awesome 6.5 CDN -->
 
-  </head>
-  <body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
+  <!-- Main Template CSS File -->
+  <link rel="stylesheet" href="./assets/css/menu.css" />
+  <link rel="stylesheet" href="./assets/css/menu-responsive.css" />
 
-    <!-- start of the header -->
-    <header class="px-3" id="main-header">
-      <div class="container-fluid px-2">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid logo-nav d-flex">
-            <!-- logo -->
-            <a class="navbar-brand logo d-flex align-items-center" href="#">
-              <div class="logo-holder">
-                <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
-              </div>
-            </a>
-            <!-- toggle button for small screens -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNavbar"
-              aria-controls="mainNavbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
+
+</head>
+
+<body>
+
+  <!-- start of the header -->
+  <header class="px-3" id="main-header">
+    <div class="container-fluid px-2">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid logo-nav d-flex">
+          <!-- logo -->
+          <a class="navbar-brand logo d-flex align-items-center" href="#">
+            <div class="logo-holder">
+              <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
+            </div>
+          </a>
+          <!-- toggle button for small screens -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- nav links -->
+          <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" aria-label="Close">
+              <i class="fas fa-xmark"></i>
             </button>
-            <!-- nav links -->
-            <div class="collapse navbar-collapse nav-links" id="mainNavbar">
-              <button
-                type="button"
-                class="btn-close exit-menu ms-auto d-lg-none"
-                aria-label="Close"
-              >
-                <i class="fas fa-xmark"></i>
-              </button>
-              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
-                <li class="nav-item d-flex align-items-center home">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <!-- dropdown -->
-                <!-- <li class="nav-item dropdown">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+              <li class="nav-item d-flex align-items-center home">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <!-- dropdown -->
+              <!-- <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -110,1133 +83,1190 @@
                     </li>
                   </ul>
                 </li> -->
-                <li class="nav-item">
-                  <a class="nav-link after-menu" href="#">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Order</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="shop.html">shop</a>
-                </li>
-              </ul>
+              <li class="nav-item">
+                <a class="nav-link after-menu" href="#">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletter.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">shop</a>
+              </li>
+            </ul>
+          </div>
+          <!-- button + cart -->
+          <div class="d-flex align-items-center header-right-side">
+            <button>RESERVATION</button>
+            <div class="icon-shopping position-relative">
+              <a href="#">
+                <i class="fas fa-cart-shopping"></i>
+              </a>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
             </div>
-            <!-- button + cart -->
-            <div class="d-flex align-items-center header-right-side">
-              <button>RESERVATION</button>
-              <div class="icon-shopping position-relative">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end the header -->
+
+  <!-- hero section -->
+  <div class="hero-section">
+    <video src="./assets/videos/seavideo.mp4" muted playsinline autoplay loop></video>
+    <div class="shop-overlay"></div>
+    <div class="container">
+      <div class="main-text">
+        <h1>OUR MENU</h1>
+      </div>
+    </div>
+  </div>
+  <!-- end hero section -->
+
+  <!-- start menu-1 -->
+  <div class="menu-1">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="swiper swiper-1">
+            <div class="swiper-pagination">
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span>OUR MENU</span>
+                  <h1> All Dishes</h1>
+                  <span>
+                    Porro eveniet, autem ipsam corrupti consectetur cum.
+                    <br>
+                    Repudiandae dignissimos fugiat sit nam.
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/about2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Boiled crayfish
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>5.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Crabs
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Casserole
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>4.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Fish burger
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>1.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Fish soup
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>20.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Salmon
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>1.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/blog-1-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Paella with seafood
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Salmon with tomatoes
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>20.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span> 01 MENU</span>
+                  <h1>Saltwater Fish</h1>
+                  <span>
+                    Porro eveniet, autem ipsam corrupti consectetur cum.
+                    <br>
+                    Repudiandae dignissimos fugiat sit nam.
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Salmon with tomatoes
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>20.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/about2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Boiled crayfish
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>5.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Fish soup
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>20.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Salmon
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>1.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span> 02 MENU</span>
+                  <h1>Farmed Fish</h1>
+                  <span>
+                    Porro eveniet, autem ipsam corrupti consectetur cum.
+                    <br>
+                    Repudiandae dignissimos fugiat sit nam.
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Fish burger
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>1.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/blog-1-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Paella with seafood
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span> 03 MENU</span>
+                  <h1> Crustaceans </h1>
+                  <span>
+                    Porro eveniet, autem ipsam corrupti consectetur cum.
+                    <br>
+                    Repudiandae dignissimos fugiat sit nam.
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Crabs
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.50</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Casserole
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>4.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end menu-1 -->
+
+  <!-- start extra-menu -->
+  <div class="menu-extra">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="swiper swiper-extra">
+            <div class="swiper-pagination">
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span>MENU</span>
+                  <h1> All Drinks</h1>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/drink-1.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Cocktail
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>4.26</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/drink-2.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Iced Diet Lemon Soda
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>2.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/drink-3.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Margarita
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>4.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/drink-4.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Smoothie
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/drink-5.webp">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Strawberry Lemonade soda
+                        </a>
+                        <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>3.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span>MENU</span>
+                  <h1>Desserts</h1>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/desert-1.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Summer Berry and Coconut Tart
+                        </a>
+                        <span>Raspberries, blackberries, blueberries.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>12.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/desert-2.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Pumpkin Cookies Cream Cheese
+                        </a>
+                        <span>Pumpkin, sugar, butter, eggs</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>10.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/desert-3.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Double Chocolate Cupcakes
+                        </a>
+                        <span>Chocolate, eggs, vanilla, milk</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>7.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span>MENU</span>
+                  <h1>Soups</h1>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-1.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Terrific Turkey Chili
+                        </a>
+                        <span>Turkey, oregano, tomato paste, peppers</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>8.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-2.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Italian Sausage Tortellini
+                        </a>
+                        <span>Cheese tortellini, sausage, garlic, carrots, zucchini</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>9.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-3.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Cream of Asparagus Soup
+                        </a>
+                        <span>Asparagus, potato, celery, onion, pepper</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>10.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-4.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Italian Sausage Soup
+                        </a>
+                        <span>Italian sausage, garlic, carrots, zucchini</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>9.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-5.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Creamy Chicken & Wild Rice Soup
+                        </a>
+                        <span>Cooked chicken, salt, butter, heavy cream</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>12.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/soup-6.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Ham and Potato Soup
+                        </a>
+                        <span>Potatoes, ham, celery, onion, milk</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>10.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="menu-title">
+                  <span>MENU</span>
+                  <h1>Salads</h1>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/salad-1.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Caprese Salad
+                        </a>
+                        <span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>15.79</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/salad-2.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Avocado Tuna Salad
+                        </a>
+                        <span>Donec id elit non mi porta gravida at eget metus.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>10.99</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/salad-3.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Fruit Salad
+                        </a>
+                        <span>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>5.89</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="content">
+                      <a href="#">
+                        <img src="./assets/images/menu images/salad-4.jpg">
+                      </a>
+                      <div class="t1">
+                        <a href="#">
+                          Salmon Salad
+                        </a>
+                        <span>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                        </span>
+                      </div>
+                      <div class="t2">
+                        <span class="span-wrapper">
+                          <span class="sign">€</span>
+                          <span>9.00</span>
+                        </span>
+                        <a href="#">
+                          <i class="fas fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end extra-menu -->
+
+
+  <!-- start reservation -->
+  <div class="reservation">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 content">
+          <span>RESERVATION</span>
+          <span>
+            <h1>THIS EVENING WILL BE GREAT!</h1>
+          </span>
+          <span>Quaerat debitis, vel, sapiente dicta sequi
+            labore porro pariatur harum expedita.</span>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="content">
+                <button id="open-reservation">RESERVATION</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <a href="contact.html">GET IN TOUCH</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="./assets/images/menu images/reserved.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end reservation -->
+
+  <div id="reservation-window" class="modal" style="display: none;">
+
+    <div class="content">
+      <span class="close-btn">&times;</span>
+      <div class="title">
+        <span>Table Reservation</span>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="text" id="name" placeholder="Name" autocomplete="name">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="email" id="email" placeholder="Email" autocomplete="email">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="text" id="phone" placeholder="Phone" autocomplete="tel">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <select id="role" name="role">
+              <option selected>Person</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 or more</option>
+            </select>
+          </div>
+          <div class="col-lg-4 col-md-4 ele-e">
+            <input type="date" id="date" class="modern-date">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <select id="time" name="time">
+              <option value="Time" selected>Time</option>
+              <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 pm">12:00 pm</option>
+              <option value="1:00 pm">1:00 pm</option>
+              <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 pm">10:00 pm</option>
+            </select>
+          </div>
+          <div class="col-lg-12 ele">
+            <textarea id="message" placeholder="Message"></textarea>
+          </div>
+        </div>
+      </div>
+      <button type="submit">RESERVE A TABLE</button>
+    </div>
+
+  </div>
+
+  <!-- start menu-2 -->
+
+  <div class="menu-2">
+    <div class="menu-2-title">
+      <span>MENU</span>
+      <h1>Special Proposals Menu</h1>
+      <span>
+        Porro eveniet, autem ipsam corrupti consectetur cum.
+        <br>
+        Repudiandae dignissimos fugiat sit nam.
+      </span>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="swiper swiper-2">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
                 <a href="#">
-                  <i class="fas fa-cart-shopping"></i>
+                  <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
                 </a>
-                <span
-                  id="cart-count"
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
-                  >0</span
-                >
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end the header -->
-
-    <!-- hero section -->
-    <div class="hero-section">
-      <video src="./assets/videos/seavideo.mp4" muted playsinline autoplay loop></video>
-      <div class="shop-overlay"></div>
-      <div class="container">
-        <div class="main-text">
-          <h1>OUR MENU</h1>
-        </div>
-      </div>
-    </div>
-    <!-- end hero section -->
-    
-    <!-- start menu-1 -->
-    <div class="menu-1">
-       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="swiper swiper-1">
-              <div class="swiper-pagination">
-              </div>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span>OUR MENU</span>
-                    <h1> All Dishes</h1>
-                    <span> 
-                        Porro eveniet, autem ipsam corrupti consectetur cum. 
-                        <br>
-                        Repudiandae dignissimos fugiat sit nam. 
-                    </span>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/about2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Boiled crayfish
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>5.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Crabs
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Casserole 
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>4.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Fish burger
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>1.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Fish soup
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>20.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Salmon
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>1.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/blog-1-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Paella with seafood
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                     Salmon with tomatoes 
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>20.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span> 01 MENU</span>
-                    <h1>Saltwater Fish</h1>
-                    <span> 
-                        Porro eveniet, autem ipsam corrupti consectetur cum. 
-                        <br>
-                        Repudiandae dignissimos fugiat sit nam. 
-                    </span>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Salmon with tomatoes
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>20.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/about2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Boiled crayfish
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>5.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Fish soup
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>20.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Salmon
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>1.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span> 02 MENU</span>
-                    <h1>Farmed Fish</h1>
-                    <span> 
-                        Porro eveniet, autem ipsam corrupti consectetur cum. 
-                        <br>
-                        Repudiandae dignissimos fugiat sit nam. 
-                    </span>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Fish burger
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>1.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/blog-1-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Paella with seafood
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span> 03 MENU</span>
-                    <h1> Crustaceans </h1>
-                    <span> 
-                        Porro eveniet, autem ipsam corrupti consectetur cum. 
-                        <br>
-                        Repudiandae dignissimos fugiat sit nam. 
-                    </span>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Crabs
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.50</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Casserole 
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>4.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end menu-1 -->
-
-    <!-- start extra-menu -->
-    <div class="menu-extra">
-       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="swiper swiper-extra">
-              <div class="swiper-pagination">
-              </div>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span>MENU</span>
-                    <h1> All Drinks</h1>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/drink-1.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Cocktail
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>4.26</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/drink-2.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Iced Diet Lemon Soda
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>2.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/drink-3.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Margarita 
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>4.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/drink-4.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Smoothie
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/drink-5.webp">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Strawberry Lemonade soda
-                                </a>
-                                <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>3.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span>MENU</span>
-                    <h1>Desserts</h1>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/desert-1.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Summer Berry and Coconut Tart
-                                </a>
-                                <span>Raspberries, blackberries, blueberries.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>12.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/desert-2.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Pumpkin Cookies Cream Cheese
-                                </a>
-                                <span>Pumpkin, sugar, butter, eggs</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>10.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/desert-3.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Double Chocolate Cupcakes
-                                </a>
-                                <span>Chocolate, eggs, vanilla, milk</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>7.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span>MENU</span>
-                    <h1>Soups</h1>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-1.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Terrific Turkey Chili
-                                </a>
-                                <span>Turkey, oregano, tomato paste, peppers</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>8.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-2.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                    Italian Sausage Tortellini
-                                </a>
-                                <span>Cheese tortellini, sausage, garlic, carrots, zucchini</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>9.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-3.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Cream of Asparagus Soup
-                                </a>
-                                <span>Asparagus, potato, celery, onion, pepper</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>10.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-4.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Italian Sausage Soup
-                                </a>
-                                <span>Italian sausage, garlic, carrots, zucchini</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>9.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-5.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Creamy Chicken & Wild Rice Soup
-                                </a>
-                                <span>Cooked chicken, salt, butter, heavy cream</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>12.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/soup-6.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Ham and Potato Soup
-                                </a>
-                                <span>Potatoes, ham, celery, onion, milk</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>10.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="menu-title">
-                    <span>MENU</span>
-                    <h1>Salads</h1>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/salad-1.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Caprese Salad
-                                </a>
-                                <span>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>15.79</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/salad-2.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                   Avocado Tuna Salad
-                                </a>
-                                <span>Donec id elit non mi porta gravida at eget metus.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>10.99</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/salad-3.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Fruit Salad
-                                </a>
-                                <span>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>5.89</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <a href="#">
-                                <img src="./assets/images/menu images/salad-4.jpg">
-                            </a>
-                            <div class="t1">
-                                <a href="#">
-                                  Salmon Salad
-                                </a>
-                                <span>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </span>
-                            </div>
-                            <div class="t2">
-                                <span class="span-wrapper">
-                                    <span class="sign">€</span>
-                                    <span>9.00</span>
-                                </span>
-                                <a href="#">
-                                    <i class="fas fa-cart-shopping"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end extra-menu -->
-
-    
-    <!-- start reservation -->
-    <div class="reservation">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 content">
-            <span>RESERVATION</span>
-            <span>
-              <h1>THIS EVENING WILL BE GREAT!</h1>
-            </span>
-            <span>Quaerat debitis, vel, sapiente dicta sequi
-             labore porro pariatur harum expedita.</span>
-             <div class="row">
-              <div class="col-lg-6">
                 <div class="content">
-                 <a href="#">RESERVATION</a>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                 <a href="#">GET IN TOUCH</a>
-              </div>
-             </div>
-          </div>
-          <div class="col-lg-6">
-              <img src="./assets/images/menu images/reserved.png">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end reservation -->
-
-    <!-- start menu-2 -->
-
-    <div class="menu-2">
-      <div class="menu-2-title">
-        <span>MENU</span>
-        <h1>Special Proposals Menu</h1>
-        <span> 
-                Porro eveniet, autem ipsam corrupti consectetur cum.
-                <br>
-                Repudiandae dignissimos fugiat sit nam.       
-        </span>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="swiper swiper-2">
-              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <a href="#">
-                      <img src="./assets/images/menu images/cooked-fish-with-potatoes-700x456.jpg.webp">
-                    </a>
-                    <div class="content">
-                      <a href="#">
-                         Salmon with tomatoes 
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>25.99</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            20.99
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                      <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
-                    </a>
-                    <div class="content">
-                      <a href="#">
-                         Crabs
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>4.50</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            3.50
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
                   <a href="#">
-                      <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
+                    Salmon with tomatoes
                   </a>
-                  <div class="content">
-                      <a href="#">
-                         Casserole 
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>5.99</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            4.99
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>25.99</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        20.99
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./assets/images/menu images/gallery-i-4-700x456.jpg.webp">
+                </a>
+                <div class="content">
                   <a href="#">
-                      <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
+                    Crabs
                   </a>
-                  <div class="content">
-                      <a href="#">
-                         Fish burger
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>2.99</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            1.99
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>4.50</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        3.50
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                      <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
-                    </a>
-                    <div class="content">
-                      <a href="#">
-                         Fish soup
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>25.99</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            20.99
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                      <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
-                    </a>
-                    <div class="content">
-                      <a href="#">
-                         Salmon 
-                      </a>
-                      <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                      <div>
-                        <div class="price">
-                          <span>
-                            <span class="sign">€</span>
-                            <del>1.99</del>
-                          </span>
-                          <br>
-                          <span>
-                            <span class="sign">€</span>
-                            1.50
-                          </span>
-                        </div>
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
-                      </div>
-                    </div>
-                </div>
-
               </div>
-              <div class="slider">
-                <a href="shop.html">ALL PRODUCTS</a>
-                <div class="button">
-                  <p>SLIDER NAVIGATION</p>
-                  <div class="swiper-button-prev">
-                    <i class="fas fa-arrow-left"></i>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./assets/images/menu images/gallery-i-6-700x456.jpg.webp">
+                </a>
+                <div class="content">
+                  <a href="#">
+                    Casserole
+                  </a>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>5.99</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        4.99
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
                   </div>
-                  <div class="swiper-button-next">
-                    <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./assets/images/menu images/gallery-i-2-700x456.jpg.webp">
+                </a>
+                <div class="content">
+                  <a href="#">
+                    Fish burger
+                  </a>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>2.99</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        1.99
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
                   </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./assets/images/menu images/blog-2-700x456.jpg.webp">
+                </a>
+                <div class="content">
+                  <a href="#">
+                    Fish soup
+                  </a>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>25.99</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        20.99
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img src="./assets/images/menu images/top-view-salmon-700x456.jpg.webp">
+                </a>
+                <div class="content">
+                  <a href="#">
+                    Salmon
+                  </a>
+                  <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+                  <div>
+                    <div class="price">
+                      <span>
+                        <span class="sign">€</span>
+                        <del>1.99</del>
+                      </span>
+                      <br>
+                      <span>
+                        <span class="sign">€</span>
+                        1.50
+                      </span>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="slider">
+              <a href="shop.html">ALL PRODUCTS</a>
+              <div class="button">
+                <p>SLIDER NAVIGATION</p>
+                <div class="swiper-button-prev">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>
@@ -1244,177 +1274,165 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- end menu-2 -->
+  <!-- end menu-2 -->
 
-    <!-- start woking-hours -->
-    
-    <div class="working-hours">
-      <img src="./assets/images/hours_bg.jpg" alt="" />
-      <div class="working-hours-overlay"></div>
-      <div class="container">
-        <div class="row working-hours-row">
-          <div class="working-hours-content col-lg-8 col-md-8 col-sm-12">
-            <h6>RESERVATION</h6>
-            <h1>WORKING HOURS</h1>
-            <p>Roloem, beatae dolorum, praesentium itaque et quam quaerat.</p>
-            <div class="working-hours-btn-wrapper">
-              <a href="#" class="booking-table-btn">BOOK A TABLE</a>
-              <a href="#" class="contact-us-btn">CONTACT US</a>
-            </div>
+  <!-- start woking-hours -->
+
+  <div class="working-hours">
+    <img src="./assets/images/hours_bg.jpg" alt="" />
+    <div class="working-hours-overlay"></div>
+    <div class="container">
+      <div class="row working-hours-row">
+        <div class="working-hours-content col-lg-8 col-md-8 col-sm-12">
+          <h6>RESERVATION</h6>
+          <h1>WORKING HOURS</h1>
+          <p>Roloem, beatae dolorum, praesentium itaque et quam quaerat.</p>
+          <div class="working-hours-btn-wrapper">
+            <a href="reservation.html" class="booking-table-btn">BOOK A TABLE</a>
+            <a href="contact.html" class="contact-us-btn">CONTACT US</a>
           </div>
-          <div class="working-hours-time col-lg-4 col-md-4 col-sm-12">
-            <h6>SUNDAY TO TUESDAY</h6>
-            <ul>
-              <li>09 <span>:</span> 00</li>
-              <li>22 <span>:</span> 00</li>
-            </ul>
-            <h6>FRIDAY TO SATURDAY</h6>
-            <ul>
-              <li>11 <span>:</span> 00</li>
-              <li>19 <span>:</span> 00</li>
-            </ul>
-          </div>
+        </div>
+        <div class="working-hours-time col-lg-4 col-md-4 col-sm-12">
+          <h6>SUNDAY TO TUESDAY</h6>
+          <ul>
+            <li>09 <span>:</span> 00</li>
+            <li>22 <span>:</span> 00</li>
+          </ul>
+          <h6>FRIDAY TO SATURDAY</h6>
+          <ul>
+            <li>11 <span>:</span> 00</li>
+            <li>19 <span>:</span> 00</li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- end working-hours -->
+  <!-- end working-hours -->
 
-    <!-- start footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="logo-holder">
-              <img src="./assets/images/logo/logo-sm.png" alt="" />
-            </div>
-          </div>
-          <div class="socail-col col-lg-6 col-md-6 col-sm-6">
-            <div class="socials">
-              <a href="#">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-x-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
-          <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
-            <h3>About us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
-              repudiandae neque illum aspernatur fugiat maiores id magni, modi,
-              quaerat vitae.
-            </p>
-            <a href="#">READ MORE</a>
-          </div>
-          <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
-            <h3>Contact info</h3>
-            <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
-              <li>
-                <span class="tst-label"> Call :</span>
-                <span>+76 (094) 754 43 7I</span>
-              </li>
-              <li>
-                <span class="tst-label"> Write :</span>
-                <span> your.email.inbox@here.com</span>
-              </li>
-              <li>
-                <span class="tst-label"> Find us :</span>
-                <span> Canada, Toronto, Avenue 31B,</span>
-              </li>
-            </ul>
-            <a href="#">READ MORE</a>
-          </div>
-          <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
-            <h3>Gallery</h3>
-            <div class="gallery-container">
-              <div class="gallery-wrapper">
-                <!-- Each image -->
-                <div class="gallery-item">
-                  <img
-                    src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp"
-                    alt="Food 2"
-                  />
-                  <div class="overlay">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </div>
-                <div class="gallery-item">
-                  <img
-                    src="./assets/images/footer swiper/blog-2-140x140.jpg.webp"
-                    alt="Food 1"
-                  />
-                  <div class="overlay">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </div>
-                <div class="gallery-item">
-                  <img
-                    src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp"
-                    alt="Food 3"
-                  />
-                  <div class="overlay">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </div>
-                <div class="gallery-item">
-                  <img
-                    src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp"
-                    alt="Food 4"
-                  />
-                  <div class="overlay">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </div>
-                <div class="gallery-item">
-                  <img
-                    src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp"
-                    alt="Food 5"
-                  />
-                  <div class="overlay">
-                    <i class="fas fa-search"></i>
-                  </div>
-                </div>
-              </div>
-              <!-- Custom navigation -->
-              <div class="gallery-controls">
-                <a href="#">READ MORE</a>
-                <div class="nav-controls">
-                  <div class="gallery-prev">
-                    <i class="fas fa-arrow-left"></i>
-                  </div>
-                  <div class="gallery-next">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
-          <div class="copyrights col-lg-6 col-md-6 col-sm-12">
-            <p>© Tastyc 2022 . All rights reserved.</p>
-          </div>
-          <div class="back-btn col-lg-6 col-md-6 col-sm-12">
-            <a href="#">Back to Top</a>
+  <!-- start footer -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="logo-holder">
+            <img src="./assets/images/logo/logo-sm.png" alt="" />
           </div>
         </div>
+        <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+          <div class="socials">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+        <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+          <h3>About us</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+            repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+            quaerat vitae.
+          </p>
+          <a href="#">READ MORE</a>
+        </div>
+        <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+          <h3>Contact info</h3>
+          <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+            <li>
+              <span class="tst-label"> Call :</span>
+              <span>+76 (094) 754 43 7I</span>
+            </li>
+            <li>
+              <span class="tst-label"> Write :</span>
+              <span> your.email.inbox@here.com</span>
+            </li>
+            <li>
+              <span class="tst-label"> Find us :</span>
+              <span> Canada, Toronto, Avenue 31B,</span>
+            </li>
+          </ul>
+          <a href="#">READ MORE</a>
+        </div>
+        <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+          <h3>Gallery</h3>
+          <div class="gallery-container">
+            <div class="gallery-wrapper">
+              <!-- Each image -->
+              <div class="gallery-item">
+                <img src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp" alt="Food 2" />
+                <div class="overlay">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="./assets/images/footer swiper/blog-2-140x140.jpg.webp" alt="Food 1" />
+                <div class="overlay">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp" alt="Food 3" />
+                <div class="overlay">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp" alt="Food 4" />
+                <div class="overlay">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp" alt="Food 5" />
+                <div class="overlay">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Custom navigation -->
+            <div class="gallery-controls">
+              <a href="#">READ MORE</a>
+              <div class="nav-controls">
+                <div class="gallery-prev">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="gallery-next">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+        <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+          <p>© Tastyc 2022 . All rights reserved.</p>
+        </div>
+        <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+          <a href="#">Back to Top</a>
+        </div>
       </div>
-    </footer>
-    <!-- start footer -->
+    </div>
+  </footer>
+  <!-- start footer -->
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="./assets/js/menu.js" defer></script>
-    <!-- Swiper JS -->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
-  </body>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+  <script src="./assets/js/menu.js" defer></script>
+
+</body>
+
 </html>
