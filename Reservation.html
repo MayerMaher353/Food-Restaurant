@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/icon"
+      href="./assets/images/logo/logo-sm.png"
+    />
+    <title>Tastyc - Seafood Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./self work/assets/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Render All Elements Normally -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- Font Awesome 6.5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="./assets/css/Reservation.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css"
+    />
+  </head>
+
+
+<body>
+ 
+  <!-- start of the header -->
+  <header class="px-3" id="main-header">
+    <div class="container-fluid px-2">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid logo-nav d-flex">
+          <!-- logo -->
+          <a class="navbar-brand logo d-flex align-items-center" href="#">
+            <div class="logo-holder">
+              <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
+            </div>
+          </a>
+          <!-- toggle button for small screens -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- nav links -->
+          <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" aria-label="Close">
+              <i class="fas fa-xmark"></i>
+            </button>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+              <li class="nav-item d-flex align-items-center home">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+
+
+              <!-- Pages -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">About Me</a></li>
+                  <li><a class="dropdown-item" href="#">Gallery</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                  <li><a class="dropdown-item" href="#">Features</a></li>
+                  <li><a class="dropdown-item" href="#">Pricing</a></li>
+                  <li><a class="dropdown-item" href="#">Our Chefs</a></li>
+                  <li><a class="dropdown-item" href="#">FAQ</a></li>
+                  <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                  <li><a class="dropdown-item" href="#">404 Page</a></li>
+                </ul>
+              </li>
+
+              <!-- Order -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="orderMenu" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Order</a>
+                <ul class="dropdown-menu" aria-labelledby="orderMenu">
+                  <li><a class="dropdown-item" href="#">Reservation (Booking Calendar)</a></li>
+                  <li><a class="dropdown-item" href="#">Reservation (Contact Form 7)</a></li>
+                  <li><a class="dropdown-item" href="#">Reservation (OpenTable)</a></li>
+                  <li><a class="dropdown-item" href="#">Reservation Popup</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            </ul>
+          </div>
+
+          <!-- button + cart -->
+          <div class="d-flex align-items-center header-right-side">
+            <button>RESERVATION</button>
+            <div class="icon-shopping position-relative">
+              <a href="#">
+                <i class="fas fa-cart-shopping"></i>
+              </a>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end of the header -->
+
+  <!-- start of the background-image -->
+  <div class="row g-0 background-image" id="home">
+    <div class="col-12 background d-flex justify-content-center align-items-center pt-0 position-relative">
+      <div class="overlay position-absolute top-0 start-0"></div>
+      <div class="background-text position-absolute z-2 text-center">
+        <h2>Reservation</h2>
+      </div>
+    </div>
+  </div>
+  <!-- end of the background-image -->
+
+  <!-- Reservation form -->
+  <div class="tst-content-frame--start tst-p-60-0">
+    <div class="container text-center">
+      <div class="tst-suptitle tst-suptitle-center tst-mb-15"> <span> Reservation </span></div>
+      <h3 class="tst-title--h tst-mb-30"> <span> Book a Table </span></h3>
+      <p class="tst-text tst-mb-60"> <span> CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW </span></p>
+    </div>
+
+    <form>
+      <div class="row g-3 mb-3">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Name" />
+        </div>
+        <div class="col-md-4">
+          <input type="email" class="form-control" placeholder="Email" />
+        </div>
+        <div class="col-md-4">
+          <input type="tel" class="form-control" placeholder="Phone" />
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-4">
+          <select class="form-select" aria-label="Select number of persons">
+            <option selected disabled>Person</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4 Persons</option>
+            <option value="5">5 Persons</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <input type="date" class="form-control" aria-label="Select date" />
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" aria-label="Select time">
+            <option selected disabled>Time</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="18:00">6:00 PM</option>
+            <option value="19:00">7:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12">
+          <textarea class="form-control" placeholder="Message"></textarea>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-orange">Reserve a Table</button>
+      </div>
+    </form>
+  </div>
+
+  
+
+  <!-- ====================== CONTACT SECTION ====================== -->
+  <section class="contact-section py-5">
+    <div class="container text-center">
+      <h6 class="contact-subtitle">Have a Questions?</h6>
+      <h2 class="contact-title">Contact Us</h2>
+      <p class="contact-description">
+        Quaerat debitis, vel, sapiente dicta sequi labore porro pariatur harum expedita.
+      </p>
+
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="contact-box">
+            <i class="fa-solid fa-envelope-open-text contact-icon"></i>
+            <h5>Email</h5>
+            <p>info@tastyc.com</p>
+            <p>reservation@tastyc.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-box">
+            <i class="fa-solid fa-phone-volume contact-icon"></i>
+            <h5>Phone</h5>
+            <p>+76 (094) 754 43 71</p>
+            <p>+76 (093) 753 43 72</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-box">
+            <i class="fa-solid fa-map-location-dot contact-icon"></i>
+            <h5>Location</h5>
+            <p>Canada, Toronto, North Avenue 31B</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start subscribe -->
+  <div class="subscribe">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>NEWSLETTER</p>
+          <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+          <p class="p">
+            Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
+          </p>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 ele">
+              <input type="text" id="email" placeholder="Enter your email here">
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 ele">
+              <button type="submit" class="btn">subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end subscribe -->
+
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="logo-holder">
+              <img src="./assets/images/logo/logo-sm.png" alt="" />
+            </div>
+          </div>
+          <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+            <div class="socials">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+              repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+              quaerat vitae.
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Contact info</h3>
+            <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+              <li>
+                <span class="tst-label"> Call :</span>
+                <span>+76 (094) 754 43 7I</span>
+              </li>
+              <li>
+                <span class="tst-label"> Write :</span>
+                <span> your.email.inbox@here.com</span>
+              </li>
+              <li>
+                <span class="tst-label"> Find us :</span>
+                <span> Canada, Toronto, Avenue 31B,</span>
+              </li>
+            </ul>
+            <a href="#">READ MORE</a>
+          </div>
+          <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+            <h3>Gallery</h3>
+            <div class="gallery-container">
+              <div class="gallery-wrapper">
+                <!-- Each image -->
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp"
+                    alt="Food 2"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/blog-2-140x140.jpg.webp"
+                    alt="Food 1"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp"
+                    alt="Food 3"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp"
+                    alt="Food 4"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp"
+                    alt="Food 5"
+                  />
+                  <div class="overlay">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Custom navigation -->
+              <div class="gallery-controls">
+                <a href="#">READ MORE</a>
+                <div class="nav-controls">
+                  <div class="gallery-prev">
+                    <i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="gallery-next">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+          <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+            <p>© Tastyc 2022 . All rights reserved.</p>
+          </div>
+          <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+            <a href="#">Back to Top</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Bootstrap swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+<script> // ================== Exit Menu Button ==================
+  const exitMenuButton = document.querySelector(".exit-menu");
+  const navbarCollapse = document.getElementById("mainNavbar");
+
+  if (exitMenuButton && navbarCollapse) {
+    exitMenuButton.addEventListener("click", function () {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+      collapseInstance.hide();
+    });
+  }
+</script>
+  
+    <script src="./assets/js/Reservation.js" defer></script>
+  </body>
+</html>
+
+</html>
