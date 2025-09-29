@@ -90,7 +90,7 @@ header .icon-shopping i {
   position: relative;
 }
 
-.nav-links .navbar-nav .nav-item .after-home::after {
+.nav-links .navbar-nav .nav-item .contact-link::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -98,7 +98,7 @@ header .icon-shopping i {
   ;
   position: absolute;
   background-color: var(--main-color);
-  top: 138%;
+  top: 113%;
   left: 0;
   animation: active 0.3s 1 linear;
 }

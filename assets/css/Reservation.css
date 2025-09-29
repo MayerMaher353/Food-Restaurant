@@ -87,15 +87,15 @@ header.scrolled .icon-shopping i {
   position: relative;
 }
 
-.nav-links .navbar-nav .nav-item .after-home::after {
+.nav-links .navbar-nav .nav-item .order-link::after {
   content: "";
   width: 53px;
   height: 3px;
   border-radius: 12px;
   position: absolute;
   background-color: var(--main-color);
-  top: 100%;
-  left: 6%;
+  top: 113%;
+  left: 0%;
 }
 
 .navbar .nav-item .nav-link {
