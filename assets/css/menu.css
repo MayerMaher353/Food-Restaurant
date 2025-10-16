@@ -99,7 +99,7 @@ header .icon-shopping i {
   ;
   position: absolute;
   background-color: var(--main-color);
-  top: 113%;
+  top: 138%;
   left: 0;
   animation: active 0.3s 1 linear;
 }
