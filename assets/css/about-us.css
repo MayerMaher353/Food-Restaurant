@@ -265,7 +265,284 @@ header .icon-shopping i {
   line-height: -4px;
 }
 
+/* start about us */
+
+
+.about-us-main-text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-family-secondary);
+}
+
+.about-us-main-text h5{
+    font-family: var(--font-family);
+    position: relative;
+}
+.about-us-main-text h5::before{
+    position: absolute;
+    content: "";
+      width: 37px;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    top: -14px;
+        right: 48.3%;
+}
+
+.about-us-main-text h2{
+  font-size: 3.5rem;
+
+}
+
+.about-us-main-text p{
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.about-icon-wrapper{
+  margin: 5rem 0;
+  text-align: center;
+}
+.about-icon-wrapper .row{
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.about-icon {
+  flex: 0 0 7rem;
+}
+
+
+.about-icon img{
+  opacity: 0.2;
+      width: 5rem;
+    height: 5rem;
+    transition: all ease 0.3s;
+}
+.about-icon h6{
+  color: #869193d2;
+   transition: all ease 0.3s;
+}
+
+.about-icon:hover img,.about-icon:hover h6{
+  opacity: 1;
+  color: var(--colorFont);
+}
+
+
+
+
+
+
+
+
+.about-video {
+  position: relative;
+  width: 100%;
+}
+.about-video .image-box{
+  position: relative;
+   width: 100%;
+  height: 90vh;
+  overflow: hidden;
+ 
+}
+
+.about-video .image-box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  z-index: -1;
+}
+
+ .about-video .image-box  .about-image-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient( rgba(6, 34, 39, 0.534) );
+  object-fit:cover;
+
+}
+ .about-video .image-box  .play-youtube-btn{
+   position: absolute;
+  background-color: var(--main-color);
+   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+  padding: 1rem 1.4rem;
+  transition: all ease 0.5s;
+
+}
+
+ .about-video .image-box  .play-youtube-btn:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+ }
+
+
+
+/* end about us */
+
+/* start skills */
+.skills{
+  background-color: #F3F2F0;
+  margin-top: 2rem;
+  padding: 2rem 0 3rem 0;
+}
+.skills-main-text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: var(--font-family-secondary);
+  margin: 4rem 0;
+}
+
+.skills-main-text h5{
+    font-family: var(--font-family-secondary);
+    position: relative;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing:1px;
+}
+.skills-main-text h5::before{
+    position: absolute;
+    content: "";
+      width: 37px;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    top: -14px;
+        right: 48.3%;
+}
+
+.skills-main-text h2{
+  font-size: 3.5rem;
+
+}
+
+.skills-main-text p{
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+.skills-item h6{
+  letter-spacing: .6px;
+  font-weight: 600;
+
+}
+.skills-item{
+  position: relative;
+}
+
+
+.skills-item  .precentge{
+  border-top: 4px dotted #00000033;
+  margin: 2.3rem 0;
+  position: relative;
+}
+
+.skills-item .precentge::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 90%;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.skills-item  .precentge-80{
+  border-top: 4px dotted #00000033;
+  margin: 2.3rem 0;
+  position: relative;
+}
+
+.skills-item .precentge-80::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 80%;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.skills-item  .precentge-75{
+  border-top: 4px dotted #00000033;
+  margin: 2.3rem 0;
+  position: relative;
+}
+
+.skills-item .precentge-75::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 75%;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.skills-item  .precentge-85{
+  border-top: 4px dotted #00000033;
+  margin: 2.3rem 0;
+  position: relative;
+}
+
+.skills-item .precentge-85::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 85%;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.skills-item  .precentge-95{
+  border-top: 4px dotted #00000033;
+  margin: 2.3rem 0;
+  position: relative;
+}
+
+.skills-item .precentge-95::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 95%;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+.skill-item-main-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skills-wrapper .row{
+  row-gap: 0.3rem;
+}
+
+/* end skills */
+
 /* start features */
+.restaurant-about{
+      padding-top: 1rem !important;
+}
 .restaurant-about .gg {
   padding: 0;
 }

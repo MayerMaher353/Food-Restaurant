@@ -1,3 +1,5 @@
+@import url("menu-responsive.css");
+
 @media (max-width: 1350px) {
 
   /* container */
@@ -88,6 +90,7 @@
   .container-our-team h2 {
     font-size: 50px;
   }
+  
 }
 
 @media(min-width:992px)and (max-width: 1280px) {
@@ -156,6 +159,41 @@
     gap: 0rem;
 
   }
+    /* start about us page */
+
+.shop-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 6.4rem;
+
+}
+
+.about-us-main-text h2{
+  font-size: 4.5rem;
+
+}
+
+.about-us-main-text p{
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+.about-video .image-box{
+  position: relative;
+   width: 90%;
+  height: 55vh;
+  overflow: hidden;
+   margin: 0 auto;
+ 
+}
+ .about-video .image-box  .play-youtube-btn{
+
+  padding: .4rem .9rem;
+  text-align: center;
+  
+
+}
+
+
+/* end about us page */
 }
 
 @media (max-width: 1265px) and (min-width:992px) {
@@ -498,6 +536,13 @@
 
 
   /* end shop page */
+
+/* start  */
+
+
+
+
+
 }
 
 
@@ -521,6 +566,49 @@
   .subscribe .container .p {
     text-align: center;
   }
+  /* start about us page */
+
+.shop-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 4.4rem;
+
+}
+
+.about-us-main-text h5::before{
+        right: 47.5%;
+}
+.about-us-main-text h2{
+  font-size: 2.5rem;
+
+}
+
+.about-us-main-text p{
+  color: var(--secondary-color);
+  font-size: 10px;
+}
+.about-video .image-box{
+  position: relative;
+   width: 90%;
+  height: 35vh;
+  overflow: hidden;
+   margin: 0 auto;
+ 
+}
+ .about-video .image-box  .play-youtube-btn{
+
+  padding: .4rem .9rem;
+  text-align: center;
+  
+
+}
+.skills-main-text h5::before{
+ 
+        right: 47.3%;
+}
+/* 44.3% */
+
+
+/* end about us page */
 }
 
 @media(max-width:957px) {
@@ -592,6 +680,52 @@
 }
 
 @media(max-width:767px) {
+
+/* start about us page */
+
+.shop-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 4.4rem;
+
+}
+
+.about-us-main-text h2{
+  font-size: 2.5rem;
+
+}
+
+.about-us-main-text p{
+  color: var(--secondary-color);
+  font-size: 10px;
+}
+.about-video .image-box{
+  position: relative;
+   width: 90%;
+  height: 25vh;
+  overflow: hidden;
+  margin: 0 auto;
+ 
+}
+ .about-video .image-box  .play-youtube-btn{
+
+  padding: .3rem .5rem;
+  text-align: center;
+  font-size: 10px;
+  
+
+}
+.about-us-main-text h5::before{
+        right: 44.5%;
+}
+.skills-main-text h5::before{
+ 
+        right: 46.3%;
+}
+
+/* end about us page */
+
+
+
   .restaurant-about .gg {
     padding: 10px;
   }
@@ -789,6 +923,38 @@
 
 
   /* end menu */
+    /* start about us page */
+
+.shop-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 3.4rem;
+
+}
+
+.about-us-main-text h2{
+  font-size: 2.5rem;
+
+}
+ .about-video .image-box  .play-youtube-btn{
+
+  padding: .2rem .5rem;
+  text-align: center;
+  font-size: 12px;
+  
+
+}
+
+
+.about-us-main-text h5::before{
+        right: 44.5%;
+}
+
+.skills-main-text h5::before{
+ 
+        right: 44.3%;
+}
+/* 47.3% */
+/* end about us page */
 
 }
 
