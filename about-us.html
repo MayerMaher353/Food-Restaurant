@@ -18,11 +18,15 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Font Awesome Library -->
   <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <!-- Font Awesome 6.5 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
   <!-- Main Template CSS File -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/about-us.css" />
   <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+
 </head>
 
 <body>
@@ -53,6 +57,19 @@
                 <i class="fas fa-house me-1"></i>
                 <a class="nav-link after-home" href="index.html">Home</a>
               </li>
+              <!-- Pages -->
+              <li class="nav-item  shop-link dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                  <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Gallery</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                  <li><a class="dropdown-item" href="#">Pricing</a></li>
+                  <li><a class="dropdown-item" href="#">FAQ</a></li>
+
+                </ul>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>
               </li>
@@ -66,14 +83,13 @@
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="shop.html">shop</a>
+                <a class="nav-link " href="shop.html">shop</a>
               </li>
             </ul>
           </div>
           <!-- button + cart -->
           <div class="d-flex align-items-center header-right-side">
            <button onclick="window.location.href='Reservation.html'">RESERVATION</button>
-
             <div class="icon-shopping position-relative">
               <a href="#">
                 <i class="fas fa-cart-shopping"></i>
@@ -87,83 +103,24 @@
     </div>
   </header>
   <!-- end of the header -->
-  <!-- start of the background-image -->
-  <div class="row g-0 background-image" id="home">
-    <div class="col-12 background d-flex justify-content-center align-items-center pt-0 position-relative">
-      <div class="overlay position-absolute top-0 start-0"></div>
-      <div class="background-text position-absolute z-2 text-center">
-        <div class="welcoming">
-          <h6>HELLO, NEW FRIEND!</h6>
-        </div>
-        <h2>
-          Welcome To
-          <br />
-          TASTYC SEAFOOD
-        </h2>
-        <button class="book-a-table-button">
-          <a href="#">BOOK A TABLE</a>
-        </button>
-        <button class="open-menu-button">
-          <a href="#">OPEN MENU</a>
-        </button>
+
+
+  <!-- hero section -->
+  <div class="shop-hero">
+    <img class="bgImg" src="./assets/images/about-us/blog-card2.webp" />
+    <div class="shop-overlay"></div>
+    <div class="container">
+      <div class="main-text">
+        
+        <h1 >ABOUT US</h1>
       </div>
     </div>
   </div>
-  <!-- end of the background-image -->
 
-  <!-- Section Start -->
+  <!-- feature Start -->
   <section class="restaurant-about py-5">
     <div class="container">
-      <!-- About Us -->
-      <div class="row align-items-center">
-        <div class="col-md-6 aboutus">
-          <h5 class="h5-menu">About Us</h5>
-          <h2>We Invite You to Visit Our Restaurant</h2>
-          <p class="p-menu">
-            Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
-            repudiandae dolorem, beatae dolorum, praesentium itaque et quam
-            quaerat.
-          </p>
-          <button class="btn-custom">READ MORE</button>
-        </div>
-        <div class="col-md-6 gg">
-          <img src="./assets/images/about1.jpg" class="img-fluid" alt="About Image" />
-        </div>
-      </div>
-
-      <!-- Menu -->
-      <div class="row align-items-center flex-md-row-reverse">
-        <div class="col-md-6 menu-info">
-          <h5 class="h5-menu">Restaurant Menu</h5>
-          <h2>Always Fresh Ingredients</h2>
-          <p class="p-menu">
-            Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
-            repudiandae dolorem, beatae dolorum, praesentium itaque et quam
-            quaerat.
-          </p>
-          <button class="btn-custom">VIEW MENU</button>
-        </div>
-        <div class="col-md-6 gg">
-          <img src="./assets/images/about2.jpg" class="img-fluid" alt="Menu Image" />
-        </div>
-      </div>
-
-      <!-- Our Team -->
-      <div class="row align-items-center our-team">
-        <div class="col-md-6 our-team-container">
-          <h5 class="h5-menu">Our Team</h5>
-          <h2>Use the Tips & Recipes of Our Chefs</h2>
-          <p class="p-menu">
-            Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
-            repudiandae dolorem, beatae dolorum, praesentium itaque et quam
-            quaerat.
-          </p>
-          <button class="btn-custom">MEET THE TEAM</button>
-        </div>
-        <div class="col-md-6 gg">
-          <img src="./assets/images/about3.jpg" class="img-fluid" alt="Team Image" />
-        </div>
-      </div>
+  
 
       <!-- Features -->
       <div class="text-center my-10 features">
@@ -238,342 +195,9 @@
       </div>
     </div>
   </section>
-  <!-- Section End -->
+  <!-- feature End -->
 
-  <section class="home-menu" id="home-menu">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="main-menu-text col-lg-12 col-sm-12 col-md-12">
-          <p>OUR NEW DISHES</p>
-          <h2>Crafted to impress - the ocean's finest on every plate</h2>
-        </div>
-        <div class="separator col-lg-12 col-sm-12 col-md-12"></div>
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-1.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Crispy Calamari</p>
-              <p>€12.50</p>
-            </div>
-            <p class="abt-menu-item">
-              From childhood summers by the shore to late-night meals with
-              loved ones, seafood.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-2.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Grilled Lobster Tail</p>
-              <p>€29.99</p>
-            </div>
-            <p class="abt-menu-item">
-              Succulent lobster tail grilled to perfection. served with garlic
-              butter and lemon wedges.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-3.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Scallop Ceviche</p>
-              <p>€14.75</p>
-            </div>
-            <p class="abt-menu-item">
-              Fresh scallops marinated in citrus served with garlic & red
-              onion and cilantro.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-4.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Seared Scallops</p>
-              <p>€24.99</p>
-            </div>
-            <p class="abt-menu-item">
-              Pan-seared scallops with a citrus glaze, served over a bed of
-              creamy risotto.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-5.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Crab & Avocado Salad</p>
-              <p>€15.50</p>
-            </div>
-            <p class="abt-menu-item">
-              Lump crab meat tossed with avocado, cherry tomatoes, and lime
-              dressing.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="home-menu-item col-lg-6 col-sm-12 col-md-6">
-          <div class="menu-img-holder">
-            <img src="./assets/images/menu images/our-menu-image-6.png" />
-          </div>
-          <div class="menu-content-holder">
-            <div class="menu-item-info">
-              <p>Crab Cakes</p>
-              <p>€18.50</p>
-            </div>
-            <p class="abt-menu-item">
-              Golden brown crab cakes served with a spicy remoulade sauce and
-              fresh greens.
-              <a href="#"><i class="fas fa-cart-shopping"></i></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-end col-lg-12 col-sm-12 col-md-12">
-          <p>
-            <span>free</span>Crafted for Your Cravings: Today's Must-
-            <a href="menu.html">View Full Menu</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- start gallery -->
-
-  <div class="gallery">
-    <div class="head">
-      <p>OUR GALLERY</p>
-      <h1>Savor the view - delicious dishes and unforgettable memories</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-1.jpg" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-2.jpg" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-3.jpg" />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-4.jpg" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-5.jpg" />
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 ele">
-          <div class="content">
-            <div class="overlay">
-              <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </div>
-            <img src="./assets/images/gallery-6.jpg" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scroller">
-      <div class="scrolling-content">
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Grilled prawns</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Grilled prawns</span>
-      </div>
-      <div class="scrolling-content">
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Grilled prawns</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Grilled prawns</span>
-      </div>
-    </div>
-    <div class="scroller reverse">
-      <div class="scrolling-content">
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Grilled prawns</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Grilled prawns</span>
-      </div>
-      <div class="scrolling-content">
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Grilled prawns</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Crab cakes</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Seafood paella</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Shrimp skewers</span>
-        <span><img src="./assets/images/scrolling-ticker-image-1.jpg" alt="" />Lobster tail</span>
-        <span><img src="./assets/images/scrolling-ticker-image-2.jpg" alt="" />Grilled prawns</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- end gallery -->
-
-  <!-- Event Services Section -->
-  <section class="event-services py-5">
-    <div class="overlay"></div>
-    <div class="container">
-      <!-- Title + Button Row -->
-      <div class="row align-items-center mb-5">
-        <div class="col-md-8">
-          <h2 class="mb-0 section-title">
-            We also offer unique <br />
-            services for your events
-          </h2>
-        </div>
-        <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
-          <button class="btn-green">WIN NOW</button>
-        </div>
-      </div>
-
-      <!-- Cards Row -->
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="service-card text-center">
-            <img src="./assets/images/mike-bergmann-tHjXXy1kk_Q-unsplash.jpg" alt="Catering" />
-            <h5>Caterings</h5>
-            <p>
-              A small gathering or a large celebration, we deliver quality and
-              reliability with care.
-            </p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="service-card text-center">
-            <img src="./assets/images/vk-bro-_79ZJS8pV70-unsplash.jpg" alt="Birthday" />
-            <h5>Birthdays</h5>
-            <p>
-              Make your birthday celebration extra special with our delicious
-              gourmet treats.
-            </p>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="service-card text-center">
-            <img src="./assets/images/pexels-1155579-2871757.jpg" alt="Wedding" />
-            <h5>Weddings</h5>
-            <p>
-              We offer beautifully crafted menus tailored to your tastes
-              ensuring every dish delights.
-            </p>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class="service-card text-center">
-            <img src="./assets/images/pexels-cottonbro-3298065.jpg" alt="Events" />
-            <h5>Events</h5>
-            <p>
-              Corporate meetings with fresh food and professional service
-              truly memorable.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Event Services Section -->
-
-  <div class="categories">
-    <div class="scroller">
-      <div class="scrolling-content">
-        <span><a href="menu.html">SEAFOOD<img src="./assets/images/menu_01.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SALADS<img src="./assets/images/menu_02.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SIDE DISHES<img src="./assets/images/menu_03.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SUSHI<img src="./assets/images/menu_04.jpg" alt="" /></a></span>
-        <span><a href="menu.html">DRINKS<img src="./assets/images/menu_05.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SEAFOOD<img src="./assets/images/menu_01.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SALADS<img src="./assets/images/menu_02.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SIDE DISHES<img src="./assets/images/menu_03.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SUSHI<img src="./assets/images/menu_04.jpg" alt="" /></a></span>
-        <span><a href="menu.html">DRINKS<img src="./assets/images/menu_05.jpg" alt="" /></a></span>
-      </div>
-      <div class="scrolling-content">
-        <span><a href="menu.html">SEAFOOD<img src="./assets/images/menu_01.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SALADS<img src="./assets/images/menu_02.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SIDE DISHES<img src="./assets/images/menu_03.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SUSHI<img src="./assets/images/menu_04.jpg" alt="" /></a></span>
-        <span><a href="menu.html">DRINKS<img src="./assets/images/menu_05.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SEAFOOD<img src="./assets/images/menu_01.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SALADS<img src="./assets/images/menu_02.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SIDE DISHES<img src="./assets/images/menu_03.jpg" alt="" /></a></span>
-        <span><a href="menu.html">SUSHI<img src="./assets/images/menu_04.jpg" alt="" /></a></span>
-        <span><a href="menu.html">DRINKS<img src="./assets/images/menu_05.jpg" alt="" /></a></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- start working hours -->
+    <!-- start working hours -->
   <div class="working-hours">
     <img src="./assets/images/hours_bg.jpg" alt="" />
     <div class="working-hours-overlay"></div>
@@ -757,43 +381,37 @@
   </div>
   <!-- end Testimonials -->
 
-  <!-- START APP-->
-  <section class="app-download">
+  <!-- start reservation -->
+  <div class="reservation">
     <div class="overlay"></div>
     <div class="container">
-      <div class="row align-items-center">
-        <!-- text -->
-        <div class="col-12 col-lg-6">
-          <div class="content text-center">
-            <p class="subtitle">Mobile Application</p>
-            <h2 class="title">
-              Download <br />
-              our application
-            </h2>
-            <p class="description">
-              Quaerat debitis, vel, sapiente dicta sequi labore porro pariatur
-              harum expedita.
-            </p>
-            <div class="buttons">
-              <a href="https://www.apple.com/ua/app-store/" class="btn download-btn">
-                <i class="fab fa-apple"></i> Appstore
-              </a>
-              <a href="https://play.google.com/store" class="btn download-btn">
-                <i class="fab fa-google-play"></i> Playmarket
-              </a>
+      <div class="row">
+        <div class="col-lg-6 content">
+          <span>RESERVATION</span>
+          <span>
+            <h1>THIS EVENING WILL BE GREAT!</h1>
+          </span>
+          <span>Quaerat debitis, vel, sapiente dicta sequi
+            labore porro pariatur harum expedita.</span>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="content">
+                <button id="open-reservation">RESERVATION</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <a href="contact.html">GET IN TOUCH</a>
             </div>
           </div>
         </div>
-
-        <!-- image-->
-        <div class="col-12 col-lg-6">
-          <div class="phones text-center">
-            <img src="./assets/images/phone.png" alt="App Preview" class="img-fluid" />
-          </div>
+        <div class="col-lg-6">
+          <img src="./assets/images/menu images/reserved.png">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- end reservation -->
+   <!-- start blog -->
    <!--TEXT-->
 <div class="block newsletter-block text-center app-txt-center">
   <div class="tst-suptitle tst-suptitle-center tst-mb-15">
@@ -893,8 +511,31 @@
 </div>
 
 
+   <!-- end blog -->
+  <!-- start subscribe -->
+  <div class="subscribe">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>NEWSLETTER</p>
+          <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+          <p class="p">
+            Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
+          </p>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 ele">
+              <input type="text" id="email" placeholder="Enter your email here"/>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 ele">
+              <button type="submit" class="btn">subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- end subscribe -->
-
   <!-- start footer -->
   <footer id="main-footer">
     <div class="container">
@@ -1009,12 +650,12 @@
     </div>
   </footer>
   <!-- end footer -->
-
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
   <script src="./assets/js/basic.js" defer></script>
+
 </body>
 
 </html>
