@@ -93,6 +93,7 @@ const gallerySlider = new Swiper(".gallery-container", {
   wrapperClass: "gallery-wrapper",
   slideClass: "gallery-item",
 });
+
 $(document).ready(function () {
   $("select").niceSelect();
 });
