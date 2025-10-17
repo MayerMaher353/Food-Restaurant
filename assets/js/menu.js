@@ -96,6 +96,7 @@ const gallerySlider = new Swiper(".gallery-container", {
 $(document).ready(function () {
   $("select").niceSelect();
 });
+
 const openBtn = document.getElementById("open-reservation");
 const modal = document.getElementById("reservation-window");
 const closeBtn = document.querySelector(".close-btn");
