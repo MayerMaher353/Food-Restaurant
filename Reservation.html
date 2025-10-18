@@ -46,17 +46,23 @@
     <!-- Main Template CSS File -->
     <link rel="stylesheet" href="./assets/css/Reservation.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+  
+   
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
   </head>
 
 
 <body>
  
-  <!-- start of the header -->
+   <!-- start of the header -->
   <header class="px-3" id="main-header">
     <div class="container-fluid px-2">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -74,57 +80,55 @@
           </button>
           <!-- nav links -->
           <div class="collapse navbar-collapse nav-links" id="mainNavbar">
-            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" aria-label="Close">
+            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-label="Close">
               <i class="fas fa-xmark"></i>
             </button>
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
               <li class="nav-item d-flex align-items-center home">
-                <a class="nav-link" href="index.html">Home</a>
+                <i class="fas fa-house me-1"></i>
+                <a class="nav-link after-home" href="index.html">Home</a>
               </li>
-
-
               <!-- Pages -->
-              <li class="nav-item dropdown">
+              <li class="nav-item  shop-link dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
                   <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
                   <li><a class="dropdown-item" href="#">Gallery</a></li>
-                  <li><a class="dropdown-item" href="#">History</a></li>
+                  <li><a class="dropdown-item" href="history.html">History</a></li>
                   <li><a class="dropdown-item" href="#">Pricing</a></li>
                   <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-                
-                </ul>
-              </li>
 
-              <!-- Order -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="#" id="orderMenu" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">Order</a>
-                <ul class="dropdown-menu" aria-labelledby="orderMenu">
-                  <li><a class="dropdown-item" href="#">Reservation (Booking Calendar)</a></li>
-                  <li><a class="dropdown-item" href="#">Reservation (Contact Form 7)</a></li>
-                  <li><a class="dropdown-item" href="#">Reservation (OpenTable)</a></li>
-                  <li><a class="dropdown-item" href="#">Reservation Popup</a></li>
                 </ul>
               </li>
-                             <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="newsletter.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="Reservation.html">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletter.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">shop</a>
+              </li>
             </ul>
           </div>
-
           <!-- button + cart -->
           <div class="d-flex align-items-center header-right-side">
-            <button>RESERVATION</button>
+           <button onclick="window.location.href='Reservation.html'">RESERVATION</button>
+
             <div class="icon-shopping position-relative">
               <a href="#">
                 <i class="fas fa-cart-shopping"></i>
               </a>
-              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
             </div>
           </div>
         </div>
@@ -144,64 +148,48 @@
   </div>
   <!-- end of the background-image -->
 
-  <!-- Reservation form -->
-  <div class="tst-content-frame--start tst-p-60-0">
-    <div class="container text-center">
-      <div class="tst-suptitle tst-suptitle-center tst-mb-15"> <span> Reservation </span></div>
-      <h3 class="tst-title--h tst-mb-30"> <span> Book a Table </span></h3>
-      <p class="tst-text tst-mb-60"> <span> CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW </span></p>
+<section class="tst-content-frame--start tst-p-60-0">
+  <div class="container text-center">
+    <div class="tst-suptitle tst-suptitle-center tst-mb-15">
+      <span>Reservation</span>
     </div>
-
-    <form>
-      <div class="row g-3 mb-3">
-        <div class="col-md-4">
-          <input type="text" class="form-control" placeholder="Name" />
-        </div>
-        <div class="col-md-4">
-          <input type="email" class="form-control" placeholder="Email" />
-        </div>
-        <div class="col-md-4">
-          <input type="tel" class="form-control" placeholder="Phone" />
-        </div>
-      </div>
-
-      <div class="row g-3 mb-3">
-        <div class="col-md-4">
-          <select class="form-select" aria-label="Select number of persons">
-            <option selected disabled>Person</option>
-            <option value="1">1 Person</option>
-            <option value="2">2 Persons</option>
-            <option value="3">3 Persons</option>
-            <option value="4">4 Persons</option>
-            <option value="5">5 Persons</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <input type="date" class="form-control" aria-label="Select date" />
-        </div>
-        <div class="col-md-4">
-          <select class="form-select" aria-label="Select time">
-            <option selected disabled>Time</option>
-            <option value="12:00">12:00 PM</option>
-            <option value="13:00">1:00 PM</option>
-            <option value="14:00">2:00 PM</option>
-            <option value="18:00">6:00 PM</option>
-            <option value="19:00">7:00 PM</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row mb-4">
-        <div class="col-12">
-          <textarea class="form-control" placeholder="Message"></textarea>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="btn btn-orange">Reserve a Table</button>
-      </div>
-    </form>
+    <h3 class="tst-title--h tst-mb-30"><span>Book a Table</span></h3>
+    <p class="tst-text tst-mb-60">
+      <span>CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW</span>
+    </p>
   </div>
+
+  <div class="reservation-form">
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+
+    <select required>
+      <option value="">Person</option>
+      <option value="1">1 Person</option>
+      <option value="2">2 People</option>
+      <option value="3">3 People</option>
+      <option value="4">4 People</option>
+      <option value="5">5 People</option>
+      <option value="6">6 or more</option>
+    </select>
+
+    <input type="date" required>
+    <select required>
+      <option value="">Time</option>
+      <option value="12pm">12:00 PM</option>
+      <option value="1pm">1:00 PM</option>
+      <option value="2pm">2:00 PM</option>
+      <option value="3pm">3:00 PM</option>
+      <option value="4pm">4:00 PM</option>
+      <option value="5pm">5:00 PM</option>
+    </select>
+
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">RESERVE A TABLE</button>
+  </form>
+</div>
 
   
 
@@ -250,12 +238,12 @@
         <div class="col">
           <p>NEWSLETTER</p>
           <h1>SUBSCRIBE OUR NEWSLETTER</h1>
-          <p class="p">
+          <p class="text-p">
             Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
           </p>
           <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 ele">
-              <input type="text" id="email" placeholder="Enter your email here">
+              <input type="text" id="email" placeholder="Enter your email here" />
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 ele">
               <button type="submit" class="btn">subscribe</button>
@@ -266,7 +254,6 @@
     </div>
   </div>
   <!-- end subscribe -->
-
   <footer>
       <div class="container">
         <div class="row">
@@ -411,6 +398,11 @@
 </script>
   
     <script src="./assets/js/Reservation.js" defer></script>
+    <script>
+  $(document).ready(function () {
+    $("select").niceSelect();
+  });
+</script>
   </body>
 </html>
 

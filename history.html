@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/icon" href="./assets/images/logo/logo-sm.png" />
+    <title>Tastyc - Seafood Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./self work/assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Render All Elements Normally -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- Font Awesome 6.5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="./assets/css/our history.css" />
+    <link rel="stylesheet" href="./assets/js/Reservation.js" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    
+    
+ 
+<link rel="stylesheet" href="./assets/css/menu.css" />
+<link rel="stylesheet" href="./assets/css/menu-responsive.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+</head>
+
+
+<body>
+ <!-- start of the header -->
+  <header class="px-3" id="main-header">
+    <div class="container-fluid px-2">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid logo-nav d-flex">
+          <!-- logo -->
+          <a class="navbar-brand logo d-flex align-items-center" href="#">
+            <div class="logo-holder">
+              <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
+            </div>
+          </a>
+          <!-- toggle button for small screens -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- nav links -->
+          <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-label="Close">
+              <i class="fas fa-xmark"></i>
+            </button>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+              <li class="nav-item d-flex align-items-center home">
+                <i class="fas fa-house me-1"></i>
+                <a class="nav-link after-home" href="index.html">Home</a>
+              </li>
+              <!-- Pages -->
+              <li class="nav-item  shop-link dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                  <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Gallery</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                  <li><a class="dropdown-item" href="#">Pricing</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Reservation.html">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletter.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">shop</a>
+              </li>
+            </ul>
+          </div>
+          <!-- button + cart -->
+          <div class="d-flex align-items-center header-right-side">
+           <button onclick="window.location.href='Reservation.html'">RESERVATION</button>
+
+            <div class="icon-shopping position-relative">
+              <a href="#">
+                <i class="fas fa-cart-shopping"></i>
+              </a>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end of the header -->
+
+    <!-- start of the background-image -->
+    <div class="row g-0 background-image" id="home">
+        <div class="col-12 background d-flex justify-content-center align-items-center pt-0 position-relative">
+            <div class="overlay position-absolute top-0 start-0"></div>
+            <div class="background-text position-absolute z-2 text-center">
+                <h2>OUR HISTORY</h2>
+            </div>
+        </div>
+    </div>
+    <!-- end of the background-image -->
+
+    <section class="tst-content-frame--start tst-p-60-0">
+        <div class="container text-center">
+            <h3 class="tst-title--h tst-mb-30"><span>Delicious traditions<br>
+                    since 1996</span></h3>
+            <p class="tst-text tst-mb-60">
+                <span> Assumenda possimus eaque illo iste, autem. Porro eveniet, autem ipsam vitae amet repellat
+                    repudiandae tenetur, quod corrupti consectetur cum? Repudiandae dignissimos fugiat sit nam. Tempore
+                    aspernatur quae repudiandae dolorem, beatae dolorum, praesentium. Cumque, consequatur! </span>
+            </p>
+        </div>
+        <div class="col-lg-12">
+            <div class="tst-timeline">
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 1996 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy entered br-loaded"
+                                src="./assets/images/history1.webp"
+                                data-breeze="https://tastyc.bslthemes.com/seafood/wp-content/webp-express/webp-images/uploads/sites/2/2021/12/history-1.jpg.webp"
+                                decoding="async" alt="" data-ll-status="loaded"></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> First Sea Restaurant Was Founded </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Assumenda possimus eaque illo iste, autem. Porro eveniet, autem ipsam vitae amet
+                                        repellat repudiandae tenetur, quod corrupti consectetur cum? Repudiandae
+                                        dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 2001 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy entered br-loaded"
+                               img src="./assets/images/ourhistory2.webp"
+                               
+                                decoding="async" alt="" data-ll-status="loaded"></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> Oscar Has Started Cooking For You </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Assumenda possimus eaque illo iste, autem. Porro eveniet, autem ipsam vitae amet
+                                        repellat repudiandae tenetur, quod corrupti consectetur cum? Repudiandae
+                                        dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 2004 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy entered br-loaded"
+                              img src="./assets/images/history3.webp"
+                                
+                                decoding="async" alt="" data-ll-status="loaded"></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> A New Restaurant Has Been Established in London </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Assumenda possimus eaque illo iste, autem. Quod corrupti consectetur cum.
+                                        Repudiandae dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 2010 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy entered br-loaded"
+                    img src="./assets/images/history4.webp"
+                                
+                                decoding="async" alt="" data-ll-status="loaded"></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> A New Restaurant Was Opened in Paris </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Porro eveniet, autem ipsam vitae amet repellat repudiandae tenetur, quod corrupti
+                                        consectetur cum? Repudiandae dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 2012 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy entered br-loaded"
+                              img src="./assets/images/history5.webp"
+                                decoding="async" alt="" data-ll-status="loaded"></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> We Got a <br>Michelin Star </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Assumenda possimus eaque illo iste, autem. Porro eveniet, autem ipsam vitae amet
+                                        repellat repudiandae tenetur, quod corrupti consectetur cum? Repudiandae
+                                        dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tst-timeline-item tst-mb-30">
+                    <div class="tst-year tst-mb-15"> <span> 2019 </span></div>
+                    <div class="tst-tl-content">
+                        <div class="tst-ilust"> <img class="br-lazy"
+                                img src="./assets/images/history6.webp"
+                              
+                                decoding="async" alt=""></div>
+                        <div class="tst-tl-text-frame">
+                            <h4 class="tst-mb-30"> <span> Established Own <br>Address Delivery </span></h4>
+                            <div class="tst-text">
+                                <div>
+                                    <p>Porro eveniet, autem ipsam vitae amet repellat repudiandae tenetur, quod corrupti
+                                        consectetur cum? Repudiandae dignissimos fugiat sit nam. Tempore aspernatur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+  <!-- start reservation -->
+  <div class="reservation">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 content">
+          <span>RESERVATION</span>
+          <span>
+            <h1>THIS EVENING WILL BE GREAT!</h1>
+          </span>
+          <span>Quaerat debitis, vel, sapiente dicta sequi
+            labore porro pariatur harum expedita.</span>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="content">
+                <button id="open-reservation">RESERVATION</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <a href="contact.html">GET IN TOUCH</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="./assets/images/menu images/reserved.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end reservation -->
+
+  <div id="reservation-window" class="modal" style="display: none;">
+
+    <div class="content">
+      <span class="close-btn">&times;</span>
+      <div class="title">
+        <span>Table Reservation</span>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="text" id="name" placeholder="Name" autocomplete="name">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="email" id="email" placeholder="Email" autocomplete="email">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <input type="text" id="phone" placeholder="Phone" autocomplete="tel">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <select id="role" name="role">
+              <option selected>Person</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 or more</option>
+            </select>
+          </div>
+          <div class="col-lg-4 col-md-4 ele-e">
+            <input type="date" id="date" class="modern-date">
+          </div>
+          <div class="col-lg-4 col-md-4 ele">
+            <select id="time" name="time">
+              <option value="Time" selected>Time</option>
+              <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 pm">12:00 pm</option>
+              <option value="1:00 pm">1:00 pm</option>
+              <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 pm">10:00 pm</option>
+            </select>
+          </div>
+          <div class="col-lg-12 ele">
+            <textarea id="message" placeholder="Message"></textarea>
+          </div>
+        </div>
+      </div>
+      <button type="submit">RESERVE A TABLE</button>
+    </div>
+
+  </div>
+
+   <!--TEXT-->
+<div class="block newsletter-block text-center app-txt-center">
+  <div class="tst-suptitle tst-suptitle-center tst-mb-15">
+    <span>Newsletter</span>
+  </div>
+  <h3 class="tst-title--h tst-mb-30">
+    <span>Use the Tips <br />and Recipes of Our Chefs</span>
+  </h3>
+  <p class="tst-text tst-title--desc tst-mb-60">
+    <span>
+      Porro eveniet, autem ipsam corrupti consectetur cum. <br />
+      Repudiandae dignissimos fugiat sit nam.
+    </span>
+  </p>
+</div>
+
+<!-- Blog Cards Wrapper -->
+<div class="block blog-block container py-5 container-app">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="block blog-card-wrapper">
+        <div class="blog-card">
+          <img src="./assets/images/blog-card1.webp" alt="" />
+          <div class="blog-content">
+            <span class="category">Deserts, Salads</span>
+            <h5 class="blog-title">Business Breakfast</h5>
+            <p class="blog-text">
+              Consectetur adipisicing elit. Soluta, impedit, saepe. Unde
+              minima distinctio officiis amet temporibus...
+            </p>
+            <a href="#" class="read-more">Read More</a>
+            <div class="author">
+              <span><i class="bi bi-person-circle"></i> Oleksandr</span>
+              <span class="text-muted">May 1, 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="block blog-card-wrapper">
+        <div class="blog-card">
+          <img src="./assets/images/blog-card2.webp" alt="" />
+          <div class="blog-content">
+            <span class="category">Deserts</span>
+            <h5 class="blog-title">Pancakes in Chocolate</h5>
+            <p class="blog-text">
+              Consectetur adipisicing elit. Soluta, impedit, saepe. Unde
+              minima distinctio officiis amet temporibus...
+            </p>
+            <a href="#" class="read-more">Read More</a>
+            <div class="author">
+              <span><i class="bi bi-person-circle"></i> Oleksandr</span>
+              <span class="text-muted">May 1, 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="block blog-card-wrapper">
+        <div class="blog-card">
+          <img src="./assets/images/blogcaard3.webp" alt="" />
+          <div class="blog-content">
+            <span class="category">Deserts</span>
+            <h5 class="blog-title">Tuna & Tomatoes</h5>
+            <p class="blog-text">
+              Consectetur adipisicing elit. Soluta, impedit, saepe. Unde
+              minima distinctio officiis amet temporibus...
+            </p>
+            <a href="#" class="read-more">Read More</a>
+            <div class="author">
+              <span><i class="bi bi-person-circle"></i> Oleksandr</span>
+              <span class="text-muted">May 1, 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Blog Footer -->
+  <div class="block blog-footer-block d-flex justify-content-between align-items-center mt-4 flex-wrap">
+    <p class="text-muted mb-0">
+      Read the news of our restaurant, recipes for delicious fears, tips for
+      your home kitchen in our blog!
+    </p>
+    <a href="#" class="tst-btn">All Publications</a>
+  </div>
+</div>
+
+    <!-- end of blog cards wrapper -->
+
+    
+    <!-- start subscribe -->
+    <div class="subscribe">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>NEWSLETTER</p>
+                    <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+                    <p class="p">
+                        Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 ele">
+                            <input type="text" id="email" placeholder="Enter your email here" />
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 ele">
+                            <button type="submit" class="btn">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end subscribe -->
+    <!-- start footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="logo-holder">
+                        <img src="./assets/images/logo/logo-sm.png" alt="" />
+                    </div>
+                </div>
+                <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+                    <div class="socials">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+                <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>About us</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+                        repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+                        quaerat vitae.
+                    </p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>Contact info</h3>
+                    <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+                        <li>
+                            <span class="tst-label"> Call :</span>
+                            <span>+76 (094) 754 43 7I</span>
+                        </li>
+                        <li>
+                            <span class="tst-label"> Write :</span>
+                            <span> your.email.inbox@here.com</span>
+                        </li>
+                        <li>
+                            <span class="tst-label"> Find us :</span>
+                            <span> Canada, Toronto, Avenue 31B,</span>
+                        </li>
+                    </ul>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>Gallery</h3>
+                    <div class="gallery-container">
+                        <div class="gallery-wrapper">
+                            <!-- Each image -->
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp" alt="Food 2" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/blog-2-140x140.jpg.webp" alt="Food 1" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp" alt="Food 3" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp" alt="Food 4" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp" alt="Food 5" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom navigation -->
+                        <div class="gallery-controls">
+                            <a href="#">READ MORE</a>
+                            <div class="nav-controls">
+                                <div class="gallery-prev">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                                <div class="gallery-next">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+                <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+                    <p>© Tastyc 2022 . All rights reserved.</p>
+                </div>
+                <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+                    <a href="#">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- end footer -->
+
+
+     
+        <script> // ================== Exit Menu Button ==================
+  const exitMenuButton = document.querySelector(".exit-menu");
+  const navbarCollapse = document.getElementById("mainNavbar");
+
+  if (exitMenuButton && navbarCollapse) {
+    exitMenuButton.addEventListener("click", function () {
+      const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+      collapseInstance.hide();
+    });
+  }
+</script>
+  
+    <script src="./assets/js/Reservation.js" defer></script>
+    <script>
+  $(document).ready(function () {
+    $("select").niceSelect();
+  });
+</script>
+ <!-- end section 6 -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+    <script src="./assets/js/shop.js" defer></script>
+    <script src="./assets/js/newsletter.js"></script>
+</body>
+</html>
