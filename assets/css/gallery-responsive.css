@@ -1,0 +1,64 @@
+@media(max-width:1243px) and (min-width:1095px) {
+    .container.all {
+        justify-content: center;
+    }
+
+    .all .pic-one,
+    .all .pic-two,
+    .all .pic-three,
+    .all .pic-four,
+    .all .pic-five,
+    .all .pic-six,
+    .all .pic-seven,
+    .all .pic-eight,
+    .all .pic-nine,
+    .all .pic-ten,
+    .all .pic-eleven,
+    .all .pic-twelve {
+        width: 337px;
+        height: 300px;
+    }
+}
+
+@media(max-width:1096px) {
+    .container.all {
+        justify-content: center;
+    }
+
+    .all .pic-one,
+    .all .pic-two,
+    .all .pic-three,
+    .all .pic-four,
+    .all .pic-five,
+    .all .pic-six,
+    .all .pic-seven,
+    .all .pic-eight,
+    .all .pic-nine,
+    .all .pic-ten,
+    .all .pic-eleven,
+    .all .pic-twelve {
+        width: 287px;
+    }
+
+    .all .image-item img {
+        width: 287px;
+    }
+}
+
+@media(max-width:393px) {
+    .gallery-links {
+        gap: 26px;
+    }
+
+    .gallery-links .link button,
+    .gallery-links .link-one button {
+        font-size: 12px;
+    }
+
+    .tst-title--h {
+    font-size: 38px;}
+
+    .gallery-links button.active-filter {
+    height: 37px;
+    width: 71px;}
+}

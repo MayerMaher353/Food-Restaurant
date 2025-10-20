@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/icon" href="./assets/images/logo/logo-sm.png" />
+    <title>Tastyc - Seafood Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./self work/assets/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Render All Elements Normally -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- Font Awesome 6.5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="./assets/css/gallery.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/gallery-responsive.css">
+
+
+</head>
+
+<body>
+    <!-- start of the header -->
+    <header class="px-3" id="main-header">
+        <div class="container-fluid px-2">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid logo-nav d-flex">
+                    <!-- logo -->
+                    <a class="navbar-brand logo d-flex align-items-center" href="#">
+                        <div class="logo-holder">
+                            <img id="logo" src="./assets/images/logo/logo-sm-white.png" />
+                        </div>
+                    </a>
+                    <!-- toggle button for small screens -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- nav links -->
+                    <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+                        <button type="button" class="btn-close exit-menu ms-auto d-lg-none" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar" aria-label="Close">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
+                            <li class="nav-item d-flex align-items-center home">
+                                <i class="fas fa-house me-1"></i>
+                                <a class="nav-link after-home" href="index.html">Home</a>
+                            </li>
+                            <!-- Pages -->
+                            <li class="nav-item  shop-link dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                                    <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                    <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                                    <li><a class="dropdown-item" href="history.html">History</a></li>
+                                    <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Reservation.html">Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link blog-link" href="newsletter.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="shop.html">shop</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- button + cart -->
+                    <div class="d-flex align-items-center header-right-side">
+                        <button onclick="window.location.href='Reservation.html'">RESERVATION</button>
+                        <div class="icon-shopping position-relative">
+                            <a href="#">
+                                <i class="fas fa-cart-shopping"></i>
+                            </a>
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end of the header -->
+
+    <!-- hero section -->
+    <div class="hero-section">
+        <img class="bgImg" src="./assets/images/about-us/blog-card2.webp" />
+        <div class="newsletter-overlay"></div>
+        <div class="container">
+            <div class="main-text">
+                <h1>GALLERY</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--TEXT-->
+
+    <div class="text-center app-txt-center">
+        <div class="tst-suptitle tst-suptitle-center tst-mb-15">
+            <span> GALLERY </span>
+        </div>
+        <h3 class="tst-title--h tst-mb-30">Our Best Moments</span></h3>
+        <p class="tst-text tst-title--desc tst-mb-60">
+            <span> Porro eveniet, autem ipsam corrupti
+                consectetur cum. <br>Repudiandae
+                dignissimos fugiat sit nam. </span>
+        </p>
+    </div>
+
+    <!-- ------ start of the gallery section -------- -->
+
+    <div class="gallery-links">
+        <div class="link-one"><button data-filter="all">ALL</button></div>
+        <div class="link"><button data-filter="drinks">DRINKS</button></div>
+        <div class="link"><button data-filter="dishes">DISHES</button></div>
+        <div class="link"><button data-filter="desserts">DESSERTS</button></div>
+    </div>
+
+    <div class="container all">
+        <!-- strat of the first section  -->
+        <!-- <div class="row first-section"> -->
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-one image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Cooked Fish</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-one.jpg" width="384px" height="300px" alt="Cooked Fish">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-two image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Salmon tomatoes</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-two.jpg" width="384px" height="300px" alt="Salmon tomatoes">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-three  image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Salmon</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-three.jpg" width="384px" height="300px" alt="Salmon">
+        </div>
+        <!-- </div> -->
+        <!-- end of the first section  -->
+        <!-- start of the second section -->
+        <!-- <div class="row second-section"> -->
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-four  image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Fish Soup</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-four.jpg" width="384px" height="300px" alt="Fish Soup">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-five image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Crawfish</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-five.jpg" width="384px" height="300px" alt="Crawfish">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-six image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Casserole</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-six.jpg" width="384px" height="300px" alt="Casserole">
+        </div>
+        <!-- </div> -->
+        <!-- end of the second section  -->
+        <!-- start of the third section -->
+        <!-- <div class="row third-section"> -->
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-seven image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Fish Soup</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-seven.jpg" width="384px" height="300px" alt="Fish Soup">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-eight image-item" data-category="dishes">
+            <div class="overley-one">
+                <h5 class="category">Dishes</h5>
+                <h3 class="type">Fish Burger</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-eight.jpg" width="384px" height="300px" alt="Fish Burger">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-nine image-item" data-category="drinks">
+            <div class="overley-one">
+                <h5 class="category">Drinks</h5>
+                <h3 class="type">Cola</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-nine.jpg" width="384px" height="300px" alt="Cola">
+        </div>
+        <!-- </div> -->
+        <!-- end of the third section  -->
+        <!-- start of the fourth section -->
+        <!-- <div class="row fourth-section"> -->
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-ten image-item" data-category="desserts">
+            <div class="overley-one">
+                <h5 class="category">Desserts</h5>
+                <h3 class="type">Desert</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-ten.jpg" width="384px" height="300px" alt="Desert">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-eleven image-item" data-category="drinks">
+            <div class="overley-one">
+                <h5 class="category">Drinks</h5>
+                <h3 class="type">Bear</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-eleven.jpg" width="384px" height="300px" alt="Bear">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 pic-twelve image-item" data-category="drinks">
+            <div class="overley-one">
+                <h5 class="category">Drinks</h5>
+                <h3 class="type">Juices</h3>
+            </div>
+            <img src="./assets/images/galley-images/gallery-twelve.jpg" width="384px" height="300px" alt="Juices">
+        </div>
+    </div>
+    <!-- end of the fourth section  -->
+    <!-- ------ end of the gallery section -------- -->
+
+    <!-- start footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="logo-holder">
+                        <img src="./assets/images/logo/logo-sm.png" alt="" />
+                    </div>
+                </div>
+                <div class="socail-col col-lg-6 col-md-6 col-sm-6">
+                    <div class="socials">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+                <div class="about-us-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>About us</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expedita
+                        repudiandae neque illum aspernatur fugiat maiores id magni, modi,
+                        quaerat vitae.
+                    </p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="contact-info-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>Contact info</h3>
+                    <ul class="tst-footer-contact tst-text-shadow tst-mb-30">
+                        <li>
+                            <span class="tst-label"> Call :</span>
+                            <span>+76 (094) 754 43 7I</span>
+                        </li>
+                        <li>
+                            <span class="tst-label"> Write :</span>
+                            <span> your.email.inbox@here.com</span>
+                        </li>
+                        <li>
+                            <span class="tst-label"> Find us :</span>
+                            <span> Canada, Toronto, Avenue 31B,</span>
+                        </li>
+                    </ul>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="gallery-footer col-lg-4 col-md-4 col-sm-12">
+                    <h3>Gallery</h3>
+                    <div class="gallery-container">
+                        <div class="gallery-wrapper">
+                            <!-- Each image -->
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-2-140x140.jpg.webp" alt="Food 2" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/blog-2-140x140.jpg.webp" alt="Food 1" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-4-140x140.jpg.webp" alt="Food 3" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-5-140x140.jpg.webp" alt="Food 4" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="./assets/images/footer swiper/gallery-i-6-140x140.jpg.webp" alt="Food 5" />
+                                <div class="overlay">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom navigation -->
+                        <div class="gallery-controls">
+                            <a href="#">READ MORE</a>
+                            <div class="nav-controls">
+                                <div class="gallery-prev">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                                <div class="gallery-next">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-dot col-lg-12 col-md-12 col-sm-12"></div>
+                <div class="copyrights col-lg-6 col-md-6 col-sm-12">
+                    <p>© Tastyc 2022 . All rights reserved.</p>
+                </div>
+                <div class="back-btn col-lg-6 col-md-6 col-sm-12">
+                    <a href="#">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- start footer -->
+    <!-- end section 6 -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
+    <script src="./assets/js/shop.js" defer></script>
+    <script src="./assets/js/newsletter.js"></script>
+    <script src="./assets/js/gallery.js" defer></script>
+
+    <!-- ======== Popup Image Viewer ======== -->
+    <div id="image-popup" class="image-popup">
+        <span class="close-popup">&times;</span>
+        <img id="popup-img" src="" alt="Popup Image">
+        <div id="popup-title"></div>
+    </div>
+
+</body>
+
+</html>
