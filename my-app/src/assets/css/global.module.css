@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Belleza&family=Poppins:wght@300;400;600&display=swap');
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+ body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f2f0; /* Example background */
+  font-family: "Poppins", sans-serif;
+}
+p, li, span {
+  font-family: var(--poppins-font);
+}
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+:root {
+  --main-color: #f76e2a;
+  --colorFont: rgb(26, 47, 51);
+  --secondary-color: #869193;
+  --font-family: "Roboto", sans-serif;
+  --font-family-secondary: "Belleza", sans-serif;
+  --third-font-family: "Cinzel", sans-serif;
+  --text-color: #F3F2F0;
+  --cinzel-font: 'Cinzel', serif;
+  --menu-item-color: #F3F2F0;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+
+* {
+  scrollbar-width: thin;
+  /* auto | thin | none */
+  scrollbar-color: var(--main-color) var(--colorFont);
+  /* thumb color | track color */
+}
