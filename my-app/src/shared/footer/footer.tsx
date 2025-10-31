@@ -1,15 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css"; 
-// import styles from "./css/Footer.module.css";
+// import styles from "./css/Footer.css";
 import "./css/footer.css";
-
-
-
+import "./css/footerResponsive.css"
 
 import logo from "../../assets/images/logo/logo-sm.png";
 import img1 from "../../assets/images/footer-swiper/gallery-i-2-140x140.jpg.webp";
