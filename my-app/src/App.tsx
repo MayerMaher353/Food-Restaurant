@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Footer from './shared/footer/footer'
+import WorkingHours from './shared/WorkingHours/WorkingHours'
+import Testemonials from './shared/Testemonials/Testemonials'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+     <WorkingHours />
+     <Testemonials />
      {/* Footer appears here */}
       <Footer />
     </>
