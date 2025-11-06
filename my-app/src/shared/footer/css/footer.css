@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
-
-
 /* start footer */
 footer {
- width: 100%;
+  width: 100%;
   background-color: #F3F2F0;
   padding: 40px 0px;
   text-align: left;
@@ -16,8 +13,6 @@ footer .container {
   /* max-width: 100%; */
   padding: 0;
 }
-
-
 .logo-holder {
   position: relative;
   width: 8rem;
@@ -25,15 +20,11 @@ footer .container {
 
 footer .container .row {
   justify-content: space-between;
-
-
 }
 
 .logo-holder img {
-
   width: 100%;
   height: 100%;
-
 }
 
 .socials {
@@ -78,23 +69,16 @@ footer a:visited {
   color: var(--main-color); /* Keep same color on hover/focus/visited */
   text-decoration: none; /* Ensure no underline appears */
 }
-
-
-
 .tst-footer-contact ul {
   margin: 0;
   padding: 0;
-  list-style: none;
-     
+  list-style: none;    
 }
-
 .tst-footer-contact  li {
   display: flex;
   list-style: none;
   justify-content: space-between;
-
 }
-
 .tst-footer-contact .tst-label {
   color: #1A2F33;
   font-weight: 400;
@@ -109,8 +93,6 @@ footer span {
   color: #6D797B;
   font-size: 1.1rem;
 }
-
-
 .tst-footer-contact {
   display: flex;
   flex-direction: column;
@@ -118,9 +100,7 @@ footer span {
   padding: 0%;
   gap: 10px;
   margin-top: 5px;
-
 }
-
 .socail-col {
   position: relative;
 }
@@ -131,22 +111,19 @@ footer span {
   justify-content: space-between;
   gap: .4rem;
 }
-
 .contact-info-footer ul{
     list-style: none;
 }
-
 .gallery-footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .gallery-container {
   position: relative;
   overflow: hidden;
-  width: calc(5.6rem * 4 + 13px * 3); /* 4 images + spacing between them */
-  max-width: 100%;
+  width:100%;
+  max-width: 106%;
   margin: 0 auto;
 }
 .gallery-container .swiper-wrapper {
