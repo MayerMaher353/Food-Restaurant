@@ -10,10 +10,10 @@ footer {
   text-align: left;
   
 }
-#root { background-color: #F3F2F0;}
+/* #root { background-color: #F3F2F0;} */
 
 footer .container {
-  max-width: 100%;
+  /* max-width: 100%; */
   padding: 0;
 }
 
@@ -60,7 +60,7 @@ footer .container .row {
 footer h3 {
   color: var(--colorFont);
   font-family: var(--font-family-secondary);
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 0rem; */
 }
 
 
@@ -129,7 +129,7 @@ footer span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  gap: .4rem;
 }
 
 .contact-info-footer ul{
@@ -154,28 +154,34 @@ footer span {
   width: max-content; /* only as wide as needed */
 }
 
-
+.swiper {
+    padding: 35px 0 !important;
+    border-bottom: none !important;
+}
 
 
 .gallery-item {
-  position: relative;
-  flex-shrink: 0;
-  /*  important for looping */
+  position: relative !important;
   width: 5.6rem !important;
   height: 5.4rem !important;
+  flex-shrink: 0 !important;
   overflow: hidden;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
   display: block;
-  transition: transform 0.3s ease;
-
+  border-radius: inherit;
+  flex-shrink: 0;
 }
+
 
 .gallery-item .overlay {
   position: absolute;
@@ -291,3 +297,178 @@ footer span {
 
 
 /* end footer */
+
+
+  
+
+/*     .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 49.7rem;
+    }
+ */
+@media (max-width:361px){
+  footer .container {
+  width: 84%;
+  margin: 0 auto;
+  padding: 10px;
+}
+    .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 40.7rem;
+    }
+    .logo-holder img {
+    width: 86%;
+    height: 100%;
+}
+.border-dot {
+    border-top: 4px dotted #00000033;
+    margin: 3rem 0;
+}
+    footer .container .row {
+        justify-content: space-between;
+        gap: 2.8rem;
+
+    }
+    .gallery-controls {
+
+    margin-top: 0.71rem;
+   
+}
+footer p, footer span {
+    color: #6D797B;
+    font-size: 0.8rem;
+}
+}
+
+
+
+
+@media (max-width:600px){
+  .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.about-us-footer{
+  gap: 0.4rem;
+}
+.socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 50.6rem;
+    }
+}
+@media (width:390px){
+     .socials {
+        
+        bottom: 47.6rem;
+    }
+  }
+
+
+
+  @media (width:360px){
+     .socials {
+       
+        bottom: 40.6rem;
+    }
+  }
+
+  @media (width:375px){
+     .socials {
+     
+        bottom: 36.6rem;
+    }
+  }
+   @media (width:344px){
+     .socials {
+     
+        bottom: 49.6rem;
+    }
+  }
+
+  @media (width: 412px) {
+    .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 51.6rem;
+    }
+}
+   @media (width:540px){
+     .socials {
+     
+        bottom: 39.6rem;
+    }
+  }
+/* Small devices (tablets, 600px and up) */
+@media (min-width: 600px) {
+  body {
+    background-color: #f0f0f0;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+         /* .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 50.6rem;
+    } */
+    .logo-holder img {
+    width: 86%;
+    height: 100%;
+}
+.border-dot {
+    border-top: 4px dotted #00000033;
+    margin: 3rem 0;
+}
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    background-color: #e0e0e0;
+  }
+  footer .container {
+    width: 90%;
+  }
+  footer p, footer span {
+    color: #6D797B;
+    font-size: 1rem;
+}
+
+.border-dot {
+    border-top: 4px dotted #00000033;
+    margin: 3rem 0;
+}
+.about-us-footer{
+  gap: 0.1rem;
+}
+      /* .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 58.6rem;
+    } */
+}
+/* @media (width:853px){
+      .socials {
+        position: absolute;
+        right: 1rem;
+        bottom: 56.6rem;
+    }
+} */
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: #d0d0d0;
+  }
+  .container{
+    width: 90%;
+  }
+  
+}
+

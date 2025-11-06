@@ -8,10 +8,16 @@
  body, #root {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f2f0; /* Example background */
+   margin: 0 !important;
+    padding: 0 !important;
+  background-color: #ffffff !important; /* Example background */
   font-family: "Poppins", sans-serif;
+}
+#root{
+    max-width: none !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 p, li, span {
   font-family: var(--poppins-font);
@@ -48,3 +54,11 @@ p {
   scrollbar-color: var(--main-color) var(--colorFont);
   /* thumb color | track color */
 }
+
+body {
+    margin: 0;
+    padding: 0;
+     background-color: white;
+    font-family: sans-serif;
+}
+ 
