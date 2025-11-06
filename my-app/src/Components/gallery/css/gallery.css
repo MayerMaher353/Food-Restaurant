@@ -1,0 +1,167 @@
+/* ------------------start gallery-------------------------- */
+
+.gallery {
+    margin: 100px 0;
+    overflow: hidden;
+}
+
+.gallery .head {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.gallery .head::after {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    top: 0;
+}
+
+.gallery .head p {
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--colorFont);
+    margin: 20px 0;
+}
+
+.gallery .head h1 {
+    font-family: var(--font-family-secondary);
+    font-size: 52px;
+    color: var(--colorFont);
+    padding: 0 12%;
+}
+
+.gallery .container .row .ele .content {
+    position: relative;
+    margin: 10px 0;
+    transition: all 0.7s ease;
+}
+
+.gallery .container .row .ele .content .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #2a44498f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+}
+
+.gallery .container .row .ele .content .overlay a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .container .row .ele .content .overlay a i {
+    color: white;
+    font-weight: 600;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a4449;
+    padding: 39% 74%;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+}
+
+.gallery .container .row .ele .content .overlay i:hover {
+    transform: rotate(0deg);
+}
+
+.gallery .container .row .ele .content:hover .overlay {
+    display: flex;
+    transform: scale(1);
+}
+
+.gallery .container .row .ele .content:hover {
+    transform: translateY(-5px);
+}
+
+.gallery .container .row .ele .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.gallery .scroller {
+    margin-top: 100px;
+    gap: 40px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    align-items: center;
+}
+
+.gallery .scroller:hover .scrolling-content {
+    animation-play-state: paused;
+}
+
+.gallery .scroller .scrolling-content {
+    flex-shrink: 0;
+    display: flex;
+    gap: 40px;
+    min-width: 100%;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 40px));
+    }
+}
+
+.gallery .scroller.reverse {
+    border-top: 1px solid rgb(194, 192, 192);
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.gallery .scroller.reverse .scrolling-content {
+    animation-direction: reverse;
+}
+
+.gallery .scroller .scrolling-content span {
+    font-family: var(--font-family);
+    font-size: 24px;
+    color: var(--colorFont);
+    display: flex;
+}
+
+.gallery .scroller .scrolling-content span img {
+    max-width: 64px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.gallery .scroller .scrolling-content span:nth-child(even) img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+/* ---------------end gallery ------------------------ */

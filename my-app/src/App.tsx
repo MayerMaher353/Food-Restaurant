@@ -1,5 +1,5 @@
 import './App.css'
-import Footer from './pages/aboutUs'
+import Footer from "./shared/Features/features";
 
 function App() {
   return (

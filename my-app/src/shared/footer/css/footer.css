@@ -27,21 +27,6 @@ footer .container .row {
   height: 100%;
 }
 
-.socials {
-  display: flex;
-  gap: 15px;
-  justify-content: flex-end;
-}
-
-.socials a {
-  color: var(--colorFont);
-  transition: all 0.3s ease;
-}
-
-.socials a:hover {
-  color: var(--main-color);
-}
-
 .border-dot {
   border-top: 4px dotted #00000033;
   /* black dotted line */
@@ -53,7 +38,6 @@ footer h3 {
   font-family: var(--font-family-secondary);
   /* margin-bottom: 0rem; */
 }
-
 
 footer a {
   text-decoration: none;
@@ -68,6 +52,20 @@ footer a:active,
 footer a:visited {
   color: var(--main-color); /* Keep same color on hover/focus/visited */
   text-decoration: none; /* Ensure no underline appears */
+}
+.socials {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+footer .socials a {
+  color: var(--colorFont);
+  transition: all 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: var(--main-color);
 }
 .tst-footer-contact ul {
   margin: 0;
