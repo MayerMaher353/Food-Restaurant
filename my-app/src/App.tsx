@@ -1,14 +1,15 @@
 import './App.css'
-import Footer from './shared/footer/footer'
-import WorkingHours from './shared/WorkingHours/WorkingHours'
-import Testemonials from './shared/Testemonials/Testemonials'
+import Footer from './pages/aboutUs'
+
 function App() {
   return (
+    
     <>
-     <WorkingHours />
-     <Testemonials />
-     {/* Footer appears here */}
-      <Footer />
+    
+   
+    <Footer/>
+
+   
     </>
   )
 }
