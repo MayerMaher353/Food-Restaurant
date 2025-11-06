@@ -1,0 +1,103 @@
+@media(max-width:542px) {
+  .hero-section .main-text h1 {
+    font-size: 4.4rem;
+    text-align: center;
+  }
+}
+
+@media(max-width:500px) {
+  .menu-1 .swiper-wrapper .swiper-slide .row .content {
+    align-items: stretch;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content {
+    align-items: stretch;
+  }
+
+  .menu-1 .swiper-wrapper .swiper-slide .row .content>a img {
+    height: 100%;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content>a img {
+    height: 100%;
+  }
+
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 {
+    padding: 20px 0;
+  }
+
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t2 {
+    padding: 20px 30px 20px 0;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 {
+    padding: 20px 0;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t2 {
+    padding: 20px 30px 20px 0;
+  }
+}
+
+@media(max-width:390px) {
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 span {
+    font-size: 0.6rem !important;
+  }
+
+  .menu-1 .swiper-wrapper .swiper-slide .row .content {
+    gap: 13px;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 span {
+    font-size: 0.6rem !important;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content {
+    gap: 13px;
+  }
+}
+
+@media(max-width:472px) {
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 span {
+    font-size: 0.7rem;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 span {
+    font-size: 0.65rem;
+  }
+
+  .menu-2 .swiper-2 .slider {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .menu-2 .swiper-2 .slider a {
+    width: fit-content;
+    padding: 18px 39px;
+  }
+}
+
+@media(max-width:504px) {
+  .menu-1 .swiper-wrapper .swiper-slide .row .content .t1 a {
+    font-size: 1.18rem;
+    font-weight: 800;
+  }
+
+  .menu-extra .swiper-wrapper .swiper-slide .row .content .t1 a {
+    font-size: 1.18rem;
+    font-weight: 800;
+  }
+}
+
+@media(max-width:768px) {
+  .menu-1 .swiper-pagination {
+    flex-direction: column;
+  }
+
+  .menu-extra .swiper-pagination {
+    flex-direction: column;
+  }
+}
+
+

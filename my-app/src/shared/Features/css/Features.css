@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.menu-info {
+  padding-left: 60px;
+}
+
+.restaurant-about .gg {
+  padding: 0;
+}
+
+.restaurant-about .row:first-child .gg img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.features {
+  margin-top: 150px;
+}
+
+.icons-features {
+  margin-top: 60px;
+}
+
+.icons-features h5 {
+  font-family: "Belleza", sans-serif;
+  font-size: 30px;
+}
+
+.features h5 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 800;
+  color: var(--colorFont);
+  margin-bottom: 0;
+}
+
+.features h5::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 4px;
+  background-color: #f76e2a;
+  transform: translateX(-185%);
+  top: -20px;
+  border-radius: 7px;
+}
+
+.features .p-features {
+  font-family: var(--font-family);
+  color: rgb(134, 145, 147);
+}
+
+.features h2 {
+  padding: 25px 0;
+  margin-bottom: 0;
+}
+
+.h5-menu {
+  color: #1a2f33;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-left: 40px;
+  letter-spacing: 2px;
+}
+
+.h5-menu::before {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 4px;
+  transform: translateX(-134%);
+  background-color: #f76e2a;
+  border-radius: 10px;
+}
+
+.restaurant-about h2 {
+  color: #1a2f33;
+  font-weight: 400;
+  font-size: 50px;
+  font-family: "Belleza", sans-serif;
+  margin-bottom: 20px;
+}
+
+.p-menu {
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.p-features {
+  color: #555;
+}
+
+.btn-custom {
+  width: 150px;
+  height: 60px;
+  transition: 0.5s;
+  background-color: #f76e2a;
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  transform: scale(1.07);
+}
+
+.our-team {
+  margin-bottom: 50px;
+}
+
+.our-team h2 {
+  max-width: 600px;
+}
+
+.feature-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.restaurant-about .container .icons-features {
+  margin: 70px 0;
+}
+
+.restaurant-about {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.restaurant-about::before {
+  position: absolute;
+  content: '';
+  background-image: url(../../../assets/images/food-dish-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 240px;
+  height: 240px;
+  top: 73%;
+  left: -115px;
+  animation: rotation 10s linear infinite;
+  z-index: -1;
+}
+
+.restaurant-about::after {
+  position: absolute;
+  content: '';
+  background-image: url(../../../assets/images/food-dish-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 240px;
+  height: 240px;
+  bottom: 0%;
+  right: -125px;
+  animation: rotation 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.restaurant-about .container .icons-features .ele-features {
+  margin: 20px 0;
+  cursor: default;
+}
+
+.restaurant-about .container .icons-features .ele-features .content {
+  position: relative;
+  padding: 70px 0;
+  border-radius: 200px;
+  box-shadow: 0 0 11px #8080804f;
+  background-color: white;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+  transform: scale(0);
+  transition: all 1s ease;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 200px;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-image .overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.534);
+  position: absolute;
+  z-index: 1;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-content {
+  position: relative;
+  z-index: 2;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-content img {
+  margin: 20px 0;
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-content h3 {
+  font-family: var(--font-family-secondary);
+  color: var(--colorFont);
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-content h2 {
+  color: var(--main-color);
+}
+
+.restaurant-about .container .icons-features .ele-features .content .why-choose-item-content h2 .counter-features {
+  color: var(--colorFont);
+}
+
+.restaurant-about .container .icons-features .ele-features.active .content .why-choose-item-content img {
+  visibility: hidden;
+}
+
+.restaurant-about .container .icons-features .ele-features.active .content .why-choose-item-content h2,
+.restaurant-about .container .icons-features .ele-features.active .content .why-choose-item-content h3,
+.restaurant-about .container .icons-features .ele-features.active .content .why-choose-item-content h2 .counter-features {
+  color: white;
+}
+
+.restaurant-about .container .icons-features .ele-features.active .content {
+  box-shadow: 0 0 0 white;
+}
+
+.restaurant-about .container .icons-features .ele-features.active .content .why-choose-item-image {
+  transform: scale(1);
+}
