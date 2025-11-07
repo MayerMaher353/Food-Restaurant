@@ -1,17 +1,12 @@
-import './App.css'
-import Footer from "./shared/Features/features";
+import "./App.css";
+import Footer from "./pages/faq";
 
 function App() {
   return (
-    
     <>
-    
-   
-    <Footer/>
-
-   
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
