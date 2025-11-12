@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./css/pricing.css";
 import image from "../../assets/images/about-us/blog-card2.webp";
 const pricingHero = () => {

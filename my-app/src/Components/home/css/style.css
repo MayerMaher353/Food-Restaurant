@@ -18,14 +18,19 @@
   --font-family-secondary: "Belleza", sans-serif;
   --third-font-family: "Cinzel", sans-serif;
   --text-color: #f3f2f0;
+}
+
+.text-center {
+    text-align: center !important;
+    margin: 95px;
   --cinzel-font: "Cinzel", serif;
   --menu-item-color: #f3f2f0;
 }
 
 .container {
-  max-width: 1240px;
+    max-width: 1240px;
+    margin-top: -86px;
 }
-
 p {
   margin-bottom: 0;
 }
@@ -1048,7 +1053,7 @@ header .icon-shopping i {
   --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   position: relative;
-  background-image: url(../images/bg.jpg);
+  background-image: url(../../../assets/images/bg.jpg);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1660,12 +1665,12 @@ header .icon-shopping i {
   }
 
   .navbar-collapse .nav-link {
-    color: #000;
+    color: #ffffff !important;
     font-weight: 600;
   }
 
   .navbar .nav-item .nav-link {
-    color: #1a2f33 !important;
+    color: #ffffff !important;
   }
 
   .navbar-collapse .dropdown-menu {

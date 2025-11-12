@@ -318,12 +318,12 @@
   }
 
   .navbar-collapse .nav-link {
-    color: #000;
+    color: #ffffff !important;
     font-weight: 600;
   }
 
   .navbar .nav-item .nav-link {
-    color: #1a2f33 !important;
+    color: #ffffff !important;
   }
 
   .navbar-collapse .dropdown-menu {

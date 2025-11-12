@@ -1,6 +1,6 @@
 // src/Components/team/TeamSection.tsx
 
-import React from 'react';
+
 import TeamMemberCard from "./teamCard";
 import type { TeamMember } from '../../../types/teamTypes';
 import '../css/about-us.css'; // Make sure this path is correct

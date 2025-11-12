@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "./css/menu.css";
 import "./css/menuResponsive.css";
 import video from "../../assets/videos/seavideo.mp4";
