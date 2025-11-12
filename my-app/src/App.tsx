@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "./Components/home/about/about";
+import Footer from "./pages/contact";
 
 function App() {
   return (
