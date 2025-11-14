@@ -54,7 +54,27 @@ const timelineData: TimelineItem[] = [
 
 export default function Timeline() {
   return (
-    <div className="tst-timeline container">
+    <>
+      <section className="tst-content-frame--start tst-p-60-0">
+        <div className="container text-center">
+          <h3 className="tst-title--h tst-mb-30">
+            <span>
+              Delicious traditions
+              <br />
+              since 1996
+            </span>
+          </h3>
+          <p className="tst-text tst-mb-60">
+            <span>
+              Assumenda possimus eaque illo iste, autem. Porro eveniet, autem ipsam vitae amet repellat
+              repudiandae tenetur, quod corrupti consectetur cum? Repudiandae dignissimos fugiat sit nam. Tempore
+              aspernatur quae repudiandae dolorem, beatae dolorum, praesentium. Cumque, consequatur!
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <div className="tst-timeline container">
       {timelineData.map((item, index) => (
         <div key={index} className="tst-timeline-item tst-mb-30">
           <div className="tst-year tst-mb-15">
@@ -76,5 +96,6 @@ export default function Timeline() {
         </div>
       ))}
     </div>
+    </>
   );
 }

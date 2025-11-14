@@ -22,7 +22,7 @@
 
 .text-center {
     text-align: center !important;
-    margin: 95px;
+    margin: 49px;
   --cinzel-font: "Cinzel", serif;
   --menu-item-color: #f3f2f0;
 }
@@ -202,7 +202,7 @@ header .icon-shopping i {
 
 .background-image {
   background-color: #f4f4f4;
-  min-height: 100vh;
+
 }
 
 .background-image .background .overlay {
