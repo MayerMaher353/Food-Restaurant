@@ -1,14 +1,17 @@
 
+
 .shop-hero {
-  height: 21.9rem;
-  margin-bottom: 4rem;
+  height: 25rem !important;
+  margin-bottom: 0rem;
+  padding: 2rem 0;
 }
+
 
 .shop-hero .bgImg {
   position: absolute;
   /* z-index: -2; */
   width: 100%;
-  height: 30rem;
+  height: 31rem;
   object-fit: cover;
   top: 0;
   left: 0;
@@ -19,7 +22,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  height: 30rem;
+  height: 31rem;
   width: 100%;
   /* z-index: -1; */
   background-image: linear-gradient(90deg, rgba(6, 34, 39, 0.849) 10%, rgba(6, 34, 39, 0.0) 100%);
@@ -33,9 +36,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.1rem !important;
   color: #E5EBEF;
-  margin: 4rem 0;
+  margin: 5rem 0 !important;
 }
 
 .shop-hero .main-text h5 {
@@ -83,6 +86,7 @@
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "categories products";
   margin: 50px 0;
+  text-align: left;
 }
 
 .shop-categories h3 {
@@ -90,6 +94,7 @@
   font-family: var(--font-family-secondary);
   font-size: 1.2rem;
   font-weight: 800;
+  text-align: left;
 }
 
 .shop-categories {
@@ -97,7 +102,7 @@
   grid-area: categories;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .shop-categories form {
@@ -112,8 +117,11 @@
   border: none;
   box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.123);
   border-radius: 5px;
+ 
 }
-
+form{
+  margin: 0px;
+}
 .shop-categories form span {
   position: absolute;
   right: 11px;
@@ -123,6 +131,9 @@
 #min-price,
 #max-price {
   outline: none;
+}
+.categories {
+    padding: 0;
 }
 
 .categories ul {
@@ -172,13 +183,17 @@
 .sidebar-product-item span {
   color: var(--secondary-color);
 }
-
+.sidebar-product-item P {
+  color: var(--colorFont);
+}
 .sidebar-product-item #price-offer {
   color: var(--secondary-color);
   font-size: .7rem;
   margin-top: .9rem;
 }
-
+.sidebar-product-item .salmon-name{
+  font-size: 11.5px;
+}
 .tag-btn {
   color: var(--main-color);
   padding: 1px 3px;
@@ -313,6 +328,7 @@
 .price-section p {
   font-size: 1.2rem;
   font-weight: 400;
+  color: var(--colorFont);
 }
 
 .price-section #price-offer {
@@ -365,6 +381,7 @@
 .nav-controls {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 1rem;
   transition: all ease 0.3s;
@@ -379,11 +396,13 @@
   color: #fff;
   background-color: var(--main-color);
   /* border-radius: 5px; */
-}
 
+  
+}
+/* .page-indicator */
 .swiper-prev i,
 .swiper-next i {
-  padding: 1.3rem 1rem;
+  padding: 1.3rem 1.5rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -406,4 +425,111 @@
   display: none !important;
 }
 
+.shop-products {
+  overflow-x: hidden; /* hides horizontal scroll */
+  width: 100%;
+}
 
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* horizontal scrolling handled by Swiper */
+}
+
+.swiper-slide {
+  width: auto; /* let Swiper control the width */
+}
+
+@media (max-width: 1055px) and (min-width:992px) {
+
+
+  /* start shop page */
+
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 3 columns, flexible */
+    gap: 30px;
+  }
+
+  .shop-item-sort p {
+
+    padding-top: .7rem;
+  }
+
+
+  /* end shop page */
+
+}
+
+@media(max-width:992px) {
+
+  /* start shop page */
+  .shop-content-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "products"
+      "categories";
+  }
+
+  .shop-hero .main-text p {
+    font-size: 10px;
+
+  }
+
+  .shop-products {
+    margin-bottom: 2rem;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* 3 columns, flexible */
+    gap: 20px;
+  }
+
+  .shop-item-sort p {
+    font-size: .7rem;
+    padding-top: .7rem;
+  }
+
+
+  /* end shop page */
+
+/* start  */
+
+
+
+
+
+}
+
+
+@media(max-width:991px) {
+
+.shop-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 4.4rem;
+
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+
+  /* start shop page */
+
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 3 columns, flexible */
+    gap: 30px;
+  }
+
+  .shop-hero .main-text p {
+    font-size: 16px;
+  }
+
+  /* end shop page */
+}

@@ -15,10 +15,10 @@ const WorkingHours = () => {
               <h1>WORKING HOURS</h1>
               <p>Roloem, beatae dolorum, praesentium itaque et quam quaerat.</p>
               <div className="working-hours-btn-wrapper">
-                <a href="#" className="booking-table-btn">
+                <a href="/Reservation" className="booking-table-btn">
                   BOOK A TABLE
                 </a>
-                <a href="#" className="contact-us-btn">
+                <a href="/contact" className="contact-us-btn">
                   CONTACT US
                 </a>
               </div>

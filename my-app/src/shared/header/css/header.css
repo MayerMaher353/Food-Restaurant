@@ -116,6 +116,7 @@ header .icon-shopping i {
 .navbar .nav-item .nav-link {
   font-size: 16px;
   text-transform: none;
+  font-weight: 500;
   letter-spacing: 1px !important;
   font-family: var(--font-family);
 }

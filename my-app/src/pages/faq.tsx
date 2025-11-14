@@ -5,6 +5,7 @@ import Faqtext from "../Components/faq/faqtext";
 import Clicker from "../Components/faq/clicker";
 import Form from "../Components/faq/form";
 import Reserved from "../shared/reserved/reserved";
+import Blog from "../shared/Blog/BlogCard"
 import Subcribe from "../shared/subscribe/subcribe";
 import Footer from "../shared/footer/footer";
 
@@ -17,6 +18,7 @@ function faq() {
       <Clicker />
       <Form />
       <Reserved />
+      <Blog/>
       <Subcribe />
       <Footer />
     </>
