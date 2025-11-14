@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../shared/header/header';
 import Hero from '../Components/about us/hero'
 import AboutUs from '../Components/about us/aboutUs'
 import Teams from '../Components/about us/team/team'
@@ -10,6 +11,7 @@ import Footer from "../shared/footer/footer"
 function aboutUs() {
   return (
     <>
+    <Header />
     <Hero/>
     <AboutUs/>
     <Teams/>

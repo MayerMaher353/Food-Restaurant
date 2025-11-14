@@ -1,16 +1,16 @@
 import React from "react";
 import "./css/gallery.css";
 // ===== IMAGES (gallery) =====
-import g1 from "../../assets/images/gallery-1.jpg";
-import g2 from "../../assets/images/gallery-2.jpg";
-import g3 from "../../assets/images/gallery-3.jpg";
-import g4 from "../../assets/images/gallery-4.jpg";
-import g5 from "../../assets/images/gallery-5.jpg";
-import g6 from "../../assets/images/gallery-6.jpg";
+import g1 from "../../../assets/images/gallery-1.jpg";
+import g2 from "../../../assets/images/gallery-2.jpg";
+import g3 from "../../../assets/images/gallery-3.jpg";
+import g4 from "../../../assets/images/gallery-4.jpg";
+import g5 from "../../../assets/images/gallery-5.jpg";
+import g6 from "../../../assets/images/gallery-6.jpg";
 
 // ===== IMAGES (scrolling ticker) =====
-import tick1 from "../../assets/images/scrolling-ticker-image-1.jpg";
-import tick2 from "../../assets/images/scrolling-ticker-image-2.jpg";
+import tick1 from "../../../assets/images/scrolling-ticker-image-1.jpg";
+import tick2 from "../../../assets/images/scrolling-ticker-image-2.jpg";
 
 const Gallery = () => {
   return (

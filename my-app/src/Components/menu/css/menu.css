@@ -23,6 +23,9 @@
 .hero-section .container{
   position: relative;
   z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .hero-section .main-text {
   color: #ffffff;
@@ -74,7 +77,9 @@
   color: white;
   background-color: var(--main-color);
 }
-
+.menu-1 .swiper-wrapper .swiper-slide{
+  flex-direction: column;
+}
 .menu-1 .swiper-wrapper .swiper-slide .menu-title {
   display: flex;
   justify-content: center;
@@ -240,7 +245,9 @@
   color: white;
   background-color: var(--main-color);
 }
-
+.menu-extra .swiper-wrapper .swiper-slide {
+  flex-direction: column;
+}
 .menu-extra .swiper-wrapper .swiper-slide .menu-title {
   display: flex;
   justify-content: center;
@@ -489,7 +496,9 @@
 .menu-2 .swiper-2 .slider a:hover {
   transform: scale(1.02);
 }
-
+.menu-2 .swiper-2 .swiper-slide{
+  flex-direction: column;
+}
 .menu-2 .swiper-2 .swiper-slide>a {
   display: flex;
   height: fit-content;
