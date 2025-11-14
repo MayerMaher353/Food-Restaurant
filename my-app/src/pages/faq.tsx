@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from '../shared/header/header';
 import FaqHero from "../Components/faq/faqhero";
 import Faqtext from "../Components/faq/faqtext";
 import Clicker from "../Components/faq/clicker";
@@ -11,6 +11,7 @@ import Footer from "../shared/footer/footer";
 function faq() {
   return (
     <>
+      <Header />
       <FaqHero />
       <Faqtext />
       <Clicker />

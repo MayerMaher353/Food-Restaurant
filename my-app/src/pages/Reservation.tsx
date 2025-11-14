@@ -1,10 +1,10 @@
 
 import React from "react";
-import Header from "../components/Reservation/Header";
-import ReservationForm from "../components/Reservation/ReservationForm";
-import ContactSection from "../components/Reservation/ContactSection";
-import SubscribeSection from "../components/Reservation/SubscribeSection";
-import Footer from "../components/Reservation/Footer";
+import Header from '../shared/header/header';
+import ReservationForm from "../Components/Reservation/ReservationForm";
+import ContactSection from "../Components/Reservation/ContactSection";
+import SubscribeSection from "../Components/Reservation/SubscribeSection";
+import Footer from "../Components/Reservation/Footer";
 
 const App: React.FC = () => {
   return (
