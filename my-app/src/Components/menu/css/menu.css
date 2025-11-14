@@ -45,6 +45,10 @@
 }
 
 /* start menu */
+menu-1{
+  margin-top: 2rem;
+
+}
 
 .menu-1 .swiper-pagination {
   bottom: auto !important;

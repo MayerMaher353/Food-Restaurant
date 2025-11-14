@@ -1,6 +1,7 @@
 
 import React from "react";
 import Header from '../shared/header/header';
+
 import ReservationForm from "../Components/Reservation/ReservationForm";
 import ContactSection from "../Components/Reservation/ContactSection";
 import SubscribeSection from "../Components/Reservation/SubscribeSection";
@@ -10,6 +11,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
+
       <ReservationForm />
       <ContactSection />
       <SubscribeSection />

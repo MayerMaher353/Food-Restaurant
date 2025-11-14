@@ -98,7 +98,7 @@ function HomeMenuSection() {
           <div className="menu-end col-lg-12 col-sm-12 col-md-12">
             <p>
               <span>free</span>Crafted for Your Cravings: Today's Must-
-              <a href="menu.html">View Full Menu</a>
+              <a href="/menu">View Full Menu</a>
             </p>
           </div>
         </div>
