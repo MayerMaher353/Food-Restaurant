@@ -179,7 +179,7 @@ const Testimonials: React.FC = () => {
               </SwiperSlide>
               
               <div className="slider">
-                <a href="/aboutUs">MORE ABOUT US</a>
+                <a href="/about-us">MORE ABOUT US</a>
                 <div className="swiper-pagination"></div>
                 <div className="button">
                   <p>SLIDER NAVIGATION</p>
