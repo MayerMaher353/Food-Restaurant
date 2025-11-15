@@ -77,7 +77,7 @@ const Footer = () => {
               repudiandae neque illum aspernatur fugiat maiores id magni, modi,
               quaerat vitae.
             </p>
-            <a href="#">READ MORE</a>
+            <a href="/about-us">READ MORE</a>
           </div>
 
           {/* Contact info */}
@@ -88,7 +88,7 @@ const Footer = () => {
               <li><span className="tst-label">Write:</span> <span>your.email.inbox@here.com</span></li>
               <li><span className="tst-label">Find us:</span> <span>Canada, Toronto, Avenue 31B</span></li>
             </ul>
-            <a href="#">READ MORE</a>
+            <a href="/contact">READ MORE</a>
           </div>
 
           {/* Gallery */}

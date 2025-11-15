@@ -74,7 +74,7 @@ function About() {
               repudiandae dolorem, beatae dolorum, praesentium itaque et quam
               quaerat.
             </p>
-            <button className="btn-custom">READ MORE</button>
+            <a href="/about-us" className="btn-custom">READ MORE</a>
           </div>
           <div className="col-md-6 gg">
             <img src={about1} className="img-fluid" alt="About" />
@@ -91,7 +91,7 @@ function About() {
               repudiandae dolorem, beatae dolorum, praesentium itaque et quam
               quaerat.
             </p>
-            <button className="btn-custom">VIEW MENU</button>
+            <a href="/menu" className="btn-custom">VIEW MENU</a>
           </div>
           <div className="col-md-6 gg">
             <img src={about2} className="img-fluid" alt="Menu" />
@@ -108,7 +108,7 @@ function About() {
               repudiandae dolorem, beatae dolorum, praesentium itaque et quam
               quaerat.
             </p>
-            <button className="btn-custom">MEET THE TEAM</button>
+            <a href="/about-us" className="btn-custom">MEET THE TEAM</a>
           </div>
           <div className="col-md-6 gg">
             <img src={about3} className="img-fluid" alt="Team" />

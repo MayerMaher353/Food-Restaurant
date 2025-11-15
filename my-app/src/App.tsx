@@ -9,24 +9,22 @@ import Faq from "./pages/faq";
 import Pricing from "./pages/pricing";
 import Blog from "./pages/blog";
 import OurHistory from "./pages/OurHistory";
-import Gallery from "./pages/gallery";
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/about-us" element={<AboutUs />} />
-    //     <Route path="/menu" element={<Menu />} />
-    //     <Route path="/contact" element={<Contact />} />
-    //     <Route path="/reservation" element={<Reservation />} />
-    //     <Route path="/shop" element={<Shop />} />
-    //     <Route path="/faq" element={<Faq />} />
-    //     <Route path="/pricing" element={<Pricing />} />
-    //     <Route path="/blog" element={<Blog />} />
-    //     <Route path="/ourHistory" element={<OurHistory />} />
-    //   </Routes>
-    // </Router>
-    <Gallery/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/ourHistory" element={<OurHistory />} />
+      </Routes>
+    </Router>
   );
 }
 

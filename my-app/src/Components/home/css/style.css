@@ -97,12 +97,16 @@
 }
 
 .btn-custom {
-  width: 150px;
-  height: 60px;
-  transition: 0.5s;
-  background-color: #f76e2a;
-  color: white;
-  border: none;
+    width: 150px;
+    height: 60px;
+    transition: 0.5s;
+    background-color: #f76e2a;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .btn-custom:hover {
