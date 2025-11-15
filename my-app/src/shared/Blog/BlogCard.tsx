@@ -36,20 +36,23 @@ export default function BlogSection() {
   return (
     <div>
       {/* Newsletter Section */}
-      <div className="block newsletter-block text-center app-txt-center">
-        <div className="tst-suptitle tst-suptitle-center tst-mb-15">
-          <span>Newsletter</span>
-        </div>
-        <h3 className="tst-title--h tst-mb-30">
-          <span>Use the Tips <br />and Recipes of Our Chefs</span>
-        </h3>
-        <p className="tst-text tst-title--desc tst-mb-60">
-          <span>
-            Porro eveniet, autem ipsam corrupti consectetur cum. <br />
-            Repudiandae dignissimos fugiat sit nam.
-          </span>
-        </p>
-      </div>
+     <div>
+  <div className="block newsletter-block text-center app-txt-center">
+    <div className="tst-suptitle tst-suptitle-center tst-mb-15">
+      <span>Newsletter</span>
+    </div>
+    <h3 className="tst-title--h tst-mb-30">
+      <span>Use the Tips <br />and Recipes of Our Chefs</span>
+    </h3>
+    <p className="newsletter-text tst-title--desc tst-mb-60">
+      <span>
+        Porro eveniet, autem ipsam corrupti consectetur cum. <br />
+        Repudiandae dignissimos fugiat sit nam.
+      </span>
+    </p>
+  </div>
+</div>
+
 
       {/* Blog Cards Wrapper */}
       <div className="block blog-block container py-5 container-app">

@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/our history.css"; 
-import ourHistoryImg from '../../assets/images/OUR HISTORY.webp';
+import ourHistoryImg from "../../assets/images/OUR HISTORY.webp";
 
-const Background: React.FC = () => (
-  <div className="row g-0 background-image" id="home">
+const OurHistoryHero: React.FC = () => (
+  <div className="row g-0 background-image" id="our-history">
     <div
       className="col-12 background d-flex justify-content-center align-items-center pt-0 position-relative"
       style={{ backgroundImage: `url(${ourHistoryImg})` }}
@@ -16,4 +16,4 @@ const Background: React.FC = () => (
   </div>
 );
 
-export default Background;
+export default OurHistoryHero;
