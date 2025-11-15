@@ -1,18 +1,20 @@
 
 import React from "react";
 import Header from '../shared/header/header';
+import BackgroundHero from "../Components/Reservation/reservation";
 import ReservationForm from "../Components/Reservation/ReservationForm";
-import ContactSection from "../Components/Reservation/ContactSection";
-import SubscribeSection from "../Components/Reservation/SubscribeSection";
-import Footer from "../Components/Reservation/Footer";
+import ContactInfo from "../Components/contact/contactinformation";
+import Subcribe from "../shared/subscribe/subcribe";
+import Footer from "../shared/footer/footer";
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
+      <BackgroundHero />
       <ReservationForm />
-      <ContactSection />
-      <SubscribeSection />
+      <ContactInfo />
+      <Subcribe />
       <Footer />
     </>
   );

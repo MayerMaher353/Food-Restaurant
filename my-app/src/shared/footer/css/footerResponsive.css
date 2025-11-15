@@ -2,12 +2,14 @@
  footer .container .row {
     justify-content: space-between;
     gap: 0rem;
+    text-align: left;
   }
 }
 @media(max-width:992px) {
   footer .container .row {
     justify-content: space-between;
     gap: 1.8rem;
+    text-align: left;
 
   }
 }
@@ -26,14 +28,17 @@
   footer span {
     color: #6D797B;
     font-size: .69rem;
+    text-align: left;
   }
 
   footer p {
     font-size: .9rem;
+    text-align: left;
 
   }
 
   footer h3 {
     margin-bottom: .5rem;
+    text-align: left;
   }
 }

@@ -21,7 +21,7 @@ const BackgroundSection: React.FC = () => {
               <a href="#">BOOK A TABLE</a>
             </button>
             <button className="open-menu-button">
-              <a href="#">OPEN MENU</a>
+              <a href="/menu">OPEN MENU</a>
             </button>
           </div>
         </div>

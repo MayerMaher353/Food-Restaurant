@@ -1,7 +1,6 @@
 import React from "react";
 import phoneImg from "../../../assets/images/phone.png";
 import "../css/style.css";
-
 const AppDownloadSection: React.FC = () => {
   return (
     <>

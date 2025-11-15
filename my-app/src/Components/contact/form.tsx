@@ -1,7 +1,4 @@
-import React from "react";
-
 import "./css/contact.css";
-
 function form() {
   return (
     <>
@@ -30,7 +27,7 @@ function form() {
               <input type="text" placeholder="Email" />
             </div>
             <div className="col-12">
-              <textarea placeholder="Message" rows="4"></textarea>
+              <textarea placeholder="Message" rows={4}></textarea>
             </div>
             <div className="col-12">
               <button type="submit">SEND A MESSAGE</button>

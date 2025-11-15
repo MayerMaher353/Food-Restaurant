@@ -30,17 +30,20 @@ const ReservationForm: React.FC = () => {
   };
 
   return (
-    <section className="tst-content-frame--start tst-p-60-0">
-      <div className="container text-center">
-        {/* Section title */}
-        <div className="tst-suptitle tst-suptitle-center tst-mb-15">
-          <span>Reservation</span>
-        </div>
-        <h3 className="tst-title--h tst-mb-30"><span>Book a Table</span></h3>
-        <p className="tst-text tst-mb-60">
-          <span>CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW</span>
-        </p>
+     <section className="tst-content-frame--start tst-p-60-0">
+    <div className="container text-center">
+      {/* Section title */}
+      <div className="tst-suptitle tst-suptitle-center tst-mb-15">
+        <span>Reservation</span>
       </div>
+      <h3 className="tst-title--h tst-mb-30">
+        <span>Book a Table</span>
+      </h3>
+      <p className="reservation-text tst-mb-60">
+        <span>CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW</span>
+      </p>
+    </div>
+
 
       {/* Reservation form */}
       <div className="reservation-form">
