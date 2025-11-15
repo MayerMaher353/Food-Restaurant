@@ -2,7 +2,7 @@ import React from "react";
 import "../../assets/css/style.css";
 import img1 from "../../assets/images/blog-card1.webp";
 import img2 from "../../assets/images/blog-card2.webp";
-import img3 from "../../assets/images/blogcaard3.webp";
+import img3 from "../../assets/images/blog-card3.webp";
 import img4 from "../../assets/images/lazy.jpg";
 
 export default function BlogSection() {

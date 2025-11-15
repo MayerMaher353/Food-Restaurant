@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../Components/blog/css/card.css";
-import "../../Components/blog/css/responsive.css"
-import img1 from"../../assets/images/blog-card1.webp";
+import "../../Components/blog/css/responsive.css";
+import img1 from "../../assets/images/blog-card1.webp";
 import img2 from "../../assets/images/blog-card2.webp";
-import img3 from "../../assets/images/blogcaard3.webp";
+import img3 from "../../assets/images/blog-card3.webp";
 import img4 from "../../assets/images/blog-card4.jpg";
 import img5 from "../../assets/images/blog-card5.jpg";
 import img6 from "../../assets/images/blog-card6.jpg";
@@ -11,7 +11,7 @@ import img7 from "../../assets/images/blog-card7.jpg";
 import img8 from "../../assets/images/blog-card8.jpg";
 import img9 from "../../assets/images/blog-card9.jpg";
 
-const BlogSection = () => {
+const CardsSection = () => {
   const blogs = [
     { id: 1, img: img1, category: "Dinner", title: "Business Breakfast" },
     { id: 2, img: img2, category: "Desserts", title: "Pancakes in Chocolate" },
@@ -19,7 +19,12 @@ const BlogSection = () => {
     { id: 4, img: img4, category: "DINNER", title: "Creamy Chicken Alfredo" },
     { id: 5, img: img5, category: "SEAFOOD", title: "Air Fryer Salmon" },
     { id: 6, img: img6, category: "DRINKS", title: "Supporting food flavors" },
-    { id: 7, img: img7, category: "Desserts", title: "Supporting food flavors" },
+    {
+      id: 7,
+      img: img7,
+      category: "Desserts",
+      title: "Supporting food flavors",
+    },
     { id: 8, img: img8, category: "Salads", title: "Air Fryer Salmon" },
     { id: 9, img: img9, category: "Dinner", title: "Grilled Chicken" },
   ];
@@ -43,7 +48,7 @@ const BlogSection = () => {
   return (
     <section className="blog-section container py-5">
       <div className="text-center">
-        <div className="hero  tst-suptitle tst-suptitle-center tst-mb-15">
+        <div className="tst-suptitle tst-suptitle-center tst-mb-15">
           <span>Newsletter</span>
         </div>
         <h3 className="tst-title--h tst-mb-30">Latest publications</h3>
@@ -62,11 +67,17 @@ const BlogSection = () => {
                 <span className="category">{blog.category}</span>
                 <h5 className="blog-title">{blog.title}</h5>
                 <p className="blog-text">
-                  Consectetur adipisicing elit. Soluta, impedit, saepe. Unde minima distinctio officiis amet temporibus, consequuntur dolorem dicta...
+                  Consectetur adipisicing elit. Soluta, impedit, saepe. Unde
+                  minima distinctio officiis amet temporibus, consequuntur
+                  dolorem dicta...
                 </p>
-                <a href="#" className="read-more">Read More</a>
+                <a href="#" className="read-more">
+                  Read More
+                </a>
                 <div className="author">
-                  <span className="oleksandr"><i className="bi bi-person-circle"></i> OLEKSANDR</span>
+                  <span className="oleksandr">
+                    <i className="bi bi-person-circle"></i> OLEKSANDR
+                  </span>
                   <span className="text-muted">May 1, 2021</span>
                 </div>
               </div>
@@ -75,8 +86,11 @@ const BlogSection = () => {
         ))}
       </div>
 
-      <div className="links text-center mt-5">
-        <div className="link" style={{ display: "inline-block", margin: "0 10px" }}>
+      <div className="links mt-5">
+        <div
+          className="link"
+          style={{ display: "inline-block", margin: "0 10px" }}
+        >
           <a
             href="#"
             onClick={(e) => {
@@ -88,7 +102,10 @@ const BlogSection = () => {
             1
           </a>
         </div>
-        <div className="link" style={{ display: "inline-block", margin: "0 10px" }}>
+        <div
+          className="link"
+          style={{ display: "inline-block", margin: "0 10px" }}
+        >
           <a
             href="#"
             onClick={(e) => {
@@ -100,7 +117,10 @@ const BlogSection = () => {
             2
           </a>
         </div>
-        <div className="link" style={{ display: "inline-block", margin: "0 10px" }}>
+        <div
+          className="link"
+          style={{ display: "inline-block", margin: "0 10px" }}
+        >
           <a
             href="#"
             onClick={(e) => {
@@ -117,4 +137,4 @@ const BlogSection = () => {
   );
 };
 
-export default BlogSection;
+export default CardsSection;

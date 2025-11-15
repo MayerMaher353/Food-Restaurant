@@ -1,14 +1,9 @@
-import { useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom"; // NavLink is now imported
+import React, { useEffect, useRef } from "react";
 import "./css/header.css";
 import logoWhite from "../../assets/images/logo/logo-sm-white.png";
 import logoDark from "../../assets/images/logo/logo-sm.png";
 
-// Function to determine if a NavLink is active and apply the 'after-home' class
-const getNavLinkClassName = ({ isActive }: { isActive: boolean }) =>
-  `nav-link ${isActive ? 'after-home' : ''}`;
-
-const SharedHeader = () => {
+const SharedHeader =()=> {
   const headerRef = useRef<HTMLElement | null>(null);
   const logoRef = useRef<HTMLImageElement | null>(null);
 
@@ -37,50 +32,47 @@ const SharedHeader = () => {
       <div className="container-fluid px-2">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid logo-nav d-flex">
-            
-            {/* Logo - Uses Link, as it's not part of the active menu items */}
-            <Link className="navbar-brand logo d-flex align-items-center" to="/">
+            {/* logo */}
+            <a className="navbar-brand logo d-flex align-items-center" href="#">
               <div className="logo-holder">
-                <img id="logo" ref={logoRef} src={logoWhite} alt="Logo" />
+                <img
+                  id="logo"
+                  ref={logoRef}
+                  src={logoWhite}
+                  alt="Logo"
+                />
               </div>
-            </Link>
-
-            {/* Toggle button */}
+            </a>
+            {/* toggle button for small screens */}
             <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-
-            {/* Nav Links */}
+            {/* nav links */}
             <div className="collapse navbar-collapse nav-links" id="mainNavbar">
               <button
                 type="button"
                 className="btn-close exit-menu ms-auto d-lg-none"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
+                aria-label="Close"
               >
                 <i className="fas fa-xmark"></i>
               </button>
-
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
-                
-                {/* HOME LINK - Uses NavLink and 'end' prop for exact match */}
                 <li className="nav-item d-flex align-items-center home">
                   <i className="fas fa-house me-1"></i>
-                  <NavLink 
-                    className={getNavLinkClassName} // Uses the shared function
-                    to="/"
-                    end // Ensures 'after-home' is only active on the exact root path
-                  >
+                  <a className="nav-link after-home" href="index.html">
                     Home
-                  </NavLink>
+                  </a>
                 </li>
-
-                {/* PAGES DROPDOWN - Remains an <a> tag and Link for dropdown items */}
                 <li className="nav-item shop-link dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -88,65 +80,82 @@ const SharedHeader = () => {
                     id="categoriesMenu"
                     role="button"
                     data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
                     Pages
                   </a>
-
-                  <ul className="dropdown-menu">
-                    {/* These links don't usually need NavLink active state */}
-                    <li><Link className="dropdown-item" to="/about-us">About Us</Link></li>
-                    <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
-                    <li><Link className="dropdown-item" to="/faq">FAQ</Link></li>
-                    <li><Link className="dropdown-item" to="/blog">Blog</Link></li>
-                    <li><Link className="dropdown-item" to="/ourHistory">History</Link></li>
+                  <ul className="dropdown-menu" aria-labelledby="categoriesMenu">
+                    <li>
+                      <a className="dropdown-item" href="about-us">
+                        About Us
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Gallery
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="history.html">
+                        History
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="">
+                        Pricing
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="faq.html">
+                        FAQ
+                      </a>
+                    </li>
                   </ul>
                 </li>
-
-                {/* MENU LINK - Uses NavLink */}
                 <li className="nav-item">
-                  <NavLink className={getNavLinkClassName} to="/menu">
+                  <a className="nav-link" href="menu.html">
                     Menu
-                  </NavLink>
+                  </a>
                 </li>
-
-                {/* ORDER LINK - Uses NavLink */}
                 <li className="nav-item">
-                  <NavLink className={getNavLinkClassName} to="/reservation">
+                  <a className="nav-link" href="Reservation.html">
                     Order
-                  </NavLink>
+                  </a>
                 </li>
-
-                {/* CONTACT LINK - Uses NavLink */}
                 <li className="nav-item">
-                  <NavLink className={getNavLinkClassName} to="/contact">
+                  <a className="nav-link" href="newsletter.html">
+                    Blog
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="contact.html">
                     Contact
-                  </NavLink>
+                  </a>
                 </li>
-
-                {/* SHOP LINK - Uses NavLink */}
                 <li className="nav-item">
-                  <NavLink className={getNavLinkClassName} to="/shop">
+                  <a className="nav-link" href="shop.html">
                     Shop
-                  </NavLink>
+                  </a>
                 </li>
-
               </ul>
             </div>
-
-            {/* Button + Cart - Uses Link, not NavLink */}
+            {/* button + cart */}
             <div className="d-flex align-items-center header-right-side">
-              <Link to="/reservation">
-                <button>RESERVATION</button>
-              </Link>
-
+              <button onClick={() => (window.location.href = "Reservation.html")}>
+                RESERVATION
+              </button>
               <div className="icon-shopping position-relative">
-                <Link to="/cart">
+                <a href="#">
                   <i className="fas fa-cart-shopping"></i>
-                </Link>
-                <span id="cart-count" className="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+                </a>
+                <span
+                  id="cart-count"
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                >
+                  0
+                </span>
               </div>
             </div>
-
           </div>
         </nav>
       </div>

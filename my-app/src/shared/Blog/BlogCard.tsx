@@ -1,8 +1,7 @@
-
 import "../../assets/css/global.css";
 import img1 from "../../assets/images/blog-card1.webp";
 import img2 from "../../assets/images/blog-card2.webp";
-import img3 from "../../assets/images/blogcaard3.webp";
+import img3 from "../../assets/images/blog-card3.webp";
 import img4 from "../../assets/images/lazy.jpg";
 import "./css/blogcard.css";
 export default function BlogSection() {
@@ -36,23 +35,25 @@ export default function BlogSection() {
   return (
     <div>
       {/* Newsletter Section */}
-     <div>
-  <div className="block newsletter-block text-center app-txt-center">
-    <div className="tst-suptitle tst-suptitle-center tst-mb-15">
-      <span>Newsletter</span>
-    </div>
-    <h3 className="tst-title--h tst-mb-30">
-      <span>Use the Tips <br />and Recipes of Our Chefs</span>
-    </h3>
-    <p className="newsletter-text tst-title--desc tst-mb-60">
-      <span>
-        Porro eveniet, autem ipsam corrupti consectetur cum. <br />
-        Repudiandae dignissimos fugiat sit nam.
-      </span>
-    </p>
-  </div>
-</div>
-
+      <div>
+        <div className="block newsletter-block text-center app-txt-center">
+          <div className="tst-suptitle tst-suptitle-center tst-mb-15">
+            <span>Newsletter</span>
+          </div>
+          <h3 className="tst-title--h tst-mb-30">
+            <span>
+              Use the Tips <br />
+              and Recipes of Our Chefs
+            </span>
+          </h3>
+          <p className="newsletter-text tst-title--desc tst-mb-60">
+            <span>
+              Porro eveniet, autem ipsam corrupti consectetur cum. <br />
+              Repudiandae dignissimos fugiat sit nam.
+            </span>
+          </p>
+        </div>
+      </div>
 
       {/* Blog Cards Wrapper */}
       <div className="block blog-block container py-5 container-app">
@@ -66,7 +67,9 @@ export default function BlogSection() {
                     <span className="category">{item.category}</span>
                     <h5 className="blog-title">{item.title}</h5>
                     <p className="blog-text">{item.text}</p>
-                    <a href="#" className="read-more">Read More</a>
+                    <a href="#" className="read-more">
+                      Read More
+                    </a>
 
                     {/* lazy */}
                     <div className="author d-flex align-items-center">
@@ -79,14 +82,13 @@ export default function BlogSection() {
                             height: "20px",
                             borderRadius: "50%",
                             objectFit: "cover",
-                            marginRight: "5px"
+                            marginRight: "5px",
                           }}
                         />
                         {item.author}
                       </span>
                       <span className="text-muted ms-3">{item.date}</span>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -97,10 +99,12 @@ export default function BlogSection() {
         {/* Blog Footer */}
         <div className="block blog-footer-block d-flex justify-content-between align-items-center mt-4 flex-wrap">
           <p className="text-muted mb-0">
-            Read the news of our restaurant, recipes for delicious fears, tips for
-            your home kitchen in our blog!
+            Read the news of our restaurant, recipes for delicious fears, tips
+            for your home kitchen in our blog!
           </p>
-          <a href="#" className="tst-btn">All Publications</a>
+          <a href="#" className="tst-btn">
+            All Publications
+          </a>
         </div>
       </div>
     </div>
