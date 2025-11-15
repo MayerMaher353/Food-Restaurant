@@ -99,6 +99,7 @@
 .icons-features {
   margin-top: 60px;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .icons-features .row {

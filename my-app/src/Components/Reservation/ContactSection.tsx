@@ -11,7 +11,7 @@ function ContactSection() {
           Quaerat debitis, vel, sapiente dicta sequi labore porro pariatur harum expedita.
         </p>
 
-        <div className="row mt-5">
+        <div className="row mt-5 contact-box-wrapper">
           <div className="col-md-4">
             <div className="contact-box">
               <i className="fa-solid fa-envelope-open-text contact-icon"></i>
