@@ -1,7 +1,3 @@
-
-
-
-import React from 'react';
 import MenuItemCard from './MenuItemCard';
 import type { MenuItem } from '../../../types/menuTypes';
 import '../css/style.css';

@@ -4,7 +4,7 @@ import "./css/menuResponsive.css";
 import video from "../../assets/videos/seavideo.mp4";
 const menuHero = () => {
   return (
-     <div className="hero-section">
+     <div className="menu-hero-section">
        <video src={video} muted playsInline autoPlay loop></video>
        <div className="shop-overlay"></div>
        <div className="container">

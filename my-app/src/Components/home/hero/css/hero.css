@@ -1,7 +1,8 @@
 .background-image .background {
-  background-image: url(../../../../assets/images/background-image.jpeg);
+  background-image: url(../../../../assets/images/background-image.jpeg) !important;
   background-size: cover;
   background-repeat: no-repeat;
+  height: auto !important;
 }
 
 .background-image {
