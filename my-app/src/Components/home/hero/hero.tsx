@@ -18,7 +18,7 @@ const BackgroundSection: React.FC = () => {
               TASTYC SEAFOOD
             </h2>
             <button className="book-a-table-button">
-              <a href="#">BOOK A TABLE</a>
+              <a href="/Reservation">BOOK A TABLE</a>
             </button>
             <button className="open-menu-button">
               <a href="/menu">OPEN MENU</a>
