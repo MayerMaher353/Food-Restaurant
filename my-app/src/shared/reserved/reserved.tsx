@@ -1,4 +1,3 @@
-import React from 'react';
 import './css/reservation.css'; // Import the corresponding CSS
 import reservedImage from '../../assets/images/menu images/reserved.png'; // Update path as necessary
 
@@ -25,12 +24,12 @@ function ReservationBanner() {
               <div className="col-lg-6">
                 <div className="content">
                   {/* The button would typically trigger a modal or redirect */}
-                  <button id="open-reservation">RESERVATION</button>
+                  <a href="/Reservation" id="button-reservation">RESERVATION</a>
                 </div>
               </div>
               <div className="col-lg-6">
                 {/* The 'a' tag here would be a <Link> component in a real routing setup */}
-                <a href="contact.html">GET IN TOUCH</a>
+                <a href="/contact">GET IN TOUCH</a>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./shared/header/header";
 import Home from "./pages/home";
 import AboutUs from "./pages/aboutUs";
 import Menu from "./pages/menu";
@@ -13,7 +12,6 @@ import OurHistory from "./pages/OurHistory";
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />

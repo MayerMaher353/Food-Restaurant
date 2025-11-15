@@ -307,7 +307,7 @@ footer span {
     padding: 10px;
   }
 
-  .logo-holder img {
+  footer .logo-holder img {
     width: 86%;
     height: 100%;
   }
@@ -373,7 +373,7 @@ footer span {
     margin: 0 auto;
   }
 
-  .logo-holder img {
+  footer .logo-holder img {
     width: 86%;
     height: 100%;
   }

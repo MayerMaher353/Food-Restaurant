@@ -146,14 +146,6 @@
     margin-right: 0;
   }
 
-  /* .socials {
-
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-    position: static;
-  } */
-
   footer .container .row {
     justify-content: space-between;
     gap: 0rem;
@@ -267,16 +259,6 @@
     margin-top: -20px;
   }
 
-  .header-right-side {
-    order: 3;
-  }
-
-  .logo-nav .logo {
-    order: 2;
-    margin-left: 6%;
-  }
-
-
   .logo img {
     width: 102px;
     height: 42px;
@@ -292,7 +274,6 @@
     left: -250px;
     width: 224px;
     height: 100%;
-    background-color: rgb(26, 47, 51);
     padding: 1.5rem;
     transition: left 0.3s ease;
     overflow-y: auto;
@@ -317,12 +298,7 @@
   }
 
   .navbar-collapse .nav-link {
-    color: #ffffff !important;
     font-weight: 600;
-  }
-
-  .navbar .nav-item .nav-link {
-    color: #ffffff !important;
   }
 
   .navbar-collapse .dropdown-menu {
@@ -604,8 +580,6 @@
  
         right: 47.3%;
 }
-/* 44.3% */
-
 
 /* end about us page */
 }

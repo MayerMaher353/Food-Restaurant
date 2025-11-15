@@ -82,7 +82,7 @@
   width: fit-content;
 }
 
-.reservation .container .content .row .col-lg-6:first-child button {
+.reservation .container .content .row .col-lg-6:first-child #button-reservation {
   background-color: var(--main-color);
   padding: 20px;
   outline: none;
@@ -95,7 +95,7 @@
   transition: all 0.5s ease;
 }
 
-.reservation .container .content .row .col-lg-6:first-child button:hover {
+.reservation .container .content .row .col-lg-6:first-child #button-reservation:hover {
   transform: scale(1.02);
 }
 
