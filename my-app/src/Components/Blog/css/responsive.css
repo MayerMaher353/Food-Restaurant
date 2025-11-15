@@ -137,7 +137,7 @@
   }
 
   .navbar-collapse .nav-link {
-    color: #000;
+    color: #000 !important;
     font-weight: 600;
   }
 
@@ -150,7 +150,7 @@
   }
 
   .navbar-collapse .dropdown-item {
-    color: #000;
+    color: #000 !important;
   }
 
   .background-image .background .background-text h2 {

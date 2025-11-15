@@ -41,6 +41,11 @@ p {
 .navbar {
   z-index: 1000;
 }
+@media (max-width:992px){
+ header .logo-holder{
+  width: fit-content;
+ }
+}
 
 header {
   min-height: 80px;
@@ -96,11 +101,20 @@ header .icon-shopping i {
   border-radius: 2px 2px 0 0;;
   position: absolute;
   background-color: var(--main-color);
-  top: 138%;
+  top: 137%;
   left: 0;
   animation: active 0.3s 1 linear;
 }
-
+@media (max-width:1265px) and (min-width:1056px)  {
+  .nav-links .navbar-nav .nav-item .after-home::after {
+     top: 148%;
+  }
+}
+@media (max-width:1055px) and (min-width:992px)  {
+  .nav-links .navbar-nav .nav-item .after-home::after {
+     top: 144%;
+  }
+}
 @keyframes active {
   from {
     transform: scaleX(0);
@@ -168,8 +182,8 @@ header .icon-shopping i {
 
 #cart-count {
   background-color: #2ecc71;
-  padding-right: 7px;
-  padding-left: 7px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .navbar-toggler {

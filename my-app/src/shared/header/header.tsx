@@ -143,7 +143,7 @@ const SharedHeader = () => {
                 <Link to="/cart">
                   <i className="fas fa-cart-shopping"></i>
                 </Link>
-                <span className="badge rounded-pill">0</span>
+                <span id="cart-count" className="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
               </div>
             </div>
 

@@ -1,4 +1,3 @@
-import React from "react";
 
 
 import emailIcon from "../../assets/images/icon-contact-email-256x256.png";
@@ -11,7 +10,7 @@ const ContactInfo = () => {
   return (
     <>
       {/* contact information */}
-      <div className="text-center my-10 features">
+      <div className="text-center my-10 contact-features">
         <h5>GET IN TOUCH</h5>
         <h2>Contact Information</h2>
         <p className="p-features">
