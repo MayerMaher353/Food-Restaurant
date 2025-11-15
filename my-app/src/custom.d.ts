@@ -1,0 +1,9 @@
+declare module "swiper/css";
+declare module "swiper/modules";
+declare module "swiper/modules/navigation";
+declare module "swiper/modules/pagination";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.webp";
+declare module "*.gif";
+declare module "*.svg";
