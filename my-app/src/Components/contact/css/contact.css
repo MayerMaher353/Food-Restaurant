@@ -1,0 +1,290 @@
+/* hero section */
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  height: 25rem;
+}
+
+.contact-hero .bgImg {
+  position: absolute;
+  /* z-index: -2; */
+  width: 100%;
+  max-width: 100%;
+  height: 23rem;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.contact-hero .shop-overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 23rem;
+  width: 100%;
+  /* z-index: -1; */
+  background-image: linear-gradient(
+    90deg,
+    rgba(6, 34, 39, 0.849) 10%,
+    rgba(6, 34, 39, 0) 100%
+  );
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero .main-text {
+  /* z-index: 2; */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.4rem;
+  color: #e5ebef;
+  margin: 5.5rem 0;
+  
+}
+
+.contact-hero .main-text h5 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero .main-text h5::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 0.27rem;
+  bottom: 36px;
+  left: 38px;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+}
+
+.contact-hero .main-text h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 5.4rem;
+  z-index: 2;
+}
+
+.contact-hero .main-text p {
+  font-family: var(--font-family);
+  color: #dddddd;
+  font-weight: 500;
+  text-align: center;
+  line-height: -4px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-hero .main-text h1 {
+    font-size: 4.6rem;
+  }
+}
+
+/* end hero */
+
+/* contact information */
+.features {
+  margin-top: 150px;
+}
+
+.icons-features {
+  margin-top: 60px;
+  overflow-x: hidden;
+}
+
+.icons-features .row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.icons-features h5 {
+  font-family: "Belleza", sans-serif;
+  font-size: 30px;
+}
+
+.features h5 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+
+.features h5::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 4px;
+  background-color: #f76e2a;
+  transform: translateX(-244%);
+  border-radius: 10px;
+  top: -20px;
+}
+
+.feature-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.features h2 {
+  color: #1a2f33;
+  font-weight: 400;
+  font-size: 50px;
+  font-family: "Belleza", sans-serif;
+  margin-bottom: 20px;
+}
+
+.features p {
+  padding: 10px;
+}
+
+.features-down {
+  margin-top: 150px;
+}
+
+.features-down h5 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 600;
+}
+
+.features-down h5::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 4px;
+  background-color: #f76e2a;
+  transform: translateX(-240%);
+  top: -20px;
+}
+
+.features-down h2 {
+  color: #1a2f33;
+  font-weight: 400;
+  font-size: 50px;
+  font-family: "Belleza", sans-serif;
+  margin-bottom: 20px;
+}
+
+.features-down p {
+  padding: 10px;
+}
+
+.button-contact {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-contact button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.6s ease-in-out;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.button-contact button:hover {
+  background-color: #e16c11;
+  transform: scale(1.05);
+}
+
+.button-contact button p {
+  font-size: 15px;
+}
+/* end features */
+
+/* start questions */
+.question .question-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.question .question-title::after {
+  position: absolute;
+  content: '';
+  width: 26px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  top: 0;
+}
+
+.question .question-title p:first-child {
+  font-family: var(--font-family);
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: var(--colorFont);
+  margin: 10px 0;
+  margin-top: 20px;
+}
+
+.question .question-title p:last-child {
+  font-family: var(--font-family);
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin: 10px 0;
+}
+
+.question .question-title h1 {
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+  font-size: 52px;
+  text-align: center;
+  font-style: normal;
+  color: var(--colorFont);
+}
+.question .container .row{
+    margin: 50px 0;
+}
+.question .col-lg-6 input, .question .col-12 textarea{
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    border: none;
+    outline: none;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 9%); 
+}
+.question .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.question .col-12 button{
+   margin: 30px 0;
+   padding:20px;
+   outline: none;
+   border: none;
+   background-color: var(--main-color);
+   color: white;
+   font-family: var(--third-font-family);
+   transition: all 0.5s ease-in-out;
+}
+.question .col-12 button:hover{
+    transform: scale(1.02);
+}
+/* end questions */
