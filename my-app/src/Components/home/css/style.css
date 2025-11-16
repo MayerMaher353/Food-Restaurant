@@ -1520,7 +1520,7 @@
   }
 
   .hero-section .main-text h1 {
-    font-size: 4.1rem;
+    font-size: 4.1rem !important;
   }
 }
 
@@ -1595,7 +1595,7 @@
   }
 
   .hero-section .main-text h1 {
-    font-size: 3.1rem;
+    font-size: 3.1rem !important;
   }
 }
 

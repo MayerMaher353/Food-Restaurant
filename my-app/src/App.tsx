@@ -9,6 +9,7 @@ import Faq from "./pages/faq";
 import Pricing from "./pages/pricing";
 import Blog from "./pages/blog";
 import OurHistory from "./pages/OurHistory";
+import Gallery from "./pages/gallery";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/ourHistory" element={<OurHistory />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </Router>
   );

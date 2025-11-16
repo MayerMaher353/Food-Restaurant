@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../Components/blog/css/card.css";
-import "../../Components/blog/css/responsive.css"
+import "../../Components/blog/css/responsive.css";
 import img1 from"../../assets/images/blog-card1.webp";
 import img2 from "../../assets/images/blog-card2.webp";
 import img3 from "../../assets/images/blogcaard3.webp";
@@ -47,7 +47,7 @@ const BlogSection = () => {
           <span>Newsletter</span>
         </div>
         <h3 className="tst-title--h tst-mb-30">Latest publications</h3>
-        <p className="tst-text tst-title--desc tst-mb-60">
+        <p className="tst-text tst-title--desc description-blog tst-mb-60">
           Porro eveniet, autem ipsam corrupti consectetur cum. <br />
           Repudiandae dignissimos fugiat sit nam.
         </p>
@@ -75,7 +75,7 @@ const BlogSection = () => {
         ))}
       </div>
 
-      <div className="links text-center mt-5">
+      <div className="links mt-5">
         <div className="link" style={{ display: "inline-block", margin: "0 10px" }}>
           <a
             href="#"

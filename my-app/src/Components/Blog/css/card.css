@@ -40,12 +40,12 @@
   padding-bottom: 12px;
 }
 
-.tst-text {
-   padding-bottom: 60px;
+.description-blog {
+    padding-bottom: 60px !important;
     opacity: .8;
     margin: 0;
     font-size: 14px;
-    color: #514a4a;
+    color: #514a4a;
 }
 
 .tst-text span {
@@ -102,7 +102,7 @@
   font-size: 26px;
   /* font-weight: 600; */
   font-family: var(--font-family-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .blog-text {
@@ -166,8 +166,4 @@
   color: white;
   transform: translate(-3px);
   border-radius: 4px;
-}
-
-@media screen {
-  
 }

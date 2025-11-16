@@ -195,7 +195,7 @@ const Menu3 = () => {
               </SwiperSlide>
 
               <div className="slider">
-                <a href="shop.html">ALL PRODUCTS</a>
+                <a href="/shop">ALL PRODUCTS</a>
 
                 <div className="button">
                   <p>SLIDER NAVIGATION</p>

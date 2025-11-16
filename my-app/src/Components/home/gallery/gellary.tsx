@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/gallery.css";
 // ===== IMAGES (gallery) =====
 import g1 from "../../../assets/images/gallery-1.jpg";
@@ -24,9 +25,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g1} />
             </div>
@@ -34,9 +35,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g2} />
             </div>
@@ -44,9 +45,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g3} />
             </div>
@@ -56,9 +57,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g4} />
             </div>
@@ -66,9 +67,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g5} />
             </div>
@@ -76,9 +77,9 @@ const Gallery = () => {
           <div className="col-lg-4 col-md-4 col-sm-12 ele">
             <div className="content">
               <div className="overlay">
-                <a href="#">
+                <a href="/gallery">
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </a>
               </div>
               <img src={g6} />
             </div>
