@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../Components/blog/hero/css/hero.css";
-import "../../../Components/blog/css/responsive.css"
+import "../../../Components/blog/css/responsive.css";
 
 const HeroSection = () => {
   return (

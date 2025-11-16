@@ -15,6 +15,7 @@ const Shop: React.FC = () => {
     const handleNext = () => swiperRef.current?.slideNext();
 
     const rootRef = useRef<HTMLDivElement | null>(null);
+    
 
     // helper to safely pick product by index (same as earlier)
     const p = (i: number): Product =>
@@ -763,7 +764,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 id="paella-large-name">
                                                         <strong>{p(4).name}</strong>
                                                     </h4>
                                                 </a>
@@ -843,7 +844,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 id="product-salmon-name">
                                                         <strong>{p(6).name}</strong>
                                                     </h4>
                                                 </a>
@@ -1071,7 +1072,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 id="product-very-very-large-name">
                                                         <strong>{p(12).name}</strong>
                                                     </h4>
                                                 </a>
@@ -1447,11 +1448,11 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 id="product-large-name">
                                                         <strong>{p(22).name}</strong>
                                                     </h4>
                                                 </a>
-                                                <div className="separator" />
+                                                <div className="separator"  />
                                                 <div className="product-price-holder">
                                                     <div className="price-section">
                                                         <p id="price-offer">
@@ -1484,7 +1485,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 id="product-very-large-name"> 
                                                         <strong>{p(23).name}</strong>
                                                     </h4>
                                                 </a>
@@ -1527,7 +1528,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 >
                                                         <strong>{p(24).name}</strong>
                                                     </h4>
                                                 </a>
@@ -1564,7 +1565,7 @@ const Shop: React.FC = () => {
                                             </div>
                                             <div className="product-content-holder">
                                                 <a href="" className="product-item-name">
-                                                    <h4>
+                                                    <h4 >
                                                         <strong>{p(25).name}</strong>
                                                     </h4>
                                                 </a>
@@ -1600,24 +1601,29 @@ const Shop: React.FC = () => {
                            
 
                             </div>
-                            {/* swiper-wrapper */}
+                            
                         </div>
-                        {/* myProductSwiper */}
+                        
 
                         {/* Custom Navigation */}
-                        <div className="swiper-controls">
-                <div className="nav-controls">
-                  <div className="swiper-prev" onClick={handlePrev}>
-                    <i className="fas fa-arrow-left" />
-                  </div>
-                  <span id="page-indicator" data-grid="1" className="active">
-                    1
-                  </span>
-                  <div className="swiper-next" onClick={handleNext}>
-                    <i className="fas fa-arrow-right" />
-                  </div>
-                </div>
-              </div>
+              {/* Custom Navigation */}
+<div className="swiper-controls">
+  <div className="nav-controls">
+    <div className="swiper-prev" onClick={handlePrev}>
+      <i className="fas fa-arrow-left" />
+    </div>
+
+    {/* page-indicator ثابت */}
+    <span id="page-indicator" className="active">
+      1
+    </span>
+
+    <div className="swiper-next" onClick={handleNext}>
+      <i className="fas fa-arrow-right" />
+    </div>
+  </div>
+</div>
+
                     </div>
                     {/* shop-products */}
                 </div>

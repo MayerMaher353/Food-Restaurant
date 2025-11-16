@@ -66,7 +66,7 @@ export default function BlogSection() {
                     <span className="category">{item.category}</span>
                     <h5 className="blog-title">{item.title}</h5>
                     <p className="blog-text">{item.text}</p>
-                    <a href="#" className="read-more">Read More</a>
+                    <a href="/blog" className="read-more">Read More</a>
 
                     {/* lazy */}
                     <div className="author d-flex align-items-center">

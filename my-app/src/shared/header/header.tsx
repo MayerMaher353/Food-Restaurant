@@ -97,6 +97,7 @@ const SharedHeader = () => {
                     <li><Link className="dropdown-item" to="/about-us">About Us</Link></li>
                     <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
                     <li><Link className="dropdown-item" to="/faq">FAQ</Link></li>
+                    <li><Link className="dropdown-item" to="/gallery">Gallery</Link></li>
                     <li><Link className="dropdown-item" to="/blog">Blog</Link></li>
                     <li><Link className="dropdown-item" to="/ourHistory">History</Link></li>
                   </ul>

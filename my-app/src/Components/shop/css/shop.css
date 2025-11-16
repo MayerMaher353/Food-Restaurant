@@ -301,6 +301,7 @@ form{
 
 .product-content-holder h4 {
   font-family: var(--font-family-secondary);
+  /* font-weight: 700; */
 }
 
 .product-content-holder .large-text {
@@ -396,6 +397,7 @@ form{
   color: #fff;
   background-color: var(--main-color);
   /* border-radius: 5px; */
+  /* position: fixed; */
 
   
 }
@@ -532,4 +534,18 @@ form{
   }
 
   /* end shop page */
+}
+.product-item-name #product-salmon-name,#paella-large-name{
+  font-size: 20.8px;
+}
+#product-large-name{
+  font-size: 20.8px;
+}
+#product-very-large-name{
+font-size: 19px;
+font-weight: 590;
+}
+#product-very-very-large-name{
+  font-size: 17.6px;
+font-weight: 599;
 }

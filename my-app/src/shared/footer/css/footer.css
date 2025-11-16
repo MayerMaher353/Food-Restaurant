@@ -423,3 +423,43 @@ footer span {
   }
 
 }
+
+/*------------------ css related for the pop-up--------- */
+.footer-popup-backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-popup-img {
+  max-width: 80%;
+  max-height: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.footer-popup-title {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
