@@ -12,7 +12,9 @@ import OurHistory from "./pages/OurHistory";
 import Gallery from "./pages/gallery";
 function App() {
   return (
+    
     <Router>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -26,7 +28,9 @@ function App() {
         <Route path="/ourHistory" element={<OurHistory />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
+      
     </Router>
+   
   );
 }
 

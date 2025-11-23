@@ -296,12 +296,16 @@ form{
 .product-content-holder .product-item-name {
   text-decoration: none;
   color: var(--colorFont);
+  display: inline-block;
+  height: 3.04rem;
+  font-weight: 900;
+  
 }
 
 
 .product-content-holder h4 {
   font-family: var(--font-family-secondary);
-  /* font-weight: 700; */
+  font-weight: 700;
 }
 
 .product-content-holder .large-text {
@@ -342,13 +346,40 @@ form{
   color: var(--secondary-color);
 }
 
-.product-price-holder .product-icon-holder {
-  background-color: var(--main-color);
-  padding: 16px 20px;
+
+
+.product-price-holder .product-icon-holder{
+  width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.product-price-holder .product-icon-holder button{
+  
+  background-color: var(--main-color) ;
+   width: 60px;
+    min-height: 58px;
+   border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: background-color 0.3s ;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 
 .product-price-holder i {
   color: white;

@@ -1,19 +1,21 @@
 import "../css/shop.css"
 /** @jsxImportSource react */
-import type { Product } from "../../../types/product";
+
+import type { Product  } from "../../../types/product";
 import { PRODUCTS } from "../../../constants/product-array"
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef ,useState } from "react";
 import { Swiper as SwiperClass } from "swiper";
 import { Navigation } from "swiper/modules";
-// import SwiperClass from "swiper"; // for TS types
 import "swiper/css";
 import "swiper/css/navigation";
+
+
 
 const Shop: React.FC = () => {
     const swiperRef = useRef<SwiperClass | null>(null);
     const handlePrev = () => swiperRef.current?.slidePrev();
     const handleNext = () => swiperRef.current?.slideNext();
-
+    
     const rootRef = useRef<HTMLDivElement | null>(null);
     
 
@@ -593,12 +595,7 @@ const Shop: React.FC = () => {
 
                         {/* Swiper with slides — each slide keeps your original product-grid structure */}
                         <div className="swiper myProductSwiper">
-                            {/* NOTE: We only render the *initial* slides here. The useEffect logic
-                                uses the data attributes on these products to build the 'products-source'
-                                element, and then dynamically renders all slides based on filters.
-                                The empty <Swiper> tag is not correct for Swiper's inner structure.
-                                We should revert to the standard div structure for the initialization to work.
-                            */}
+                            
                             <div className="swiper-wrapper">
                                 {/* Slide 1 (Products 1–6) */}
                                 <div className="swiper-slide">

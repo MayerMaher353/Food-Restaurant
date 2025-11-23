@@ -4,6 +4,7 @@ import "./css/header.css";
 import logoWhite from "../../assets/images/logo/logo-sm-white.png";
 import logoDark from "../../assets/images/logo/logo-sm.png";
 
+
 // Function to determine if a NavLink is active and apply the 'after-home' class
 const getNavLinkClassName = ({ isActive }: { isActive: boolean }) =>
   `nav-link ${isActive ? 'after-home' : ''}`;
@@ -11,6 +12,7 @@ const getNavLinkClassName = ({ isActive }: { isActive: boolean }) =>
 const SharedHeader = () => {
   const headerRef = useRef<HTMLElement | null>(null);
   const logoRef = useRef<HTMLImageElement | null>(null);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,7 +146,12 @@ const SharedHeader = () => {
                 <Link to="/cart">
                   <i className="fas fa-cart-shopping"></i>
                 </Link>
-                <span id="cart-count" className="position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+               <span
+  id="cart-count"
+  className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+>
+0
+</span>
               </div>
             </div>
 

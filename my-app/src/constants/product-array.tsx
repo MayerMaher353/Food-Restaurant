@@ -34,7 +34,7 @@ import drink5Img from '../assets/images/shop img/drink-5.webp';
 import dessert1Img from '../assets/images/shop img/desert-1.jpg'; 
 import dessert2Img from '../assets/images/shop img/desert-2.jpg';
 import dessert3Img from '../assets/images/shop img/desert-3.jpg';
-import dessert4Img from '../assets/images/shop img/gallery-i-5-140x140.jpg.webp';
+
 
 export const PRODUCTS: Product[] = [
     // --- Seafood / Crustaceans (Products 1-8) ---
@@ -72,5 +72,5 @@ export const PRODUCTS: Product[] = [
     { id: 24, name: "Summer Berry and Coconut Tart", price: 12.00, originalPrice: 15.00, tags: ["Dessert"], category: "Dessert", img: dessert1Img },
     { id: 25, name: "Pumpkin Cookies Cream Cheese", price: 10.00, originalPrice: 12.00, tags: ["Dessert"], category: "Dessert", img: dessert2Img },
     { id: 26, name: "Double Chocolate Cupcakes", price: 7.00, originalPrice: 9.00, tags: ["Dessert"], category: "Dessert", img: dessert3Img },
-    { id: 27, name: "Classic Vanilla Ice Cream", price: 4.50, originalPrice: 6.50, tags: ["Dessert"], category: "Dessert", img: dessert4Img },
+    
 ];
