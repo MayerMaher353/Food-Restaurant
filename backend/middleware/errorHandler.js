@@ -12,10 +12,6 @@ const errorHandler = (err, req, res, next) => {
     });
   }
 
-  // Production clean copy
-  let error = { ...err };
-  error.message = message;
-
   // Mongoose CastError (wrong ObjectId)
   if (err.name === "CastError") {
     statusCode = 404;

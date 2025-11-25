@@ -11,8 +11,15 @@ exports.getGallery = asyncHandler(async (req, res) => {
   });
 });
 
+const assignImagePath = (req) => {
+  if (req.file && req.file.path) {
+    req.body.image = req.file.path;
+  }
+};
+
 // create new gallery item
 exports.createGallery = asyncHandler(async (req, res) => {
+  assignImagePath(req);
   const item = await Gallery.create(req.body);
   res.status(201).json({
     status: "success",
@@ -36,6 +43,7 @@ exports.getGalleryItem = asyncHandler(async (req, res) => {
 
 // Update gallery item
 exports.updateGallery = asyncHandler(async (req, res) => {
+  assignImagePath(req);
   const item = await Gallery.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -68,4 +76,3 @@ exports.deleteGallery = asyncHandler(async (req, res) => {
     data: null,
   });
 });
-
