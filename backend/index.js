@@ -5,6 +5,7 @@ const errorHandler = require("./middleware/errorHandler");
 
 // routes
 const galleryRoutes = require("./routes/galleryRoute");
+const contactRoutes = require("./routes/contactRoute");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(express.static("public"));
 
 // Routes
 app.use("/api/v1/gallery", galleryRoutes);
+app.use("/api/v1/contact", contactRoutes);
 
 // Handle 404 - must be after all routes
 app.use((req, res) => {
