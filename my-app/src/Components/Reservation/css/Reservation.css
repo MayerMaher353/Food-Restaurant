@@ -158,8 +158,9 @@
 
 .reservation-form textarea {
   grid-column: 1 / -1;
-  min-height: 100px;
+  min-height: 137px;
   resize: none;
+  width: 310%;
 }
 
 .reservation-form button {
@@ -251,4 +252,15 @@
     font-size: 13px;
   }
 }
+/* ===== error ===== */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column; 
+}
 
+.error {
+  color: #dc3232;
+  font-size: 14px;
+  min-height: 18px;
+}

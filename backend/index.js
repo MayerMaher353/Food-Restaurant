@@ -1,29 +1,28 @@
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 const connectDB = require("./config/connectDB");
 const errorHandler = require("./middleware/errorHandler");
 
-// routes
+// Routes
+const reservationRoutes = require("./routes/reservationRoute");
 const galleryRoutes = require("./routes/galleryRoute");
-const contactRoutes = require("./routes/contactRoute");
 
-const app = express();
-
-// connect to database
+const app = express(); 
+// Connect to database
 connectDB();
 
-// middleware to parse json
+// Middleware
+app.use(cors()); 
 app.use(express.json());
-
-// static files
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Routes
+app.use("/api/v1/reservations", reservationRoutes);
 app.use("/api/v1/gallery", galleryRoutes);
-app.use("/api/v1/contact", contactRoutes);
 
-// Handle 404 - must be after all routes
+// Handle 404
 app.use((req, res) => {
   res.status(404).json({
     status: "fail",
@@ -31,10 +30,10 @@ app.use((req, res) => {
   });
 });
 
-// Global error handler middleware - must be last
+// Global error handler
 app.use(errorHandler);
 
-// listen to port
+// Listen to port
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`your server listening on port ${port}`);
