@@ -1,40 +1,41 @@
 const express = require("express");
 const router = express.Router();
 
-// controller functions
+// Controller functions
 const {
-  getContacts,
-  getContactItem,
-  createContact,
-  updateContact,
-  deleteContact,
-} = require("../controllers/contactController");
+  getReservations,
+  getReservationById,
+  createReservation,
+  updateReservation,
+  deleteReservation,
+} = require("../controllers/reservationController");
 
-// validation middleware
+// Validation middleware
 const validateBody = require("../middleware/validateBody");
 const validateParams = require("../middleware/validateParams");
 
-// validation schemas
+// Validation schemas
 const {
-  createContactSchema,
-  updateContactSchema,
+  createReservationSchema,
+  updateReservationSchema,
   idParamSchema,
-} = require("../validation/contactValidation");
+} = require("../validation/reservationValidation");
 
 // Routes
+
 router
   .route("/")
-  .get(getContacts)
-  .post(validateBody(createContactSchema), createContact);
+  .get(getReservations)
+  .post(validateBody(createReservationSchema), createReservation);
 
 router
   .route("/:id")
-  .get(validateParams(idParamSchema), getContactItem)
+  .get(validateParams(idParamSchema), getReservationById)
   .patch(
     validateParams(idParamSchema),
-    validateBody(updateContactSchema),
-    updateContact
+    validateBody(updateReservationSchema),
+    updateReservation
   )
-  .delete(validateParams(idParamSchema), deleteContact);
+  .delete(validateParams(idParamSchema), deleteReservation);
 
 module.exports = router;

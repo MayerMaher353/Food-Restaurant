@@ -6,7 +6,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  person: string;
+  persons: string; 
   date: string;
   time: string;
   message: string;
@@ -21,7 +21,7 @@ const ReservationForm: React.FC = () => {
     name: "",
     email: "",
     phone: "",
-    person: "",
+    persons: "",
     date: "",
     time: "",
     message: "",
@@ -36,18 +36,22 @@ const ReservationForm: React.FC = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
 
-    // إزالة الخطأ عند الكتابة
     if (value.trim() !== "") {
       setErrors({ ...errors, [name]: "" });
     }
   };
 
+
   const validate = () => {
     const newErrors: FormErrors = {};
+
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.phone.trim()) newErrors.phone = "Phone is required";
-    if (!formData.person.trim()) newErrors.person = "Select number of persons";
+    else if (!/^(010|011|012|015)[0-9]{8}$/.test(formData.phone))
+      newErrors.phone = "Phone must be a valid Egyptian number";
+
+    if (!formData.persons.trim()) newErrors.persons = "Select number of persons";
     if (!formData.date.trim()) newErrors.date = "Date is required";
     if (!formData.time.trim()) newErrors.time = "Time is required";
 
@@ -60,22 +64,27 @@ const ReservationForm: React.FC = () => {
     if (!validate()) return;
 
     setLoading(true);
+
     try {
       const response = await fetch("http://localhost:3000/api/v1/reservations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          persons: Number(formData.persons), 
+        }),
       });
 
       const data = await response.json();
+      console.log(data); 
 
-      if (data.success) {
+      if (data.status === "success") {
         alert("Reservation submitted successfully!");
         setFormData({
           name: "",
           email: "",
           phone: "",
-          person: "",
+          persons: "",
           date: "",
           time: "",
           message: "",
@@ -90,6 +99,7 @@ const ReservationForm: React.FC = () => {
       console.error(err);
       alert("Failed to submit reservation. Try again.");
     }
+
     setLoading(false);
   };
 
@@ -135,8 +145,8 @@ const ReservationForm: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <select name="person" value={formData.person} onChange={handleChange}>
-              <option value="">Person</option>
+            <select name="persons" value={formData.persons} onChange={handleChange}>
+              <option value="">Persons</option>
               <option value="1">1 Person</option>
               <option value="2">2 People</option>
               <option value="3">3 People</option>
@@ -144,7 +154,7 @@ const ReservationForm: React.FC = () => {
               <option value="5">5 People</option>
               <option value="6">6 or more</option>
             </select>
-            {errors.person && <span className="error">{errors.person}</span>}
+            {errors.persons && <span className="error">{errors.persons}</span>}
           </div>
 
           <div className="form-group">
@@ -155,12 +165,12 @@ const ReservationForm: React.FC = () => {
           <div className="form-group">
             <select name="time" value={formData.time} onChange={handleChange}>
               <option value="">Time</option>
-              <option value="12pm">12:00 PM</option>
-              <option value="1pm">1:00 PM</option>
-              <option value="2pm">2:00 PM</option>
-              <option value="3pm">3:00 PM</option>
-              <option value="4pm">4:00 PM</option>
-              <option value="5pm">5:00 PM</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
             </select>
             {errors.time && <span className="error">{errors.time}</span>}
           </div>
