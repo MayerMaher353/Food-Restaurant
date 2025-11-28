@@ -1,33 +1,104 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../Dashboard/css/MyStore.css";
-import "../Dashboard/css/create.css";
-import "../Dashboard/css/style.css";
-import { Link } from "react-router-dom";
 
 interface SidebarProps {
   isOpen: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => (
-  <section id="sidebar" className={isOpen ? "open" : "closed"}>
-    <a href="#" className="brand">
-      <i className="bx bxs-smile"></i>
-      <span className="text">AdminHub</span>
-    </a>
-    <ul className="side-menu top">
-      <li className="active"><a href="#"><i className="bx bxs-dashboard"></i> Dashboard</a></li>
-      <li><a href="#"><i className="bx bxs-shopping-bag-alt"></i> shop management</a></li>
-      <li><a href="#"><i className="bx bxs-message-dots"></i> gallery management</a></li>
-      <li><a href="#"><i className="bx bxs-group"></i> order</a></li>
-      <li><a href="#"><i className="bx bxs-cog"></i> reservation</a></li>
-      <li><a href="#"><i className="bx bxs-cog"></i> contact</a></li>
-    </ul>
-    <ul className="side-menu">
-      <li><Link to="/" className="logout">
-  <i className="bx bxs-log-out-circle"></i> Logout
-</Link></li>
-    </ul>
-  </section>
-);
+const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleLogout = () => {
+   
+    localStorage.removeItem("authToken");
+    
+
+
+    navigate("/");
+  };
+
+  return (
+    <section id="sidebar" className={isOpen ? "" : "hide"}>
+      <a href="#" className="brand">
+        <i className="bx bxs-smile"></i>
+        <span className="text">AdminHub</span>
+      </a>
+
+      <ul className="side-menu top">
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("products-section");
+            }}
+          >
+            <i className="bx bxs-shopping-bag-alt"></i> Products
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("gallery-section");
+            }}
+          >
+            <i className="bx bxs-image"></i> Gallery Management
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("orders-section");
+            }}
+          >
+            <i className="bx bxs-group"></i> Orders
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("reservation-section");
+            }}
+          >
+            <i className="bx bxs-cog"></i> Reservation
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("contact-section");
+            }}
+          >
+            <i className="bx bxs-cog"></i> Contact
+          </a>
+        </li>
+      </ul>
+
+      <ul className="side-menu">
+        <li>
+          <button className="logout" onClick={handleLogout}>
+            <i className="bx bxs-log-out-circle"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </section>
+  );
+};
 
 export default Sidebar;

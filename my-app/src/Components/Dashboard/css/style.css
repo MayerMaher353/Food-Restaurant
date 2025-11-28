@@ -669,3 +669,26 @@ td button {
 	#content main .table-data .order table th {
     padding-right: 0px;}
 }
+
+
+/* logout style  */
+button.logout {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  padding: 0;
+}
+
+button.logout i {
+  font-size: 1.2rem;
+}
+
+
+button.logout:hover {
+  color: #ff4d4d; 
+}
