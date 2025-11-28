@@ -1,6 +1,7 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectFade } from "swiper/modules";
+import { useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,23 +30,73 @@ import salad2 from "../../assets/images/menu images/salad-2.jpg";
 import salad3 from "../../assets/images/menu images/salad-3.jpg";
 import salad4 from "../../assets/images/menu images/salad-4.jpg";
 
+import type { Product } from "../../types/product";
+
 
 const MenuExtra = () => {
+  const { addToCart } = useContext(CartContext);
+
   const labels = ["All Drinks", "Desserts", "Soups", "Salads"];
+
+  const allProducts: Product[] = [
+    // Drinks
+    { id: 1, name: "Cocktail", price: 4.26, img: drink1, category: "All Drinks", tags: [] },
+    { id: 2, name: "Iced Diet Lemon Soda", price: 2.00, img: drink2, category: "All Drinks", tags: [] },
+    { id: 3, name: "Margarita", price: 4.00, img: drink3, category: "All Drinks", tags: [] },
+    { id: 4, name: "Smoothie", price: 3.00, img: drink4, category: "All Drinks", tags: [] },
+    { id: 5, name: "Strawberry Lemonade soda", price: 3.00, img: drink5, category: "All Drinks", tags: [] },
+    // Desserts
+    { id: 6, name: "Summer Berry Tart", price: 12.00, img: desert1, category: "Desserts", tags: [] },
+    { id: 7, name: "Pumpkin Cookies Cream Cheese", price: 10.00, img: desert2, category: "Desserts", tags: [] },
+    { id: 8, name: "Double Chocolate Cupcakes", price: 7.00, img: desert3, category: "Desserts", tags: [] },
+    // Soups
+    { id: 9, name: "Terrific Turkey Chili", price: 8.00, img: soup1, category: "Soups", tags: [] },
+    { id: 10, name: "Italian Sausage Tortellini", price: 9.00, img: soup2, category: "Soups", tags: [] },
+    { id: 11, name: "Cream of Asparagus Soup", price: 10.00, img: soup3, category: "Soups", tags: [] },
+    { id: 12, name: "Italian Sausage Soup", price: 9.00, img: soup4, category: "Soups", tags: [] },
+    { id: 13, name: "Creamy Chicken & Wild Rice Soup", price: 12.00, img: soup5, category: "Soups", tags: [] },
+    { id: 14, name: "Ham and Potato Soup", price: 10.00, img: soup6, category: "Soups", tags: [] },
+    // Salads
+    { id: 15, name: "Caprese Salad", price: 15.79, img: salad1, category: "Salads", tags: [] },
+    { id: 16, name: "Avocado Tuna Salad", price: 10.99, img: salad2, category: "Salads", tags: [] },
+    { id: 17, name: "Fruit Salad", price: 5.89, img: salad3, category: "Salads", tags: [] },
+    { id: 18, name: "Salmon Salad", price: 9.0, img: salad4, category: "Salads", tags: [] },
+  ];
+
+  const renderProduct = (product: Product) => (
+    <div key={product.id} className="col-lg-6 col-md-6 col-sm-12 mb-5">
+      <div className="content">
+        <a href="#" onClick={(e) => e.preventDefault()}>
+          <img src={product.img} alt={product.name} />
+        </a>
+        <div className="t1">
+          <a href="#" onClick={(e) => e.preventDefault()}>{product.name}</a>
+          <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
+        </div>
+        <div className="t2">
+          <span className="span-wrapper">
+            <span className="sign">€</span>
+            <span>{product.price?.toFixed(2)}</span>
+          </span>
+          <a href="#" onClick={(e) => { e.preventDefault(); addToCart(product); }}>
+            <i className="fas fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="menu-extra">
       <div className="container">
         <div className="row">
           <div className="col">
-
-            {/* PAGINATION */}
             <div className="swiper-pagination"></div>
 
             <Swiper
               modules={[Pagination, EffectFade]}
               slidesPerView={1}
-              autoHeight={true}
+              autoHeight
               loop={false}
               speed={700}
               effect="fade"
@@ -53,159 +104,23 @@ const MenuExtra = () => {
               pagination={{
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: (index, className) =>
-                  `<span class="${className}">${labels[index]}</span>`
+                renderBullet: (index, className) => `<span class="${className}">${labels[index]}</span>`
               }}
               className="swiper-extra"
             >
-
-              {/*=====================
-                 1 — ALL DRINKS
-              ======================*/}
-              <SwiperSlide>
-                <div className="menu-title">
-                  <span>MENU</span>
-                  <h1>All Drinks</h1>
-                </div>
-
-                <div className="row">
-                  {[
-                    { img: drink1, name: "Cocktail", price: "4.26" },
-                    { img: drink2, name: "Iced Diet Lemon Soda", price: "2.00" },
-                    { img: drink3, name: "Margarita", price: "4.00" },
-                    { img: drink4, name: "Smoothie", price: "3.00" },
-                    { img: drink5, name: "Strawberry Lemonade soda", price: "3.00" },
-                  ].map((item, i) => (
-                    <div className="col-lg-6" key={i}>
-                      <div className="content">
-                        <a href="#"><img src={item.img} alt="" /></a>
-                        <div className="t1">
-                          <a href="#">{item.name}</a>
-                          <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                        </div>
-                        <div className="t2">
-                          <span className="span-wrapper">
-                            <span className="sign">€</span>
-                            <span>{item.price}</span>
-                          </span>
-                          <a href="#"><i className="fas fa-cart-shopping"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </SwiperSlide>
-
-              {/*=====================
-                 2 — DESSERTS
-              ======================*/}
-              <SwiperSlide>
-                <div className="menu-title">
-                  <span>MENU</span>
-                  <h1>Desserts</h1>
-                </div>
-
-                <div className="row">
-                  {[
-                    { img: desert1, name: "Summer Berry Tart", price: "12.00" },
-                    { img: desert2, name: "Pumpkin Cookies Cream Cheese", price: "10.00" },
-                    { img: desert3, name: "Double Chocolate Cupcakes", price: "7.00" },
-                  ].map((item, i) => (
-                    <div className="col-lg-6" key={i}>
-                      <div className="content">
-                        <a href="#"><img src={item.img} alt="" /></a>
-                        <div className="t1">
-                          <a href="#">{item.name}</a>
-                          <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                        </div>
-                        <div className="t2">
-                          <span className="span-wrapper">
-                            <span className="sign">€</span>
-                            <span>{item.price}</span>
-                          </span>
-                          <a href="#"><i className="fas fa-cart-shopping"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </SwiperSlide>
-
-              {/*=====================
-                 3 — SOUPS
-              ======================*/}
-              <SwiperSlide>
-                <div className="menu-title">
-                  <span>MENU</span>
-                  <h1>Soups</h1>
-                </div>
-
-                <div className="row">
-                  {[
-                    { img: soup1, name: "Terrific Turkey Chili", price: "8.00" },
-                    { img: soup2, name: "Italian Sausage Tortellini", price: "9.00" },
-                    { img: soup3, name: "Cream of Asparagus Soup", price: "10.00" },
-                    { img: soup4, name: "Italian Sausage Soup", price: "9.00" },
-                    { img: soup5, name: "Creamy Chicken & Wild Rice Soup", price: "12.00" },
-                    { img: soup6, name: "Ham and Potato Soup", price: "10.00" },
-                  ].map((item, i) => (
-                    <div className="col-lg-6" key={i}>
-                      <div className="content">
-                        <a href="#"><img src={item.img} alt="" /></a>
-                        <div className="t1">
-                          <a href="#">{item.name}</a>
-                          <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                        </div>
-                        <div className="t2">
-                          <span className="span-wrapper">
-                            <span className="sign">€</span>
-                            <span>{item.price}</span>
-                          </span>
-                          <a href="#"><i className="fas fa-cart-shopping"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </SwiperSlide>
-
-              {/*=====================
-                 4 — SALADS
-              ======================*/}
-              <SwiperSlide>
-                <div className="menu-title">
-                  <span>MENU</span>
-                  <h1>Salads</h1>
-                </div>
-
-                <div className="row">
-                  {[
-                    { img: salad1, name: "Caprese Salad", price: "15.79" },
-                    { img: salad2, name: "Avocado Tuna Salad", price: "10.99" },
-                    { img: salad3, name: "Fruit Salad", price: "5.89" },
-                    { img: salad4, name: "Salmon Salad", price: "9.00" },
-                  ].map((item, i) => (
-                    <div className="col-lg-6" key={i}>
-                      <div className="content">
-                        <a href="#"><img src={item.img} alt="" /></a>
-                        <div className="t1">
-                          <a href="#">{item.name}</a>
-                          <span>Consectetur adipisicing elit. Soluta, impedit, saepe.</span>
-                        </div>
-                        <div className="t2">
-                          <span className="span-wrapper">
-                            <span className="sign">€</span>
-                            <span>{item.price}</span>
-                          </span>
-                          <a href="#"><i className="fas fa-cart-shopping"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </SwiperSlide>
-
+              {labels.map((label) => (
+                <SwiperSlide key={label}>
+                  <div className="menu-title">
+                    <span>MENU</span>
+                    <h1>{label}</h1>
+                  </div>
+                  <div className="row">
+                    {allProducts.filter(p => p.category === label).map(renderProduct)}
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
+
           </div>
         </div>
       </div>

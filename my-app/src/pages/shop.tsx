@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../shared/header/header';
 import Hero from '../Components/shop/shopHero'
-import Product from '../Components/shop/swiper/shop'
+import Product from '../Components/shop/swiper/shop-product'
 
 
 import Footer from "../shared/footer/footer"

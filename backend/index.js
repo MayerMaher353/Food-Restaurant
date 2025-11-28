@@ -9,6 +9,7 @@ const errorHandler = require("./middleware/errorHandler");
 const galleryRoutes = require("./routes/galleryRoute");
 const contactRoutes = require("./routes/contactRoute");
 const reservationRoutes = require("./routes/reservationRoute");
+const productRoutes = require("./routes/productRoute");
 
 const app = express(); 
 
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === "development") {
 app.use("/api/v1/reservations", reservationRoutes);
 app.use("/api/v1/gallery", galleryRoutes);
 app.use("/api/v1/contact", contactRoutes);
+app.use("/api/products", productRoutes);
 
 // Handle 404
 app.use((req, res) => {

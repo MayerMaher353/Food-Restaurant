@@ -1,6 +1,3 @@
-// src/Components/menu/MenuItemCard.tsx
-
-import React from 'react';
 import type { MenuItem } from '../../../types/menuTypes';
 
 interface MenuItemCardProps {
@@ -8,9 +5,8 @@ interface MenuItemCardProps {
 }
 
 function MenuItemCard({ item }: MenuItemCardProps) {
-  const { name, price, description, imageUrl, currency, addToCartUrl } = item;
+  const { name, price, description, imageUrl, currency } = item;
 
-  // Format price string
   const formattedPrice = `${currency}${price.toFixed(2)}`;
 
   return (
@@ -25,10 +21,6 @@ function MenuItemCard({ item }: MenuItemCardProps) {
         </div>
         <p className="abt-menu-item">
           {description}
-          {/* In a real app, this would use an onClick handler */}
-          <a href={addToCartUrl || '#'} title={`Add ${name} to cart`}>
-            <i className="fas fa-cart-shopping"></i>
-          </a>
         </p>
       </div>
     </div>

@@ -8,6 +8,7 @@
 .background-image {
   background-color: #f4f4f4;
   min-height: 100vh;
+  background-position: center;
 }
 
 .background-image .background .overlay {

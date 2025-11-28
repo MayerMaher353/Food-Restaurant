@@ -46,6 +46,9 @@ p {
   width: fit-content;
  }
 }
+.user-icon{
+  color: var(--colorFont);
+}
 
 header {
   min-height: 80px;

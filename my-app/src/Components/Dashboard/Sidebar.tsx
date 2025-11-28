@@ -2,6 +2,7 @@ import React from "react";
 import "../Dashboard/css/MyStore.css";
 import "../Dashboard/css/create.css";
 import "../Dashboard/css/style.css";
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -22,7 +23,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => (
       <li><a href="#"><i className="bx bxs-cog"></i> contact</a></li>
     </ul>
     <ul className="side-menu">
-      <li><a href="#" className="logout"><i className="bx bxs-log-out-circle"></i> Logout</a></li>
+      <li><Link to="/" className="logout">
+  <i className="bx bxs-log-out-circle"></i> Logout
+</Link></li>
     </ul>
   </section>
 );

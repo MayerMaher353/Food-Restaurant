@@ -1,18 +1,26 @@
 import { useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom"; // NavLink is now imported
+import { Link, NavLink, useLocation } from "react-router-dom"; // added useLocation
 import "./css/header.css";
 import logoWhite from "../../assets/images/logo/logo-sm-white.png";
 import logoDark from "../../assets/images/logo/logo-sm.png";
-
+import { useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 
 // Function to determine if a NavLink is active and apply the 'after-home' class
 const getNavLinkClassName = ({ isActive }: { isActive: boolean }) =>
-  `nav-link ${isActive ? 'after-home' : ''}`;
+  `nav-link ${isActive ? "after-home" : ""}`;
 
 const SharedHeader = () => {
   const headerRef = useRef<HTMLElement | null>(null);
   const logoRef = useRef<HTMLImageElement | null>(null);
+  const { toggleCart, cartItems } = useContext(CartContext);
 
+  //  Detect current route
+  const location = useLocation();
+
+  //  Determine if current page is checkout or cart
+  const isSpecialPage =
+    location.pathname === "/checkout" || location.pathname === "/cart";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,29 +29,44 @@ const SharedHeader = () => {
 
       if (!header || !logo) return;
 
+      //  For checkout/cart → always scrolled + dark logo
+      if (isSpecialPage) {
+        header.classList.add("scrolled");
+        logo.src = logoDark;
+        return;
+      }
+
+      //  Normal scroll behavior for other pages
       if (window.scrollY > 50) {
         header.classList.add("scrolled");
-        logo.src = logoDark; // dark logo
+        logo.src = logoDark;
       } else {
         header.classList.remove("scrolled");
-        logo.src = logoWhite; // light logo
+        logo.src = logoWhite;
       }
     };
 
+    //  Run on mount
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isSpecialPage]);
 
   return (
     <header className="px-3" id="main-header" ref={headerRef}>
       <div className="container-fluid px-2">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid logo-nav d-flex">
-            
             {/* Logo - Uses Link, as it's not part of the active menu items */}
             <Link className="navbar-brand logo d-flex align-items-center" to="/">
               <div className="logo-holder">
-                <img id="logo" ref={logoRef} src={logoWhite} alt="Logo" />
+                <img
+                  id="logo"
+                  ref={logoRef}
+                  src={isSpecialPage ? logoDark : logoWhite} // initial logo for special pages
+                  alt="Logo"
+                />
               </div>
             </Link>
 
@@ -69,20 +92,13 @@ const SharedHeader = () => {
               </button>
 
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-4">
-                
-                {/* HOME LINK - Uses NavLink and 'end' prop for exact match */}
                 <li className="nav-item d-flex align-items-center home">
                   <i className="fas fa-house me-1"></i>
-                  <NavLink 
-                    className={getNavLinkClassName} // Uses the shared function
-                    to="/"
-                    end // Ensures 'after-home' is only active on the exact root path
-                  >
+                  <NavLink className={getNavLinkClassName} to="/" end>
                     Home
                   </NavLink>
                 </li>
 
-                {/* PAGES DROPDOWN - Remains an <a> tag and Link for dropdown items */}
                 <li className="nav-item shop-link dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -95,66 +111,87 @@ const SharedHeader = () => {
                   </a>
 
                   <ul className="dropdown-menu">
-                    {/* These links don't usually need NavLink active state */}
-                    <li><Link className="dropdown-item" to="/about-us">About Us</Link></li>
-                    <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
-                    <li><Link className="dropdown-item" to="/faq">FAQ</Link></li>
-                    <li><Link className="dropdown-item" to="/gallery">Gallery</Link></li>
-                    <li><Link className="dropdown-item" to="/blog">Blog</Link></li>
-                    <li><Link className="dropdown-item" to="/ourHistory">History</Link></li>
+                    <li>
+                      <Link className="dropdown-item" to="/about-us">
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/pricing">
+                        Pricing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/faq">
+                        FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/gallery">
+                        Gallery
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/blog">
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/ourHistory">
+                        History
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
-                {/* MENU LINK - Uses NavLink */}
                 <li className="nav-item">
                   <NavLink className={getNavLinkClassName} to="/menu">
                     Menu
                   </NavLink>
                 </li>
 
-                {/* ORDER LINK - Uses NavLink */}
                 <li className="nav-item">
                   <NavLink className={getNavLinkClassName} to="/reservation">
                     Order
                   </NavLink>
                 </li>
 
-                {/* CONTACT LINK - Uses NavLink */}
                 <li className="nav-item">
                   <NavLink className={getNavLinkClassName} to="/contact">
                     Contact
                   </NavLink>
                 </li>
 
-                {/* SHOP LINK - Uses NavLink */}
                 <li className="nav-item">
                   <NavLink className={getNavLinkClassName} to="/shop">
                     Shop
                   </NavLink>
                 </li>
-
               </ul>
             </div>
 
-            {/* Button + Cart - Uses Link, not NavLink */}
             <div className="d-flex align-items-center header-right-side">
               <Link to="/reservation">
                 <button>RESERVATION</button>
               </Link>
-
-              <div className="icon-shopping position-relative">
-                <Link to="/cart">
-                  <i className="fas fa-cart-shopping"></i>
-                </Link>
-               <span
-  id="cart-count"
-  className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
->
-0
-</span>
+           <Link to="/signUp">
+      <i className="fa-solid fa-user user-icon"></i>
+    </Link>
+              <div
+                className="icon-shopping position-relative"
+                onClick={toggleCart}
+                style={{ cursor: "pointer" }}
+              >
+      
+                <i className="fas fa-cart-shopping"></i>
+                <span
+                  id="cart-count"
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                >
+                  {cartItems.reduce((total, item) => total + item.quantity, 0)}
+                </span>
               </div>
             </div>
-
           </div>
         </nav>
       </div>

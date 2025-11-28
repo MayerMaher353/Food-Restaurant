@@ -1528,7 +1528,9 @@
   .background-image .background .background-text h2 {
     font-size: 42px !important;
   }
-
+.header-right-side {
+    gap: 16px;
+}
   .background-image .background .background-text .welcoming h6::before {
     left: 45.3%;
     width: 29px;
@@ -1634,7 +1636,7 @@
   }
 
   .header-right-side {
-    gap: 14px;
+    gap: 14px !important;
   }
 
   .logo-holder {

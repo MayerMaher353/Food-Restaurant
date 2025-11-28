@@ -1,5 +1,3 @@
-
-
 .shop-hero {
   height: 31rem !important;
   margin-bottom: 0rem;
@@ -47,7 +45,7 @@
   font-size: .8rem;
   letter-spacing: 1.5px;
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .shop-hero .main-text h5::before {
@@ -68,7 +66,7 @@
 .shop-hero .main-text h1 {
   font-family: var(--font-family-secondary);
   font-size: 6.4rem;
-    z-index: 2;
+  z-index: 2;
 
 }
 
@@ -78,7 +76,7 @@
   font-weight: 500;
   text-align: center;
   line-height: -4px;
-    z-index: 2;
+  z-index: 2;
 }
 
 .shop-content-wrapper {
@@ -117,11 +115,13 @@
   border: none;
   box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.123);
   border-radius: 5px;
- 
+
 }
-form{
+
+form {
   margin: 0px;
 }
+
 .shop-categories form span {
   position: absolute;
   right: 11px;
@@ -132,8 +132,9 @@ form{
 #max-price {
   outline: none;
 }
+
 .categories {
-    padding: 0;
+  padding: 0;
 }
 
 .categories ul {
@@ -160,7 +161,6 @@ form{
 .product-sidebar-image-holder {
   position: relative;
   width: 6rem;
-  height: 5.5rem;
 }
 
 .product-sidebar-image-holder img {
@@ -183,17 +183,21 @@ form{
 .sidebar-product-item span {
   color: var(--secondary-color);
 }
+
 .sidebar-product-item P {
   color: var(--colorFont);
 }
+
 .sidebar-product-item #price-offer {
   color: var(--secondary-color);
   font-size: .7rem;
   margin-top: .9rem;
 }
-.sidebar-product-item .salmon-name{
+
+.sidebar-product-item .salmon-name {
   font-size: 11.5px;
 }
+
 .tag-btn {
   color: var(--main-color);
   padding: 1px 3px;
@@ -256,7 +260,7 @@ form{
   color: var(--colorFont);
   box-shadow: 0px 0px 10px rgba(63, 63, 63, 0.123);
   border-radius: 5px;
-  
+
 }
 
 
@@ -286,10 +290,12 @@ form{
   width: 100%;
   height: 100%;
   position: absolute;
+  pointer-events: none;
 }
 
 .product-content-holder {
   padding: 1rem 1rem;
+
 
 }
 
@@ -299,7 +305,9 @@ form{
   display: inline-block;
   height: 3.04rem;
   font-weight: 900;
-  
+  pointer-events: none;
+
+
 }
 
 
@@ -323,11 +331,13 @@ form{
 .casserole-item-separator {
   border-top: 2px dotted #00000033;
   margin: 2.7rem 0 1.5rem 0;
+
 }
 
 .product-price-holder {
   display: flex;
   justify-content: space-between;
+
 }
 
 .price-section p {
@@ -348,26 +358,35 @@ form{
 
 
 
-.product-price-holder .product-icon-holder{
+.product-price-holder .product-icon-holder {
   width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1000;
+
 }
-.product-price-holder .product-icon-holder button{
-  
-  background-color: var(--main-color) ;
-   width: 60px;
-    min-height: 58px;
-   border-radius: 0;
+
+.product-price-holder .product-icon-holder button {
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+  background-color: var(--main-color);
+  width: 60px;
+  min-height: 58px;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  transition: background-color 0.3s ;
+  transition: background-color 0.3s;
 }
 
-.sr-only {
+.product-icon-holder button:hover {
+  background-color: #f76e2ac2;
+}
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -377,7 +396,7 @@ form{
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
-}
+} */
 
 
 
@@ -398,8 +417,6 @@ form{
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  /* 3 columns, flexible */
-  /* grid-template-rows: repeat(2, auto);               */
   gap: 20px;
 }
 
@@ -430,8 +447,9 @@ form{
   /* border-radius: 5px; */
   /* position: fixed; */
 
-  
+
 }
+
 /* .page-indicator */
 .swiper-prev i,
 .swiper-next i {
@@ -459,17 +477,20 @@ form{
 }
 
 .shop-products {
-  overflow-x: hidden; /* hides horizontal scroll */
+  overflow-x: hidden;
+  /* hides horizontal scroll */
   width: 100%;
 }
 
 .swiper-wrapper {
   display: flex;
-  flex-wrap: nowrap; /* horizontal scrolling handled by Swiper */
+  flex-wrap: nowrap;
+  /* horizontal scrolling handled by Swiper */
 }
 
 .swiper-slide {
-  width: auto; /* let Swiper control the width */
+  width: auto;
+  /* let Swiper control the width */
 }
 
 @media (max-width: 1055px) and (min-width:992px) {
@@ -526,10 +547,15 @@ form{
     padding-top: .7rem;
   }
 
+  #product-box .swiper-controls .swiper-prev.hidden,
+  #product-box .swiper-controls .swiper-next.hidden {
+    display: none !important;
+  }
+
 
   /* end shop page */
 
-/* start  */
+  /* start  */
 
 
 
@@ -540,11 +566,11 @@ form{
 
 @media(max-width:991px) {
 
-.shop-hero .main-text h1 {
-  font-family: var(--font-family-secondary);
-  font-size: 4.4rem;
+  .shop-hero .main-text h1 {
+    font-family: var(--font-family-secondary);
+    font-size: 4.4rem;
 
-}
+  }
 
 }
 
@@ -566,17 +592,42 @@ form{
 
   /* end shop page */
 }
-.product-item-name #product-salmon-name,#paella-large-name{
+
+.product-item-name #product-salmon-name,
+#paella-large-name {
   font-size: 20.8px;
 }
-#product-large-name{
+
+#product-large-name {
   font-size: 20.8px;
 }
-#product-very-large-name{
-font-size: 19px;
-font-weight: 590;
+
+#product-very-large-name {
+  font-size: 19px;
+  font-weight: 590;
 }
-#product-very-very-large-name{
+
+#product-very-very-large-name {
   font-size: 17.6px;
-font-weight: 599;
+  font-weight: 599;
+}
+
+@media(width:1280px) {
+  .myProductSwiper .product .swiper-product-holder {
+    width: 263px;
+
+  }
+
+  .myProductSwiper .product {
+
+    width: 263px;
+
+  }
+
+
+  .product-sidebar-image-holder {
+    position: relative;
+    width: 6rem;
+  }
+
 }

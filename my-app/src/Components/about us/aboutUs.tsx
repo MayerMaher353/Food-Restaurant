@@ -58,7 +58,7 @@ function WhoWeAreSection() {
               <div className="about-image-overlay"></div>
               <img src={introVideoThumb} alt="Restaurant interior video thumbnail" />
               {/* Note: The 'a' tag should include the video URL for functionality */}
-              <a href="YOUR_YOUTUBE_LINK_HERE" className="play-youtube-btn">
+              <a href="https://www.youtube.com/watch?time_continue=15&v=SXJqEnauNaY&embeds_referring_euri=https%3A%2F%2Ftastyc.bslthemes.com%2F&source_ve_path=MjM4NTE" target='_blank' className="play-youtube-btn">
                 {/* Font Awesome icon - assuming you have the library imported globally */}
                 <i className="fas fa-play"></i>
               </a>
