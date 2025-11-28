@@ -1,0 +1,266 @@
+/* ====================== BACKGROUND HERO ====================== */
+
+.background-hero {
+  position: relative;
+  width: 100%;
+  height: 23rem; 
+  overflow: hidden;
+}
+
+.background-hero .bgImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.background-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(6, 34, 39, 0.849) 10%,
+    rgba(6, 34, 39, 0) 100%
+  );
+}
+
+.background-hero .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-hero .main-text h2 {
+  font-family: var(--font-family-secondary);
+  font-size: 5.4rem;
+  color: #e5ebef;
+  z-index: 2;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .background-hero .main-text h2 {
+    font-size: 4.6rem;
+  }
+}
+
+
+/* ====================== TITLES & TEXT ====================== */
+
+.tst-suptitle::before {
+  content: "";
+  height: 4px;
+  border-radius: 2px;
+  width: 30px;
+  position: absolute;
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgb(243, 156, 18);
+}
+
+
+.tst-suptitle {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center; 
+}
+
+
+.tst-suptitle.tst-suptitle-center {
+  text-align: center;
+  padding-left: 0;
+  padding-top: 20px;
+}
+
+.tst-mb-15 {
+  margin-bottom: 15px;
+}
+
+
+.tst-p-60-0 {
+  padding-top: 60px;
+}
+
+
+.tst-title--h {
+  font-size: 52px;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Belleza', sans-serif;
+  color: #333;
+  margin: 0 0 30px 0;
+}
+
+.reservation-text {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center; 
+  margin: 0 auto;
+}
+
+
+.tst-mb-60 {
+  margin-bottom: 60px;
+}
+
+
+/* ==================== Responsive Reservation Form ==================== */
+.reservation-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+  border-color: #ff7b2e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 123, 46, 0.3);
+}
+
+.reservation-form textarea {
+  grid-column: 1 / -1;
+  min-height: 137px;
+  resize: none;
+  width: 310%;
+}
+
+.reservation-form button {
+  grid-column: 1 / -1;
+  background: #ff6b2e;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  
+}
+
+.reservation-form button:hover {
+  background: #e85c1f;
+}
+
+
+
+.nice-select {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 35px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nice-select:after {
+  right: 15px;
+  border-color: #999;
+  border-width: 2px;
+}
+
+.nice-select:hover {
+  border-color: #ff6720;
+  box-shadow: 0 0 0 3px rgba(247, 110, 42, 0.15);
+}
+
+.nice-select .current {
+  color: #333;
+}
+
+.nice-select .list {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.nice-select .option.selected {
+  font-weight: 600;
+  background-color: #f9f9f9;
+}
+
+.nice-select .option:hover {
+  background-color: #fff3eb;
+  color: #ff6720;
+}
+
+.copyrights p {
+    font-size: 1rem;
+    font-weight: 450;
+    margin-left: 11px;
+}
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .nice-select {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nice-select {
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+  }
+}
+/* ===== error ===== */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.error {
+  color: #dc3232;
+  font-size: 14px;
+  min-height: 18px;
+}

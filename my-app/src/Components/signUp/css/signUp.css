@@ -1,0 +1,73 @@
+
+.main-sign-up{
+    
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../assets/images/OUR-HISTORY.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.521);
+    background-blend-mode: overlay;
+}
+.main-sign-up .sign-up{
+    height: 100%;
+}
+.main-sign-up .sign-up .container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.main-sign-up .sign-up .container .row{
+    gap: 20px;
+    flex-direction: column;
+    padding: 30px;
+    background-color:  rgba(0, 0, 0, 0.671);
+    border-radius: 10px;
+    color: white;
+}
+.main-sign-up .sign-up .container .row .col:first-child h1{
+    white-space: nowrap;
+    font-family: var(--font-family-secondary);
+}
+.main-sign-up .sign-up .container .row .col input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0px 6px -1px #dcdcdcb0;
+    border-radius: 5px;
+}
+.main-sign-up .sign-up .container .row .col .sign-up-btn{
+   text-decoration: none;
+   background-color: var(--main-color);
+   color: white;
+   font-family: var(--font-family);
+   padding: 10px 20px;
+   transition: all 1s ease;
+   outline: none;
+   border: 0;
+}
+.main-sign-up .sign-up .container .row .col .sign-up-btn:hover{
+  transform: scale(1.03);
+}
+.main-sign-up .sign-up .container .row .ele{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-sign-up .sign-up .container .row .col:last-child .to-sign-in{
+   color: var(--main-color);
+   transition: all 0.5s ease;
+}
+.main-sign-up .sign-up .container .row .col:last-child .to-sign-in:hover{
+   color: white;
+}
+.main-sign-up .sign-up .container .row .col .error{
+    color: red;
+    font-size: 13px;
+}
