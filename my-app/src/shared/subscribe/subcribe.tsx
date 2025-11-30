@@ -26,7 +26,7 @@ function subcribe() {
               <p className="p">
                 Rolorem, beatae dolorum, praesentium itaque et quam quaerat.
               </p>
-              <div className="row">
+              <div className="row row-subscribe">
                 <div className="col-lg-4 col-md-12 col-sm-12 ele">
                   <input
                     type="text"

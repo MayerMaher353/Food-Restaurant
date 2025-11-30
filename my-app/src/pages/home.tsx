@@ -8,6 +8,7 @@ import Testimonials from "../shared/Testemonials/Testemonials";
 import AppDownloadSection from "../Components/home/APP/App";
 import Blog from "../shared/Blog/BlogCard";
 import Footer from "../shared/footer/footer";
+import Subcribe from "../shared/subscribe/subcribe";
 const home = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const home = () => {
       <Testimonials />
       <AppDownloadSection />
       < Blog />
+      <Subcribe />
       <Footer />
     </>
   );

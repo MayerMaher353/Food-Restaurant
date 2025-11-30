@@ -32,3 +32,8 @@
     padding: 0 340px;
   }
 }
+@media(min-width:992px)and (max-width: 1052px) {
+  .testimonials .swiper-slide{
+    height: 500px;
+  }
+}

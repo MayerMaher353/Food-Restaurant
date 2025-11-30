@@ -26,7 +26,7 @@ const pricingSection = () => {
             <p>Portion Control</p>
             <p className="deleted"><del>Always fresh ingredients</del></p>
             <p className="deleted"><del>Experienced chefs</del></p>
-            <a href="Reservation.html">ORDER NOW</a>
+            <a href="/reservation">ORDER NOW</a>
           </div>
         </div>
         <div className="col-lg-4 col-md-12 col-sm-12 special">
@@ -39,7 +39,7 @@ const pricingSection = () => {
             <p>Portion Control</p>
             <p>Always fresh ingredients</p>
             <p className="deleted"><del>Experienced chefs</del></p>
-            <a href="Reservation.html">ORDER NOW</a>
+            <a href="/reservation">ORDER NOW</a>
           </div>
         </div>
         <div className="col-lg-4 col-md-12 col-sm-12">
@@ -52,7 +52,7 @@ const pricingSection = () => {
             <p>Portion Control</p>
             <p>Always fresh ingredients</p>
             <p className="deleted"><del>Experienced chefs</del></p>
-            <a href="Reservation.html">ORDER NOW</a>
+            <a href="/reservation">ORDER NOW</a>
           </div>
         </div>
       </div>

@@ -103,5 +103,13 @@
     flex-direction: column;
   }
 }
-
-
+@media (max-width:1098px) and (min-width:992px) {
+  .menu-2 .swiper-2 .swiper-slide .content{
+    height: 300px;
+  }
+}
+@media (max-width:1125px) and (min-width:768px) {
+  .menu-1 .col-lg-6, .menu-2 .col-lg-6, .menu-extra .col-lg-6{
+    width: 100%;
+  }
+}

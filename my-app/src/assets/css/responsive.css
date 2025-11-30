@@ -942,4 +942,8 @@
   .background-image .background .background-text .welcoming h6::before {
     left: 43.3%;}
   }
-
+@media (max-width:1015px) and (min-width:992px) {
+   .navbar-expand-lg .navbar-nav{
+    gap: 10px !important;
+   }
+}

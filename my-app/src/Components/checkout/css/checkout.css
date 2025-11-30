@@ -30,10 +30,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 0 !important;
 }
 
 .checkout-page.checkout-page .checkout-container.checkout-container .contact-box.contact-box .half-width.half-width {
     flex: 1 1 calc(50% - 10px);
+    width: 100%;
 }
 
 .checkout-page.checkout-page .checkout-container.checkout-container .contact-box.contact-box .full-width.full-width {
@@ -43,6 +45,7 @@
 .checkout-page.checkout-page .checkout-container.checkout-container .contact-box.contact-box input {
     width: 100%;
     padding: 10px 12px;
+    background-color: transparent !important;
     margin-top: 6px;
     margin-bottom: 4px;
     border-radius: 8px;
@@ -50,6 +53,21 @@
     font-size: 14px;
     box-sizing: border-box;
     outline: none;
+}
+/* Reserve space for error messages */
+.checkout-page .form-group {
+  position: relative;
+}
+
+.checkout-page.checkout-page .checkout-container.checkout-container .contact-box.contact-box .error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin: 0;
+  min-height: 1.2rem; /* reserve space so layout doesn't shift */
+  display: block;
+  position: absolute; /* optional: floats above input without pushing content */
+  bottom: -1.5rem; /* adjust based on spacing */
+  left: 0;
 }
 
 .checkout-page.checkout-page .checkout-container.checkout-container .contact-box.contact-box .error-text.error-text {

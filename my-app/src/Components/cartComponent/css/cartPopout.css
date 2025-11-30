@@ -74,7 +74,7 @@
   font-weight: bold;
 }
 
-.btn {
+.cart-popup .btn {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -85,21 +85,20 @@
   transition: all 0.3s ease-in-out;
   
 }
-.btn.checkout:hover{
+.cart-popup .btn.checkout:hover{
    
  background: #3333339f;
 }
-.btn:not(.checkout):hover{
-   
+.cart-popup .btn:not(.checkout):hover{
  background: #eb600fb9;
 }
 
-.btn.checkout {
+.cart-popup .btn.checkout {
   background: #333;
   color: #fff;
 }
 
-.btn:not(.checkout) {
+.cart-popup .btn:not(.checkout) {
   background: var(--main-color);
   color: #fff;
 }

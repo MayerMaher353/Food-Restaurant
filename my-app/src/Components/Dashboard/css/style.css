@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
 	margin: 0;
@@ -668,27 +668,4 @@ td button {
 	
 	#content main .table-data .order table th {
     padding-right: 0px;}
-}
-
-
-/* logout style  */
-button.logout {
-  background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-  padding: 0;
-}
-
-button.logout i {
-  font-size: 1.2rem;
-}
-
-
-button.logout:hover {
-  color: #ff4d4d; 
 }

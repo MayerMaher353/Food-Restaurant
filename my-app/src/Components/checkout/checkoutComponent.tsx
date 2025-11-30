@@ -45,7 +45,7 @@ export default function CheckoutPage() {
     setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const placeOrder = async () => {
+  const placeOrder = () => {
     if (cartItems.length === 0) {
       alert(
         "Your cart is empty! Please add some products before placing an order."
@@ -82,17 +82,11 @@ export default function CheckoutPage() {
     };
 
     try {
-      const response = await fetch("https://your-api.com/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(order),
-      });
+      const savedOrders = JSON.parse(localStorage.getItem("orders") || "[]");
+      savedOrders.push(order);
+      localStorage.setItem("orders", JSON.stringify(savedOrders));
 
-      if (!response.ok) {
-        throw new Error("Failed to place order");
-      }
-
-      // Clear cart after successful order
+      // Clear cart
       clearCart();
 
       // Reset contact form
@@ -107,7 +101,7 @@ export default function CheckoutPage() {
       alert("Your order has been placed successfully!");
     } catch (error) {
       console.error(error);
-      alert("Error placing your order. Please try again.");
+      alert("Error processing your order. Please try again.");
     }
   };
 

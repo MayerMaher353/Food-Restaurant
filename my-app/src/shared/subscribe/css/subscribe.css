@@ -9,6 +9,10 @@
   padding: 70px 0;
 }
 
+.subscribe .row-subscribe {
+  gap: 20px;
+}
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -63,14 +67,14 @@
   color: white;
 }
 
-.subscribe .container .col > div #email {
+.subscribe .container .col>div #email {
   outline: none;
   border-style: none;
   background-color: white;
   padding: 20px 120px 20px 30px;
 }
 
-.subscribe .container .col > div .btn {
+.subscribe .container .col>div .btn {
   background-color: var(--main-color);
   color: white;
   outline: none;
@@ -85,23 +89,23 @@
   transition: all 0.5s ease;
 }
 
-.subscribe .container .col > div .btn:hover {
+.subscribe .container .col>div .btn:hover {
   transform: scale(1.02);
 }
 
 /* ========== Subscribe Section Media Queries ========== */
 
 @media (min-width: 992px) and (max-width: 1280px) {
-  .subscribe .container .col > div #email {
+  .subscribe .container .col>div #email {
     width: 100%;
   }
 
-  .subscribe .container .col > div .btn {
+  .subscribe .container .col>div .btn {
     margin-left: 0;
     margin-top: 0;
   }
 
-  .subscribe .container .col > div #email {
+  .subscribe .container .col>div #email {
     width: 100%;
   }
 
@@ -112,16 +116,16 @@
 
 
 @media (max-width: 992px) {
-  .container .col > div .ele {
+  .container .col>div .ele {
     display: flex;
     justify-content: center;
   }
 
-  .subscribe .container .col > div #email {
+  .subscribe .container .col>div #email {
     padding: 20px 50px 20px 30px;
   }
 
-  .subscribe .container .col > div .btn {
+  .subscribe .container .col>div .btn {
     margin-left: 0;
     margin-top: 30px;
   }
@@ -152,6 +156,18 @@
 
   .subscribe .container .p {
     text-align: center;
+  }
+
+  @media (max-width:866px) and (min-width:573px) {
+    .reservation-form textarea {
+      width: 205% !important;
+    }
+  }
+
+  @media ((max-width:572px)) {
+    .reservation-form textarea {
+      width: 100% !important;
+    }
   }
 }
 

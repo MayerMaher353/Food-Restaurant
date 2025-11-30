@@ -181,6 +181,7 @@ const ReservationForm: React.FC = () => {
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
+              cols={12} rows={6}
             ></textarea>
           </div>
 
