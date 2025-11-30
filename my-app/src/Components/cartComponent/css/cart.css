@@ -146,7 +146,14 @@
 .cart-item{
 justify-content: space-between;
 }
-
+.checkout{
+      background: #333 !important;
+    color: #fff !important;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 @media (width: 1024px) {
   .cart-item-details {
