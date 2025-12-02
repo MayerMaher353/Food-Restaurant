@@ -1,85 +1,96 @@
 const Product = require("../models/productModel");
+const asyncHandler = require("express-async-handler");
 
-// Get All Products
-exports.getProducts = async (req, res) => {
-  try {
-    const products = await Product.find();
-    res.json(products);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+// get all products
+exports.getProducts = asyncHandler(async (req, res) => {
+  const items = await Product.find();
+  res.status(200).json({
+    status: "success",
+    results: items.length,
+    data: items,
+  });
+});
+
+const assignImagePath = (req) => {
+  if (req.file && req.file.path) {
+    req.body.image = req.file.path;
   }
 };
 
-// Get Single Product
-exports.getProduct = async (req, res) => {
-  try {
-    const product = await Product.findById(req.params.id);
-    if (!product) return res.status(404).json({ message: "Not found" });
-    res.json(product);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+// create new product
+exports.createProduct = asyncHandler(async (req, res) => {
+  assignImagePath(req);
+
+  // Handle tags: convert string to array
+  if (req.body.tags && typeof req.body.tags === "string") {
+    try {
+      req.body.tags = JSON.parse(req.body.tags);
+    } catch {
+      req.body.tags = req.body.tags
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+    }
   }
-};
+  const item = await Product.create(req.body);
+  res.status(201).json({
+    status: "success",
+    data: item,
+  });
+});
 
-// Create Product
-exports.createProduct = async (req, res) => {
-  try {
-    const { id, name, price, originalPrice, tags, category } = req.body;
-
-    const product = await Product.create({
-      id,
-      name,
-      price,
-      originalPrice,
-      tags: JSON.parse(tags),
-      category,
-      img: req.file.path
-    });
-
-    res.json(product);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+// get specific product
+exports.getProduct = asyncHandler(async (req, res) => {
+  const item = await Product.findById(req.params.id);
+  if (!item) {
+    return res
+      .status(404)
+      .json({ status: "fail", message: "Product not found" });
   }
-};
+  res.status(200).json({
+    status: "success",
+    data: item,
+  });
+});
 
-// Update Product
-exports.updateProduct = async (req, res) => {
-  try {
-    const { id, name, price, originalPrice, tags, category } = req.body;
+// Update product
+exports.updateProduct = asyncHandler(async (req, res) => {
+  assignImagePath(req);
 
-    const updateData = {
-      id,
-      name,
-      price,
-      originalPrice,
-      tags: JSON.parse(tags),
-      category
-    };
-
-    if (req.file) updateData.img = req.file.path;
-
-    const product = await Product.findByIdAndUpdate(
-      req.params.id,
-      updateData,
-      { new: true, runValidators: true }
-    );
-
-    if (!product) return res.status(404).json({ message: "Not found" });
-
-    res.json(product);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+  // Handle tags: convert string to array
+  if (req.body.tags && typeof req.body.tags === "string") {
+    req.body.tags = JSON.parse(req.body.tags);
   }
-};
 
-// Delete
-exports.deleteProduct = async (req, res) => {
-  try {
-    const product = await Product.findByIdAndDelete(req.params.id);
-    if (!product) return res.status(404).json({ message: "Not found" });
+  const item = await Product.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
 
-    res.json({ message: "Product deleted successfully" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+  if (!item) {
+    return res
+      .status(404)
+      .json({ status: "fail", message: "Product not found" });
   }
-};
+
+  res.status(200).json({
+    status: "success",
+    data: item,
+  });
+});
+
+// Delete product
+exports.deleteProduct = asyncHandler(async (req, res) => {
+  const item = await Product.findByIdAndDelete(req.params.id);
+
+  if (!item) {
+    return res
+      .status(404)
+      .json({ status: "fail", message: "Product not found" });
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: null,
+  });
+});

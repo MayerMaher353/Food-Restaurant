@@ -24,21 +24,36 @@ const {
   idParamSchema,
 } = require("../validation/galleryValidation");
 
+const { protect, restrictTo } = require("../middleware/authMiddleware");
+
 // Routes
 router
   .route("/")
   .get(getGallery)
-  .post(uploadSingleImage, validateBody(createGallerySchema), createGallery);
+  .post(
+    protect,
+    restrictTo("admin"),
+    uploadSingleImage,
+    validateBody(createGallerySchema),
+    createGallery
+  );
 
 router
   .route("/:id")
   .get(validateParams(idParamSchema), getGalleryItem)
   .patch(
+    protect,
+    restrictTo("admin"),
     validateParams(idParamSchema),
     uploadSingleImage,
     validateBody(updateGallerySchema),
     updateGallery
   )
-  .delete(validateParams(idParamSchema), deleteGallery);
+  .delete(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    deleteGallery
+  );
 
 module.exports = router;

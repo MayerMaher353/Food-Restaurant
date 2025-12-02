@@ -10,14 +10,15 @@ const galleryRoutes = require("./routes/galleryRoute");
 const contactRoutes = require("./routes/contactRoute");
 const reservationRoutes = require("./routes/reservationRoute");
 const productRoutes = require("./routes/productRoute");
+const authRoutes = require("./routes/authRoute");
 
-const app = express(); 
+const app = express();
 
 // Connect to database
 connectDB();
 
 // Middleware
-app.use(cors()); 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -27,10 +28,11 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Routes
+app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/reservations", reservationRoutes);
 app.use("/api/v1/gallery", galleryRoutes);
 app.use("/api/v1/contact", contactRoutes);
-app.use("/api/products", productRoutes);
+app.use("/api/v1/products", productRoutes);
 
 // Handle 404
 app.use((req, res) => {

@@ -3,39 +3,56 @@ const router = express.Router();
 
 // Controller functions
 const {
-  getReservations,
-  getReservationById,
-  createReservation,
-  updateReservation,
-  deleteReservation,
-} = require("../controllers/reservationController");
+  getContacts,
+  getContactItem,
+  createContact,
+  updateContact,
+  deleteContact,
+} = require("../controllers/contactController");
 
 // Validation middleware
 const validateBody = require("../middleware/validateBody");
 const validateParams = require("../middleware/validateParams");
+const { protect, restrictTo } = require("../middleware/authMiddleware");
 
 // Validation schemas
 const {
-  createReservationSchema,
-  updateReservationSchema,
+  createContactSchema,
+  updateContactSchema,
   idParamSchema,
-} = require("../validation/reservationValidation");
+} = require("../validation/contactValidation");
 
 // Routes
-
+// Public: Create contact message
 router
   .route("/")
-  .get(getReservations)
-  .post(validateBody(createReservationSchema), createReservation);
+  .post(validateBody(createContactSchema), createContact)
+  // Admin-only: Get all contact messages
+  .get(protect, restrictTo("admin"), getContacts);
 
 router
   .route("/:id")
-  .get(validateParams(idParamSchema), getReservationById)
-  .patch(
+  // Admin-only: Get specific contact message
+  .get(
+    protect,
+    restrictTo("admin"),
     validateParams(idParamSchema),
-    validateBody(updateReservationSchema),
-    updateReservation
+    getContactItem
   )
-  .delete(validateParams(idParamSchema), deleteReservation);
+  // Admin-only: Update contact message
+  .patch(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    validateBody(updateContactSchema),
+    updateContact
+  )
+  // Admin-only: Delete contact message
+  .delete(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    deleteContact
+  );
 
 module.exports = router;

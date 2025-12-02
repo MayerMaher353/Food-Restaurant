@@ -13,6 +13,7 @@ const {
 // Validation middleware
 const validateBody = require("../middleware/validateBody");
 const validateParams = require("../middleware/validateParams");
+const { protect, restrictTo } = require("../middleware/authMiddleware");
 
 // Validation schemas
 const {
@@ -22,20 +23,36 @@ const {
 } = require("../validation/reservationValidation");
 
 // Routes
-
 router
   .route("/")
-  .get(getReservations)
+  // Admin-only: Get all reservations
+  .get(protect, restrictTo("admin"), getReservations)
+  // Public: Create reservation (customers can book tables)
   .post(validateBody(createReservationSchema), createReservation);
 
 router
   .route("/:id")
-  .get(validateParams(idParamSchema), getReservationById)
+  // Admin-only: Get specific reservation
+  .get(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    getReservationById
+  )
+  // Admin-only: Update reservation
   .patch(
+    protect,
+    restrictTo("admin"),
     validateParams(idParamSchema),
     validateBody(updateReservationSchema),
     updateReservation
   )
-  .delete(validateParams(idParamSchema), deleteReservation);
+  // Admin-only: Delete reservation
+  .delete(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    deleteReservation
+  );
 
 module.exports = router;

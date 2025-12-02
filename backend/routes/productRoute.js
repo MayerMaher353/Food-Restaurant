@@ -1,26 +1,59 @@
 const express = require("express");
 const router = express.Router();
-const { getProducts, getProduct, createProduct, updateProduct, deleteProduct } = require("../controllers/productControllers");
-const upload = require("../config/cloudinary");
-const { validateProduct } = require("../validation/productValidation");
+
+// controller functions
+const {
+  getProducts,
+  getProduct,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+} = require("../controllers/productControllers");
+
+// image upload middleware
 const { uploadProductImage } = require("../middleware/uploadProductMiddleware");
+
+// validation middleware
 const validateBody = require("../middleware/validateBody");
-const { createProductSchema, updateProductSchema } = require("../validation/productValidation");
+const validateParams = require("../middleware/validateParams");
 
+// validation schemas
+const {
+  createProductSchema,
+  updateProductSchema,
+  idParamSchema,
+} = require("../validation/productValidation");
 
-// Get all products
-router.get("/", getProducts);
+const { protect, restrictTo } = require("../middleware/authMiddleware");
 
-// Get single product
-router.get("/:id", getProduct);
+// Routes
+router
+  .route("/")
+  .get(getProducts)
+  .post(
+    protect,
+    restrictTo("admin"),
+    uploadProductImage,
+    validateBody(createProductSchema),
+    createProduct
+  );
 
-// Create product with image upload
-router.post("/", uploadProductImage, validateBody(createProductSchema), createProduct);
-
-// Update product with optional new image
-router.patch("/:id", uploadProductImage, validateBody(updateProductSchema), updateProduct);
-
-// Delete product
-router.delete("/:id", deleteProduct);
+router
+  .route("/:id")
+  .get(validateParams(idParamSchema), getProduct)
+  .patch(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    uploadProductImage,
+    validateBody(updateProductSchema),
+    updateProduct
+  )
+  .delete(
+    protect,
+    restrictTo("admin"),
+    validateParams(idParamSchema),
+    deleteProduct
+  );
 
 module.exports = router;
