@@ -99,7 +99,7 @@ const GalleryManagement: React.FC = () => {
           const hasMultipleImages = item.images.length > 1;
           return (
             <div key={item.id} className="gallery-card">
-              <div className="slider">
+              <div className="slider slider-special">
                 <img
                   src={item.images[currentIndex]}
                   alt={item.title}

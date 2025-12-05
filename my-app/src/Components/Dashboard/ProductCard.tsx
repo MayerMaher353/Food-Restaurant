@@ -49,7 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className="product-card">
       {!isEditing ? (
         <>
-          <div className="slider">
+          <div className="slider slider-special">
             <img src={images[currentSlide]} alt={editedProduct.name} />
             {images.length > 1 && (
               <>

@@ -146,7 +146,7 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
       {/* SLIDER PREVIEW */}
       {selectedImages.length > 0 && (
         <div className="form-row">
-          <div className="slider">
+          <div className="slider slider-special">
             <img
               src={URL.createObjectURL(selectedImages[currentSlide])}
               alt="preview"

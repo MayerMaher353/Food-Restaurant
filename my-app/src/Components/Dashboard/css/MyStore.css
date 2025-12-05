@@ -191,7 +191,7 @@
 }
 
 /* === Slider === */
-.slider {
+.slider-special {
     position: relative;
     width: 54%;
     height: 31%;
@@ -215,8 +215,8 @@
 }
 
 /* Controls */
-.slider button.prev,
-.slider button.next {
+.slider-special button.prev,
+.slider-special button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -229,16 +229,16 @@
     border-radius: 50%;
 }
 
-.slider button.prev:hover,
-.slider button.next:hover {
+.slider-special button.prev:hover,
+.slider-special button.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.slider button.prev {
+.slider-special button.prev {
     left: 0px;
 }
 
-.slider button.next {
+.slider-special button.next {
     right: 0px;
 }
 
