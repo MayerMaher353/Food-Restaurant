@@ -13,24 +13,33 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({
   product,
-  index,
   onDelete,
   onUpdate,
 }) => {
-
   const [isEditing, setIsEditing] = useState(false);
   const [editedProduct, setEditedProduct] = useState<Product>({ ...product });
+  const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Slider images
+  const images = editedProduct.images && editedProduct.images.length > 0
+    ? editedProduct.images
+    : [editedProduct.img];
+
+  const nextSlide = () => setCurrentSlide(prev => (prev + 1) % images.length);
+  const prevSlide = () => setCurrentSlide(prev => (prev - 1 + images.length) % images.length);
+
+  // Handle form input changes
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setEditedProduct((prev) => ({
+    setEditedProduct(prev => ({
       ...prev,
-      [name]: name === "price" ? Number(value) : value,
+      [name]: name === "price" || name === "originalPrice" ? Number(value) : value,
     }));
   };
 
+  // Save edited product
   const saveChanges = () => {
     onUpdate(editedProduct);
     setIsEditing(false);
@@ -41,116 +50,128 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {!isEditing ? (
         <>
           <div className="slider">
-            <img src={product.img} alt={product.name} />
-            {/* إذا عندك أكثر من صورة ممكن هنا تعمل mapping */}
-            {/* <button onClick={prevSlide}>&#10094;</button>
-            <button onClick={nextSlide}>&#10095;</button> */}
+            <img src={images[currentSlide]} alt={editedProduct.name} />
+            {images.length > 1 && (
+              <>
+                <button className="prev" onClick={prevSlide}>&#10094;</button>
+                <button className="next" onClick={nextSlide}>&#10095;</button>
+              </>
+            )}
           </div>
-          <h3>{product.name}</h3>
-          <p>
-            <strong>Price:</strong> {product.price} EGP
-          </p>
-          <p>
-            <strong>Original Price:</strong> {product.originalPrice} EGP
-          </p>
-          <p>
-            <strong>Category:</strong> {product.category}
-          </p>
-          <p>
-            <strong>Tags:</strong> {product.tags.join(", ")}
-          </p>
+          <h3>{editedProduct.name}</h3>
+          <p><strong>Price:</strong> {editedProduct.price} EGP</p>
+          <p><strong>Original Price:</strong> {editedProduct.originalPrice} EGP</p>
+          <p><strong>Category:</strong> {editedProduct.category}</p>
+          <p><strong>Tags:</strong> {editedProduct.tags.join(", ")}</p>
           <div className="product-actions">
             <button onClick={() => setIsEditing(true)}>Edit</button>
-            <button onClick={() => onDelete(product.id)}>Delete</button>
+            <button onClick={() => onDelete(editedProduct.id)}>Delete</button>
           </div>
         </>
       ) : (
         <div className="edit-form">
+          {/* Name */}
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={editedProduct.name}
+            onChange={handleInputChange}
+          />
 
-  {/* Product Name */}
-  <label>Name</label>
-  <input
-    type="text"
-    name="name"
-    value={editedProduct.name}
-    onChange={handleInputChange}
-  />
+          {/* Price */}
+          <label>Price</label>
+          <input
+            type="number"
+            name="price"
+            value={editedProduct.price}
+            onChange={handleInputChange}
+          />
 
-  {/* Price */}
-  <label>Price</label>
-  <input
-    type="number"
-    name="price"
-    value={editedProduct.price}
-    onChange={handleInputChange}
-  />
+          {/* Original Price */}
+          <label>Original Price</label>
+          <input
+            type="number"
+            name="originalPrice"
+            value={editedProduct.originalPrice}
+            onChange={handleInputChange}
+          />
 
-  {/* Original Price */}
-  <label>Original Price</label>
-  <input
-    type="number"
-    name="originalPrice"
-    value={editedProduct.originalPrice}
-    onChange={handleInputChange}
-  />
+          {/* Category */}
+          <label>Category</label>
+          <select
+            name="category"
+            value={editedProduct.category}
+            onChange={handleInputChange}
+          >
+            <option value="">-- Select Category --</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Soup">Soup</option>
+            <option value="Salad">Salad</option>
+            <option value="Drink">Drink</option>
+            <option value="Dessert">Dessert</option>
+          </select>
 
-  {/* Category */}
-  <label>Category</label>
-  <select
-    name="category"
-    value={editedProduct.category}
-    onChange={handleInputChange}
-  >
-    <option value="">-- Select Category --</option>
-    <option value="Seafood">Seafood</option>
-    <option value="Soup">Soup</option>
-    <option value="Salad">Salad</option>
-    <option value="Drink">Drink</option>
-    <option value="Dessert">Dessert</option>
-  </select>
+          {/* Tags */}
+          <label>Tags</label>
+          <input
+            type="text"
+            name="tags"
+            value={editedProduct.tags.join(", ")}
+            onChange={e =>
+              setEditedProduct(prev => ({
+                ...prev,
+                tags: e.target.value.split(",").map(tag => tag.trim())
+              }))
+            }
+            placeholder="tag1, tag2, tag3"
+          />
 
-  {/* Tags */}
-  <label>Tags</label>
-  <input
-    type="text"
-    name="tags"
-    value={editedProduct.tags.join(", ")}
-    onChange={(e) =>
-      setEditedProduct(prev => ({
-        ...prev,
-        tags: e.target.value.split(",").map(tag => tag.trim())
-      }))
-    }
-    placeholder="tag1, tag2, tag3"
-  />
+          {/* Change Images */}
+          <label>Change Image(s)</label>
+          <input
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={e => {
+              const files = e.target.files;
+              if (files && files.length > 0) {
+                const newImages = Array.from(files).map(file => URL.createObjectURL(file));
+                setEditedProduct(prev => ({
+                  ...prev,
+                  images: newImages,
+                  img: newImages[0],
+                }));
+                setCurrentSlide(0);
+              }
+            }}
+          />
 
-  {/* Change Image */}
-  <label>Change Image</label>
-  <input
-    type="file"
-    accept="image/*"
-    onChange={(e) => {
-      const file = e.target.files?.[0];
-      if (file) {
-        setEditedProduct(prev => ({
-          ...prev,
-          img: URL.createObjectURL(file)
-        }));
-      }
-    }}
-  />
+          {/* Preview */}
+          <div className="preview">
+            {editedProduct.images && editedProduct.images.length > 0 ? (
+              editedProduct.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`preview-${idx}`}
+                  style={{ width: "80px", borderRadius: "8px", marginRight: "5px" }}
+                />
+              ))
+            ) : (
+              <img
+                src={editedProduct.img}
+                alt="preview"
+                style={{ width: "80px", borderRadius: "8px", marginRight: "5px" }}
+              />
+            )}
+          </div>
 
-  {/* Preview */}
-  <div className="preview">
-    <img
-      src={editedProduct.img}
-      alt="preview"
-      style={{ width: "100px", borderRadius: "8px", marginTop: "10px" }}
-    />
-  </div>
-
-  <button onClick={saveChanges}>Save</button>
-  <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <button onClick={saveChanges}>Save</button>
+          <button onClick={() => {
+            setIsEditing(false);
+            setEditedProduct({ ...product }); 
+          }}>Cancel</button>
         </div>
       )}
     </div>

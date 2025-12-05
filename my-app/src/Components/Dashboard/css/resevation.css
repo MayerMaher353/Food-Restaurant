@@ -1,0 +1,342 @@
+:root {
+  /* Updated color palette for a more cohesive, modern, and beautiful look */
+  /* Primary: Soft blue gradient for headers and highlights */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Secondary: Warm purple-pink gradient for accents */
+  --secondary-gradient: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  /* Accent: Vibrant blue-cyan gradient for decorative elements */
+  --accent-gradient: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  /* Shadows remain subtle for depth */
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --border-radius: 12px;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.4s ease;
+  /* Background: Pure white for a clean, bright feel */
+  --bg-main: #ffffff;
+  /* Text: Darker for better contrast and readability */
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --sepia-tint: 0;
+}
+
+/* Main container */
+.reservations-list {
+  margin-top: clamp(20px, 5vw, 40px);
+  padding: clamp(15px, 5vw, 30px);
+  background: linear-gradient(135deg, var(--bg-main) 0%, #f7fafc 100%);
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  filter: sepia(var(--sepia-tint));
+}
+
+.reservations-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-gradient);
+  border-radius: 16px 16px 0 0;
+}
+
+.reservations-list:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.reservations-list h2 {
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  font-size: clamp(20px, 5vw, 32px);
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.reservations-list h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 6px;
+  background: var(--secondary-gradient);
+  margin: 15px auto 0;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(245, 87, 108, 0.2);
+}
+
+/* Search/Filter Bar */
+.reservations-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.reservations-search input,
+.reservations-search select {
+  padding: 10px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: var(--bg-main);
+  font-size: 15px;
+  transition: border-color var(--transition-fast);
+  outline: none;
+  flex: 1;
+  min-width: 200px;
+  color: var(--text-primary);
+}
+
+.reservations-search input:focus,
+.reservations-search select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.3);
+}
+
+/* Table */
+.reservations-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 25px;
+  background: var(--bg-main);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.reservations-table th,
+.reservations-table td {
+  padding: clamp(10px, 3vw, 18px) clamp(12px, 4vw, 24px);
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.reservations-table th {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.reservations-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.reservations-table tr:hover {
+  background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+  transform: translateX(2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.reservations-table tr:hover .reservation-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.reservation-details {
+  position: absolute;
+  background: var(--bg-main);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: var(--shadow-light);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast);
+  max-width: 250px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* Select and Buttons */
+.reservations-table select {
+  padding: clamp(8px, 2vw, 10px) clamp(10px, 3vw, 14px);
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: var(--bg-main);
+  cursor: pointer;
+  font-size: clamp(14px, 2.5vw, 15px);
+  font-weight: 500;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: var(--text-primary);
+}
+
+.reservations-table select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 12px rgba(79, 172, 254, 0.3);
+  transform: scale(1.01);
+}
+
+.reservations-table button {
+  padding: clamp(8px, 2vw, 10px) clamp(12px, 4vw, 20px);
+  background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 15px);
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.reservations-table button:hover {
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 101, 101, 0.25);
+}
+
+.reservations-table button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(245, 101, 101, 0.2);
+}
+
+.reservations-table button:focus {
+  outline: 2px solid #f56565;
+  outline-offset: 2px;
+}
+
+.reservations-table button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #68d391 0%, #48bb78 100%);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.2);
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.25);
+}
+
+.confirm-btn::after {
+  content: '✓';
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.confirm-btn:hover::after {
+  opacity: 1;
+}
+
+
+.reservations-table select.status-pending {
+  background-color: #fef5e7;
+  color: #9c4221;
+  border-color: #f6ad55;
+}
+
+.reservations-table select.status-confirmed {
+  background-color: #e6fffa;
+  color: #065f46;
+  border-color: #68d391;
+}
+
+.reservations-table select.status-cancelled {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+  border-color: #fc8181;
+}
+
+.reservations-table select.status-no-show {
+  background-color: #f7fafc;
+  color: #4a5568;
+  border-color: #e2e8f0;
+}
+
+.reservations-table select option[data-icon]::after {
+  content: attr(data-icon);
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reservations-list {
+    padding: 20px;
+    margin-top: 25px;
+  }
+  
+  .reservations-list h2 {
+    font-size: 24px;
+  }
+  
+  .reservations-table th,
+  .reservations-table td {
+    padding: 12px 15px;
+  }
+  
+  .reservations-table select,
+  .reservations-table button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .reservations-search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservations-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .reservations-table th,
+  .reservations-table td {
+    min-width: 140px;
+    padding: 10px 12px;
+  }
+  
+  .reservations-list {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .reservations-list h2 {
+    font-size: 20px;
+  }
+  
+  .reservations-table select,
+  .reservations-table button {
+    min-height: 44px;
+  }
+}

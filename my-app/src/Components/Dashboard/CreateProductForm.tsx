@@ -12,6 +12,7 @@ interface CreateProductFormProps {
 const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nextId }) => {
   const [newProduct, setNewProduct] = useState<Partial<Product>>({});
   const [selectedImages, setSelectedImages] = useState<File[]>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -19,14 +20,27 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
   };
 
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedImages((prev) => [...prev, ...Array.from(e.target.files!)]);
+    const files = Array.from(e.target.files || []);
+    if (files.length > 0) {
+      setSelectedImages(files);
+      setCurrentSlide(0);
+    }
   };
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % selectedImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + selectedImages.length) % selectedImages.length);
+  };
 
   const addProduct = () => {
     if (!newProduct.name || !newProduct.price) return;
 
-    const imageUrls = selectedImages.map((file) => URL.createObjectURL(file));
+    const imageUrls = selectedImages.map((file) =>
+      URL.createObjectURL(file)
+    );
 
     onAddProduct({
       id: nextId,
@@ -36,16 +50,19 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
       category: newProduct.category || "General",
       tags: newProduct.tags || [],
       img: imageUrls[0] || "",
+      images: imageUrls,    
     });
 
     setNewProduct({});
     setSelectedImages([]);
+    setCurrentSlide(0);
   };
-
 
   return (
     <div className="form-table-container">
       <h2>Create Product</h2>
+
+      {/* Category */}
       <div className="form-row">
         <label>Category</label>
         <select
@@ -61,6 +78,7 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
           <option value="Dessert">Dessert</option>
         </select>
       </div>
+
       {/* Name */}
       <div className="form-row">
         <label>Product Name</label>
@@ -103,7 +121,7 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
         <input
           type="text"
           name="tags"
-          value={newProduct.tags || ""}
+          value={(newProduct.tags as string[])?.join(", ") || ""}
           onChange={(e) =>
             setNewProduct((prev) => ({
               ...prev,
@@ -124,13 +142,31 @@ const CreateProductForm: React.FC<CreateProductFormProps> = ({ onAddProduct, nex
           onChange={handleImageChange}
         />
       </div>
-      <div id="imagePreviewContainer" className="form-row">
-        {selectedImages.map((img, i) => (
-          <div key={i} className="image-item">
-            <img src={URL.createObjectURL(img)} alt={`preview-${i}`} />
+
+      {/* SLIDER PREVIEW */}
+      {selectedImages.length > 0 && (
+        <div className="form-row">
+          <div className="slider">
+            <img
+              src={URL.createObjectURL(selectedImages[currentSlide])}
+              alt="preview"
+            />
+
+            {selectedImages.length > 1 && (
+              <>
+                <button type="button" className="prev" onClick={prevSlide}>
+                  &#10094;
+                </button>
+
+                <button type="button" className="next" onClick={nextSlide}>
+                  &#10095;
+                </button>
+              </>
+            )}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
+
       <div className="form-row">
         <button type="button" className="submit-btn" onClick={addProduct}>
           Add Product
