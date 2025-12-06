@@ -11,7 +11,7 @@ const {
 } = require("../controllers/productControllers");
 
 // image upload middleware
-const { uploadProductImage } = require("../middleware/uploadProductMiddleware");
+const { uploadSingleImage } = require("../middleware/uploadMiddleware");
 
 // validation middleware
 const validateBody = require("../middleware/validateBody");
@@ -33,7 +33,7 @@ router
   .post(
     protect,
     restrictTo("admin"),
-    uploadProductImage,
+    uploadSingleImage,
     validateBody(createProductSchema),
     createProduct
   );
@@ -45,7 +45,7 @@ router
     protect,
     restrictTo("admin"),
     validateParams(idParamSchema),
-    uploadProductImage,
+    uploadSingleImage,
     validateBody(updateProductSchema),
     updateProduct
   )
