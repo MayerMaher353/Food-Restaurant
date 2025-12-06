@@ -22,7 +22,7 @@ const Shop: React.FC = () => {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const swiperRef = useRef<SwiperClass | null>(null);
 
- const { addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(PRODUCTS);
 
@@ -96,7 +96,7 @@ const Shop: React.FC = () => {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 20,
-        loop: false, // loop disabled
+        loop: false,
         navigation: { nextEl: ".swiper-next", prevEl: ".swiper-prev" },
         on: {
           init(swiperInstance: SwiperClass) {
@@ -119,12 +119,10 @@ const Shop: React.FC = () => {
 
       indicator.textContent = `${current} / ${total}`;
 
-      // hide prev/next at edges
       prevArrow.classList.toggle("hidden", current === 1);
       nextArrow.classList.toggle("hidden", current === total);
     }
 
-    // initial state
     updateNavigation(swiper);
 
     return () => swiper.destroy(true, true);
@@ -350,22 +348,35 @@ const Shop: React.FC = () => {
               <button id="filter-btn">Filter</button>
             </div>
 
-            <div className="product-tag-section">
-              <h3>TAGS</h3>
-              {[
-                "Burger",
-                "Crabs",
-                "Crustaceans",
-                "Fish",
-                "Food",
-                "Saltwater",
-                "Soup",
-              ].map((tag) => (
-                <button className="tag-btn" key={tag} data-tag={tag}>
-                  {tag}
-                </button>
-              ))}
-            </div>
+            {/* -------- TAGS (FIXED) -------- */}
+         
+<div className="product-tag-section">
+  <h3>TAGS</h3>
+  {[
+    "Burger",
+    "Crabs",
+    "Crustaceans",
+    "Fish",
+    "Food",
+    "Saltwater",
+    "Soup",
+  ].map((tag) => (
+    <button
+      type="button"
+      className="tag-btn"
+      key={tag}
+      data-tag={tag.toLowerCase()}
+      onClick={(e) => {
+        const btn = e.currentTarget;
+        btn.classList.toggle("active"); // toggle class
+        applyFilters(); // apply filters on click
+      }}
+    >
+      {tag}
+    </button>
+  ))}
+</div>
+
           </div>
 
           {/* Products area */}
